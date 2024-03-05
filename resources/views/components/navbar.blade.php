@@ -21,20 +21,18 @@
                 </li>
             </div>
             
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul class="ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown" ><i class="bi bi-person-fill nav-link dropdown-toggle" 
+                    role="button" data-bs-toggle="dropdown" aria-expanded="false"></i></li> 
                 @auth
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Benvenuto <strong> {{ auth()->user()->name }} </strong>
-                    </a>
                     
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href=" {{ route('account.index') }}">Gestisci utenti</a></li>
-                        <li><a class="dropdown-item" href=" {{ route('todo') }}">ToDo List</a></li>
-                        <li><a class="dropdown-item" href=" {{ route('articles.index') }}">I miei articoli</a></li>
-                        <li><a class="dropdown-item" href=" {{ route('articles.create') }}">Crea Articolo</a></li>
-                        <li><a class="dropdown-item" href=" {{ route('categories.index') }}">Le mie categorie</a></li>
-                        <li><a class="dropdown-item" href=" {{ route('categories.create') }}">Crea categoria</a></li>
+                        <li><a class="dropdown-item" href=" # ">Gestisci utenti</a></li>
+                        <li><a class="dropdown-item" href=" #">ToDo List</a></li>
+                        <li><a class="dropdown-item" href=" #">I miei articoli</a></li>
+                        <li><a class="dropdown-item" href=" #">Crea Articolo</a></li>
+                        <li><a class="dropdown-item" href=" #">Le mie categorie</a></li>
+                        <li><a class="dropdown-item" href=" #">Crea categoria</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li>
                             <form action="/logout" method="POST">
@@ -45,14 +43,12 @@
                     </ul>
                     @endauth
                     @guest
-                    <ul class="navbar-nav">
                         <li class=" nav-item ">
                             <a class=" nav-link " href="/register"> Registrati </a>
                         </li>
                         <li  class=" nav-item ">
                             <a class=" nav-link " href="/login"> Accedi </a>
                         </li>
-                    </ul>
                     
                     @endguest
                 </li>
