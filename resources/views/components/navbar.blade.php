@@ -1,6 +1,6 @@
 <div class="container">
     <nav class="navbar navbar-expand-lg bg-body-tertiary ">
-        <a class="navbar-brand" href="#"> {{ config('app.name')}} </a>
+        <a class="navbar-brand" href=" {{ route('home')}} "> {{ config('app.name')}} </a>
         <button class="navbar-toggler end-0 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -25,6 +25,10 @@
                 <li class="nav-item dropdown" ><i class="bi bi-person-fill nav-link dropdown-toggle" 
                     role="button" data-bs-toggle="dropdown" aria-expanded="false"></i></li> 
                 @auth
+                <form action="/logout" method="POST">
+                    @csrf
+                    <button class=" dropdown-item " type="submit">Esci</button>
+                </form>
                     
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href=" # ">Gestisci utenti</a></li>

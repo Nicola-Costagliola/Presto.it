@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnnuncementController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 })->name('home');
+
+Route::middleware('auth')->group( function () {
+    
+    Route::get('/nuovo/annuncio',[AnnuncementController::class, 'createAnnuncement'])->name('annuncements.create');
+});
+
