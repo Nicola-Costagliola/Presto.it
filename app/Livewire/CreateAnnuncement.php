@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Annuncement;
+use App\Models\Category;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
@@ -14,6 +15,8 @@ class CreateAnnuncement extends Component
     public $body;
     #[Validate]
     public $price;
+    public $category;
+
 
     protected function rules() {
 
@@ -45,10 +48,11 @@ class CreateAnnuncement extends Component
             'title' => $this->title,
             'body' => $this->body,
             'price' => $this->price,
+            'category_id' => $this->category,
         ]);
 
         $this->resetForm();
-        
+
 
         session()->flash('success', 'Annuncio creato correttamente');
 
@@ -59,13 +63,14 @@ class CreateAnnuncement extends Component
         $this->title = '';
         $this->body = '';
         $this->price = '';
-       
+
     }
 
 
     public function render()
     {
-        return view('livewire.create-annuncement');
+
+        return view('livewire.create-annuncement', ['categories' => Category::all()]);
     }
 
 
