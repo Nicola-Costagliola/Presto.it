@@ -1,7 +1,12 @@
 <div>
     <form wire:submit.prevent="store">
         <div class="col-6 mx-auto ">
+
+            
+
             <h1 class=" mb-3 mt-5 ">Crea il tuo annuncio</h1>
+            <x-success />
+
             <div class="row g-3 ">
                 <div class="col-12">
                     <label for="title">Inserisci il titolo del tuo annuncio</label>
