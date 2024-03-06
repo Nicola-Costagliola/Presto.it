@@ -15,7 +15,12 @@ class CreateAnnuncement extends Component
     public $body;
     #[Validate]
     public $price;
-    public $category=1;
+<<<<<<< HEAD
+
+=======
+
+    public $category= 1;
+>>>>>>> 93844ba712a945518f0c97b94bcdce632393c937
 
 
     protected function rules() {
