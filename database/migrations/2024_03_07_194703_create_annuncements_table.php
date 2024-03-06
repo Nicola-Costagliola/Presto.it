@@ -13,10 +13,15 @@ return new class extends Migration
     {
         Schema::create('annuncements', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedBigInteger('category_id');
             $table->string('title');
             $table->text('body');
             $table->float('price', 8,2);
             $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
