@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\AnnuncementController;
+use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PageController::class,'home'])->name('home');
+Route::get('/categoria/{category}', [PageController::class, 'categoryShow'])->name('category.show');
+
+
 
 Route::middleware('auth')->group( function () {
-    
-    Route::get('/nuovo/annuncio',[AnnuncementController::class, 'createAnnuncement'])->name('annuncements.create');
-});
 
+    Route::get('/nuovo/annuncio',[AnnouncementController::class, 'createAnnouncement'])->name('announcements.create');
+});

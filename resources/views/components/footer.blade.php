@@ -1,5 +1,5 @@
-<footer class="bg-dark text-light text-center py-3">
-    <div class="container">
+<footer class="bg-dark text-light text-center py-3 mt-5 container">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-md-6">
                 <h5>Contact Us</h5>

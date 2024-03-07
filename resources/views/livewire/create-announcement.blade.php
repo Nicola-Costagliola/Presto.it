@@ -10,7 +10,7 @@
             <div class="row g-3 ">
                 <div class="col-12">
                     <label for="title">Inserisci il titolo del tuo annuncio</label>
-                    <input class=" form-control " type="text" id="title" wire:model.blur="title">
+                    <input class=" form-control @error('title') is-invalid @enderror" type="text" id="title" wire:model.blur="title">
                     @error('title')<span class=" text-danger "> {{ $message }}</span> @enderror
                 </div>
 
@@ -21,18 +21,18 @@
                         @foreach ($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                         @endforeach
-                        
+
                     </select>
                 </div>
                 <div class="col-12">
                     <label for="body">Inserisci la descrizione</label>
-                    <textarea class=" form-control " type="text" id="body" wire:model.blur="body"></textarea>
+                    <textarea class=" form-control @error('body') is-invalid @enderror" type="text" id="body" wire:model.blur="body"></textarea>
                     @error('body')<span class=" text-danger "> {{ $message }}</span> @enderror
                 </div>
 
                 <div class="col-12">
                     <label for="price">Inserisci il prezzo</label>
-                    <input class=" form-control " type="text" id="price" wire:model.live="price">
+                    <input class=" form-control @error('price') is-invalid @enderror" type="text" id="price" wire:model.live="price">
                     @error('price')<span class=" text-danger "> {{ $message }}</span> @enderror
                 </div>
 

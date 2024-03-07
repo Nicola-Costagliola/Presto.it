@@ -2,12 +2,12 @@
 
 namespace App\Livewire;
 
-use App\Models\Annuncement;
+use App\Models\Announcement;
 use App\Models\Category;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
-class CreateAnnuncement extends Component
+class CreateAnnouncement extends Component
 {
     #[Validate]
     public $title;
@@ -26,7 +26,7 @@ class CreateAnnuncement extends Component
             'title'=>'required',
             'body'=>'required',
             'price'=>'required|max_digits:8',
-            
+
         ];
 
     }
@@ -39,7 +39,7 @@ class CreateAnnuncement extends Component
             'body.required'=>'La Descrizione è obbligatoria',
             'price.required'=>'Il Prezzo è obbligatorio',
             'price.max_digits'=>'Il Prezzo deve essere in cifre (massimo 8)',
-            
+
         ];
     }
 
@@ -47,7 +47,7 @@ class CreateAnnuncement extends Component
     {
         $this->validate();
 
-        Annuncement::create([
+        Announcement::create([
             'title' => $this->title,
             'body' => $this->body,
             'price' => $this->price,
@@ -74,7 +74,7 @@ class CreateAnnuncement extends Component
     public function render()
     {
 
-        return view('livewire.create-annuncement');
+        return view('livewire.create-announcement');
     }
 
 

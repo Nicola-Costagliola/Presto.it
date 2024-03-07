@@ -3,24 +3,25 @@
         <h1>Ciao</h1>
 
         @auth
-        <a href=" {{ route('annuncements.create') }}" class=" btn btn-success ">Inserisci annuncio</a>    
+        <a href=" {{ route('announcements.create') }}" class=" btn btn-success ">Inserisci annuncio</a>
         @endauth
-        
+
         <div class="row row-cols-1 row-cols-md-2 g-4 mt-5 ">
-          @foreach($annuncements as $annucement)
+          @foreach($announcements as $announcement)
 
-          <x-card 
-          
-          :title="$annucement->title"
-          :category="$annucement->category->name"
-          :body="$annucement->body"
-          :price="$annucement->price"
+          <x-card
 
+          :title="$announcement->title"
+          :category="$announcement->category->name"
+          :body="$announcement->body"
+          :price="$announcement->price"
+          :created="$announcement->created_at"
+          route="#"
           />
           @endforeach
 
         </div>
 
-        
+
     </div>
 </x-layout>

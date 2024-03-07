@@ -9,10 +9,10 @@ class Category extends Model
 {
     use HasFactory;
 
-    public function annuncements(){
+    public function announcements(){
 
-        return $this->hasMany(Annuncements::class);
-    
+        return $this->hasMany(Announcement::class);
+
     }
 
 }
