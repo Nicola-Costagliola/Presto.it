@@ -1,27 +1,25 @@
 <x-layout>
-    <div class="container mb-5 ">
-        <h1>Ciao</h1>
-
+  <div class="container mb-5 text-center mt-3 p-5">
+    <div class="row ">
+      <div class="col-12 shadow p-5">
+        <h1>Annunci</h1>
         @auth
         <a href=" {{ route('announcements.create') }}" class=" btn btn-success ">Inserisci annuncio</a>
+      </div>
         @endauth
+    </div>
 
-        <div class="row row-cols-1 row-cols-md-2 g-4 mt-5 ">
-          @foreach($announcements as $announcement)
-
-          <x-card
-
-          :title="$announcement->title"
+    <div class="row mt-5 shadow p-3">
+      @foreach($announcements as $announcement)
+      <div class="col-4">
+        <x-card :title="$announcement->title"
           :category="$announcement->category->name"
           :body="$announcement->body"
-          :price="$announcement->price"
-          :created="$announcement->created_at"
-          route="#"
-          />
-          @endforeach
-
+          :price="$announcement->price" :created="$announcement->created_at" route="#" />
         </div>
-
-
+        @endforeach
+      </div>
     </div>
+
+
 </x-layout>
