@@ -10,7 +10,7 @@
             <div class="row g-3 ">
                 <div class="col-12">
                     <label for="title">Inserisci il titolo del tuo annuncio</label>
-                    <input class=" form-control " type="text" id="title" wire:model.live="title">
+                    <input class=" form-control " type="text" id="title" wire:model.blur="title">
                     @error('title')<span class=" text-danger "> {{ $message }}</span> @enderror
                 </div>
 
@@ -26,7 +26,7 @@
                 </div>
                 <div class="col-12">
                     <label for="body">Inserisci la descrizione</label>
-                    <textarea class=" form-control " type="text" id="body" wire:model.live="body"></textarea>
+                    <textarea class=" form-control " type="text" id="body" wire:model.blur="body"></textarea>
                     @error('body')<span class=" text-danger "> {{ $message }}</span> @enderror
                 </div>
 

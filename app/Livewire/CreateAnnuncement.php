@@ -25,7 +25,8 @@ class CreateAnnuncement extends Component
 
             'title'=>'required',
             'body'=>'required',
-            'price'=>'required|max:8',
+            'price'=>'required|max_digits:8',
+            
         ];
 
     }
@@ -37,7 +38,8 @@ class CreateAnnuncement extends Component
             'title.required'=>'Il Titolo è obbligatorio',
             'body.required'=>'La Descrizione è obbligatoria',
             'price.required'=>'Il Prezzo è obbligatorio',
-            'price.max'=>'Il Prezzo è massimo 8 cifre',
+            'price.max_digits'=>'Il Prezzo deve essere in cifre (massimo 8)',
+            
         ];
     }
 
@@ -72,7 +74,7 @@ class CreateAnnuncement extends Component
     public function render()
     {
 
-        return view('livewire.create-annuncement', ['categories' => Category::all()]);
+        return view('livewire.create-annuncement');
     }
 
 
