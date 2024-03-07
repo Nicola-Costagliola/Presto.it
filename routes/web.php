@@ -18,9 +18,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PageController::class,'home'])->name('home');
 Route::get('/categoria/{category}', [PageController::class, 'categoryShow'])->name('category.show');
 
+Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcements.show');
+
 
 
 Route::middleware('auth')->group( function () {
 
-    Route::get('/nuovo/annuncio',[AnnouncementController::class, 'createAnnouncement'])->name('announcements.create');
+    Route::get('/nuovo/annuncio/', [AnnouncementController::class, 'createAnnouncement'])->name('announcements.create');
 });

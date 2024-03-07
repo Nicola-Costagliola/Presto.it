@@ -15,7 +15,10 @@
         <x-card :title="$announcement->title"
           :category="$announcement->category->name"
           :body="$announcement->body"
-          :price="$announcement->price" :created="$announcement->created_at" route="#" />
+          :price="$announcement->price"
+          :created="$announcement->created_at"
+          :route="route('announcements.show', $announcement)"
+          />
         </div>
         @endforeach
       </div>
