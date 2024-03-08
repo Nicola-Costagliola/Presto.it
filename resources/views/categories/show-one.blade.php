@@ -1,8 +1,5 @@
 <x-layout >
 
-
-
-
     <div class="container mt-5 text-center">
         <div class="col-12 mt-5">
             <div class="row">
@@ -19,7 +16,7 @@
                     :price="$announcement->price"
                     :category="$category->name"
                     :created="$announcement->created_at"
-                    route="#"
+                    route="{{ route('announcements.show', $announcement) }}"
                      />
                 </div>
                 @empty
@@ -35,4 +32,5 @@
             </div>
         </div>
     </div>
+    
 </x-layout>

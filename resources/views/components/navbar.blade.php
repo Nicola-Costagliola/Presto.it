@@ -3,7 +3,7 @@
         <!-- gli elementi inline possono contenere SOLO gli elementi inline senno devi bloccarlo o farlo diventare flex -->
         <a class="navbar-brand d-flex align-items-center " href="#">
             <img src="https://picsum.photos/50" class="me-3 rounded-circle " alt="">
-            <a class="testo-primario mb-0 " href="{{ route('home') }}">{{ config('app.name') }}</a>
+            <a class="testo-primario mb-0 link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-black " href="{{ route('home') }}">{{ config('app.name') }}</a>
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collasableMenu">
@@ -33,10 +33,10 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center ">
                 @guest
                 <li class="nav-item">
-                    <a class="nav-link" href="/register">Registrati</a>
+                    <a class="nav-link bi bi-person-fill-add" href="/register">Registrati</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/login">Accedi</a>
+                    <a class="nav-link bi bi-box-arrow-in-right" href="/login">Accedi</a>
                 </li>
                 @endguest
                 @auth

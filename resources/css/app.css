@@ -5,12 +5,12 @@
 
 .navbar{
     background: rgb(165, 251, 63);
-        background: radial-gradient(circle, rgba(165, 251, 63, 1) 0%, rgba(252, 161, 70, 1) 96%);
+        background: radial-gradient(circle, rgb(186, 255, 101) 0%, rgb(86, 242, 250) 96%);
 }
 
 body {
     background: rgb(165, 251, 63);
-        background: radial-gradient(circle, rgba(165, 251, 63, 1) 0%, rgba(252, 161, 70, 1) 96%);
+        background: radial-gradient(circle, rgba(186, 255, 101) 0%, rgb(86, 242, 250) 96%);
 }
 
 
@@ -18,13 +18,14 @@ body {
 .form {
 
     background: rgb(215, 108, 13);
-        background: radial-gradient(circle, rgba(215, 108, 13, 1) 11%, rgba(184, 233, 148, 1) 100%);
+        background: radial-gradient(circle, rgb(250, 149, 60) 11%, rgb(100, 251, 221) 100%);
 }
 .card {
 
     background: rgb(215, 108, 13);
-        background: radial-gradient(circle, rgba(215, 108, 13, 1) 11%, rgba(184, 233, 148, 1) 100%);
+        background: radial-gradient(circle, rgb(70, 247, 149) 11%, rgb(205, 255, 135) 100%);
 }
+
 .card:hover {
 
 transition: .6s ease;
@@ -58,7 +59,7 @@ transition: .6s ease;
     top: 0;
     left: 0;
     z-index: -1;
-    background: rgb(73, 224, 8);
+    background: rgb(213, 247, 99);
     transition: all 0.3s ease;
 }
 .btn:hover {
