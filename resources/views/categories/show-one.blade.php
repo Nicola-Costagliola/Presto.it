@@ -5,7 +5,7 @@
             <div class="row">
 
                 <div class="col-12 shadow p-5 text-center">
-                    <h1>Espora la categoria {{$category->name}}</h1>
+                    <h1 class="display-5">Espora la categoria {{$category->name}}</h1>
                 </div>
 
                 @forelse ($category->announcements as $announcement)
@@ -32,5 +32,5 @@
             </div>
         </div>
     </div>
-    
+
 </x-layout>

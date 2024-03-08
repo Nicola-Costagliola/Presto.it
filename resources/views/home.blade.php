@@ -2,7 +2,7 @@
   <div class="container mb-5 text-center mt-3 p-5">
     <div class="row ">
       <div class="col-12 shadow p-5">
-        <h1>Annunci</h1>
+        <h1 class="display-1">Annunci</h1>
         @auth
         <a href=" {{ route('announcements.create') }}" class=" btn btn-success ">Inserisci annuncio</a>
       </div>

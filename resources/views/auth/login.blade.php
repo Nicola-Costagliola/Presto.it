@@ -1,6 +1,6 @@
 <x-layout>
     <div class="container">
-        <h1 class=" mt-3  text-center">Accedi</h1>
+        <h1 class=" mt-3  text-center display-5">Accedi</h1>
         <div class="row mt-2 ">
             <div class="col-md-4 mx-auto ">
                 <div class=" card mt-3  ">
