@@ -43,7 +43,7 @@
                 <li>
                     <form action="/logout" method="POST">
                         @csrf
-                        <button class=" dropdown-item " type="submit">Esci</button>
+                        <button class=" dropdown-item bi bi-arrow-bar-left " type="submit">Esci</button>
                     </form>
                 </li>
                 @endauth
