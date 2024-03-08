@@ -5,31 +5,31 @@
 
 
 .navbar{
-    background: rgb(165, 251, 63);
-        background: radial-gradient(circle, rgb(186, 255, 101) 0%, rgb(86, 242, 250) 96%);
+    background: rgb(208, 255, 151);
+        background: radial-gradient(circle, rgb(208, 255, 151) 0%, rgb(205, 252, 255) 96%);
 }
 
 .footer{
-    background: rgb(165, 251, 63);
-        background: radial-gradient(circle, rgb(186, 255, 101) 0%, rgb(86, 242, 250) 96%);
+    background: rgb(208, 255, 151);
+        background: radial-gradient(circle, rgb(208, 255, 151) 0%, rgb(205, 252, 255)96%);
 }
 
 body {
-    background: rgb(165, 251, 63);
-        background: radial-gradient(circle, rgba(186, 255, 101) 0%, rgb(86, 242, 250) 96%);
+    background: rgb(208, 255, 151);
+        background: radial-gradient(circle, rgb(228, 255, 195) 0%, rgb(205, 252, 255) 96%);
 }
 
 
 
 .form {
 
-    background: rgb(215, 108, 13);
-        background: radial-gradient(circle, rgb(250, 149, 60) 11%, rgb(100, 251, 221) 100%);
+    background: rgb(255, 178, 111);
+        background: radial-gradient(circle, rgb(255, 178, 111) 11%, rgb(205, 252, 255) 100%);
 }
 .card {
 
-    background: rgb(215, 108, 13);
-        background: radial-gradient(circle, rgb(70, 247, 149) 11%, rgb(205, 255, 135) 100%);
+    background: rgb(255, 178, 111);
+        background: radial-gradient(circle, rgb(186, 255, 217) 11%, rgb(229, 254, 194) 100%);
 }
 
 .card:hover {
@@ -65,7 +65,7 @@ transition: .6s ease;
     top: 0;
     left: 0;
     z-index: -1;
-    background: rgb(213, 247, 99);
+    background: rgb(239, 255, 186);
     transition: all 0.3s ease;
 }
 .btn:hover {
