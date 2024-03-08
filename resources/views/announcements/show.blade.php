@@ -43,8 +43,10 @@
                     <p class="card-text">Categoria: {{ $announcement->category->name }}</p>
                     <p class="card-text">Descrizione: {{ $announcement->body }}</p>
                     <p class="card-text"><strong>Prezzo: {{$announcement->price}} €</strong></p>
-                    <p><a href="{{ route('home') }}" class="btn shadow bi bi-skip-backward-fill"> Indietro </a></p>
-                    <p><a class="btn shadow btn-secondary " href=" {{route('category.show', ['category' => $announcement->category]) }} ">Espora la categoria {{$announcement->category->name}} </a></p>
+                    
+                    <x-back />
+
+                    <p><a class="btn shadow btn-secondary " href=" {{route('category.show', ['category' => $announcement->category]) }} ">Esplora la categoria {{$announcement->category->name}} </a></p>
 
                 </div>
             </div>

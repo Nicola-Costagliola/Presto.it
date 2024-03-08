@@ -4,9 +4,12 @@
         <div class="col-12 mt-5">
             <div class="row">
 
+            <x-back />
                 <div class="col-12 shadow p-5 text-center">
+<<<<<<< HEAD
                     <p class=" display-6">Ecco tutti gli annunci della categoria: </p>
                     <h3 class=" display-5 fw-semibold">{{$category->name}}</h3>
+=======
                 </div>
 
                 @forelse ($category->announcements as $announcement)
