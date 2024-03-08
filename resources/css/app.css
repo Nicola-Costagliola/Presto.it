@@ -8,6 +8,11 @@
         background: radial-gradient(circle, rgb(186, 255, 101) 0%, rgb(86, 242, 250) 96%);
 }
 
+.footer{
+    background: rgb(165, 251, 63);
+        background: radial-gradient(circle, rgb(186, 255, 101) 0%, rgb(86, 242, 250) 96%);
+}
+
 body {
     background: rgb(165, 251, 63);
         background: radial-gradient(circle, rgba(186, 255, 101) 0%, rgb(86, 242, 250) 96%);
