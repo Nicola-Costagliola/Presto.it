@@ -17,4 +17,11 @@ class AnnouncementController extends Controller
 
         return view('announcements.show', compact('announcement'));
     }
+
+    public function showAll (){
+
+        $announcements = Announcement::paginate(5);
+
+        return view('announcements.show-all', compact('announcements'));
+    }
 }

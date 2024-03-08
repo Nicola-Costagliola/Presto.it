@@ -31,8 +31,9 @@
                 </div>
 
                 <div class="col-12">
-                    <label for="price">Inserisci il prezzo</label>
-                    <input class=" form-control @error('price') is-invalid @enderror" type="text" id="price" wire:model.live="price">
+                    <label for="price">Inserisci il prezzo (con 2 cifre decimali)</label>
+                    <input class=" form-control @error('price') is-invalid @enderror" type="text"  placeholder="Es. 10.00"
+                    id="price" wire:model="price">
                     @error('price')<span class=" text-danger "> {{ $message }}</span> @enderror
                 </div>
 

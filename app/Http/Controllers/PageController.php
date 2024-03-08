@@ -19,6 +19,6 @@ class PageController extends Controller
 
         return view('categories.show-one', compact('category'));
     }
-    
+
 
 }

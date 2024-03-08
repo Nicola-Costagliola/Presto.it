@@ -5,7 +5,8 @@
             <div class="row">
 
                 <div class="col-12 shadow p-5 text-center">
-                    <h1 class="display-5">Espora la categoria {{$category->name}}</h1>
+                    <p class=" display-6">Ecco tutti gli annunci della categoria: </p>
+                    <h3 class=" display-5 fw-semibold">{{$category->name}}</h3>
                 </div>
 
                 @forelse ($category->announcements as $announcement)
@@ -13,7 +14,7 @@
                 <div class="col-3 shadow p-3">
                     <x-card :title="$announcement->title"
                     :body="$announcement->body"
-                    :price="$announcement->price"
+                    :price="$announcement->price /100"
                     :category="$category->name"
                     :created="$announcement->created_at"
                     route="{{ route('announcements.show', $announcement) }}"

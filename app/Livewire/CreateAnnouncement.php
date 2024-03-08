@@ -46,6 +46,9 @@ class CreateAnnouncement extends Component
     public function store ()
     {
         $this->validate();
+        
+        $this->price = $this->price * 100;
+
 
         Announcement::create([
             'title' => $this->title,
