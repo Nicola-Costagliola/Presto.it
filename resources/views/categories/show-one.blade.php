@@ -4,6 +4,7 @@
         <div class="col-12 mt-5">
             <div class="row">
 
+            <x-back />
                 <div class="col-12 shadow p-5 text-center">
                     <h1 class="display-5">Espora la categoria {{$category->name}}</h1>
                 </div>

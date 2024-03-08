@@ -42,5 +42,8 @@
                 </div>
             </form>
         </div>
+
+        <x-back />
+        
     </div>
 </x-layout>

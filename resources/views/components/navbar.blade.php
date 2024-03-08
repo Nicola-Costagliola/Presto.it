@@ -33,10 +33,10 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center ">
                 @guest
                 <li class="nav-item">
-                    <a class="nav-link bi bi-person-fill-add" href="/register">Registrati</a>
+                    <a class="nav-link bi bi-person-fill-add" href="/register"> Registrati</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bi bi-box-arrow-in-right" href="/login">Accedi</a>
+                    <a class="nav-link bi bi-box-arrow-in-right" href="/login"> Accedi</a>
                 </li>
                 @endguest
                 @auth
