@@ -1,58 +1,55 @@
-<div class="container">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
-        <a class="navbar-brand" href=" {{ route('home')}} "> {{ config('app.name')}} </a>
-        <button class="navbar-toggler end-0 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg bg-white shadow-sm container">
+    <div class="container-fluid px-5 ">
+        <!-- gli elementi inline possono contenere SOLO gli elementi inline senno devi bloccarlo o farlo diventare flex -->
+        <a class="navbar-brand d-flex align-items-center " href="#">
+            <img src="https://picsum.photos/50" class="me-3 rounded-circle " alt="">
+            <a class="testo-primario mb-0 " href="{{ route('home') }}">{{ config('app.name') }}</a>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collasableMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-
-                <li class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Categorie
-                </li>
-                <ul class="dropdown-menu">
-                    @foreach ($categories as $category)
-                    <li><a class="dropdown-item" href="{{ route('category.show', $category) }}">{{ $category->name }}</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    @endforeach
-                </ul>
-            </div>
-
-            <ul class="ms-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown" ><i class="bi bi-person-fill nav-link dropdown-toggle"
-                    role="button" data-bs-toggle="dropdown" aria-expanded="false"></i></li>
-                @auth
-                <form action="/logout" method="POST">
-                    @csrf
-                    <button class=" dropdown-item " type="submit">Esci</button>
-                </form>
-
-                    <ul class="dropdown-menu dropdown-menu-end">
-
-                        <li><a class="dropdown-item" href=" # ">Gestisci utenti</a></li>
+        
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="collasableMenu">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center ">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorie
+                    </a>
+                    <ul class="dropdown-menu">
+                        @foreach ($categories as $category)
+                        <li><a class="dropdown-item" href="{{ route('category.show', $category ) }}">{{ $category->name }}</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li>
-                            <form action="/logout" method="POST">
-                                @csrf
-                                <button class=" dropdown-item " type="submit">Esci</button>
-                            </form>
-                        </li>
+                        @endforeach
                     </ul>
-                    @endauth
-                    @guest
-                        <li class=" nav-item ">
-                            <a class=" nav-link " href="/register"> Registrati </a>
-                        </li>
-                        <li  class=" nav-item ">
-                            <a class=" nav-link " href="/login"> Accedi </a>
-                        </li>
-
-                    @endguest
+                    
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="announcements.html">Annunci</a>
                 </li>
             </ul>
-        </div>
-    </nav>
+            
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center "> 
+                @guest
+                <li class="nav-item">
+                    <a class="nav-link" href="/register">Registrati</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Accedi</a>
+                </li>
+                @endguest
+                @auth
+                <li>
+                    <form action="/logout" method="POST">
+                        @csrf
+                        <button class=" dropdown-item " type="submit">Esci</button>
+                    </form>
+                </li>
+                @endauth
+            </ul>
+            
+        </ul>
+    </div>
 </div>
+</nav>
