@@ -14,12 +14,12 @@
                                 <div class="col-12">
                                     <label for="email">Email</label>
                                     <input type="email" id="email" name="email" class="form-control @error('email') is-invalid @enderror" value=" {{ old('email') }} ">
-                                    @error('email') <span class=" text-danger small "> {{ $message }} </span>  @enderror 
+                                    @error('email') <span class=" text-danger small "> {{ $message }} </span>  @enderror
                                 </div>
                                 <div class="col-12">
                                     <label for="password">Password</label>
                                     <input type="password" id="password" name="password" class="form-control @error('password') is-invalid @enderror">
-                                    @error('password') <span class=" text-danger small "> {{ $message }} </span>  @enderror 
+                                    @error('password') <span class=" text-danger small "> {{ $message }} </span>  @enderror
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class=" btn btn-primary "> Entra
@@ -28,9 +28,9 @@
                             </div>
                         </form>
                     </div>
-                    
+
                 </div>
             </form>
-        </div>    
+        </div>
     </div>
 </x-layout>

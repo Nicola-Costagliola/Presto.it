@@ -18,6 +18,6 @@
     </div>
 
     <div class="text-center mt-3">
-        <p>Questo e un footer di prova.</p>
+        <p>Presto.it</p>
     </div>
 </footer>
