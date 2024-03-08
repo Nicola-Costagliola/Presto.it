@@ -27,7 +27,7 @@ body {
 }
 .card:hover {
 
-transition: .3s ease;
+transition: .6s ease;
     transform: perspective(3px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
     background-size: 720%;
 
