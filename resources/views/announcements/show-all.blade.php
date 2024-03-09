@@ -4,7 +4,7 @@
             <div class="row">
                 
                 <div class="col-12 shadow p-5 text-center">
-                    <p class=" display-6">Tutti gli annunci </p>
+                    <p class=" display-6 montserrat text_color">Tutti gli annunci </p>
                 </div>
                 
                 @foreach ($announcements as $announcement)
@@ -22,7 +22,7 @@
                 @endforeach
                 
                 <div class=" d-flex  justify-content-center ">
-                    <div class=" mt-5">
+                    <div class=" mt-5 montserrat text_color_body">
                         {{ $announcements->links() }}
 
                     </div>

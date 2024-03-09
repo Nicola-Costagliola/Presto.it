@@ -2,7 +2,7 @@
 <div class="container text-center mt-3 p-2">
     <div class="row">
         <div class="col-12 shadow p-3">
-            <h1 class="display-5">Annuncio {{ $announcement->title }}</h1>
+            <h1 class="display-5 text_color montserrat">Annuncio {{ $announcement->title }}</h1>
         </div>
     </div>
 </div>
@@ -38,15 +38,15 @@
             {{-- fine carosello --}}
             <div class="row">
                 <div class="col-12 mt-3">
-                    <h3 class="display-5">{{ $announcement->title }}</h3>
+                    <h3 class="display-5 text_color_body montserrat">{{ $announcement->title }}</h3>
 
-                    <p class="card-text">Categoria: {{ $announcement->category->name }}</p>
-                    <p class="card-text">Descrizione: {{ $announcement->body }}</p>
-                    <p class="card-text"><strong>Prezzo: {{$announcement->price}} €</strong></p>
+                    <p class="card-text text_color_body montserrat">Categoria: {{ $announcement->category->name }}</p>
+                    <p class="card-text text_color_body montserrat">Descrizione: {{ $announcement->body }}</p>
+                    <p class="card-text text_color_body montserrat"><strong>Prezzo: {{$announcement->price}} €</strong></p>
                     
                     <x-back />
 
-                    <p><a class="btn shadow btn-secondary " href=" {{route('category.show', ['category' => $announcement->category]) }} ">Esplora la categoria {{$announcement->category->name}} </a></p>
+                    <p><a class="btn shadow btn-secondary text_color_body montserrat " href=" {{route('category.show', ['category' => $announcement->category]) }} ">Esplora la categoria {{$announcement->category->name}} </a></p>
 
                 </div>
             </div>
