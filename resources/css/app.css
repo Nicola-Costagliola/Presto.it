@@ -5,12 +5,12 @@
 
 
 .navbar{
-    background: rgb(15, 16, 74) !important;
+    background: rgb(6, 6, 42) !important;
         /* background: radial-gradient(circle, rgb(208, 255, 151) 0%, rgb(205, 252, 255) 96%); */
 }
 
 .footer{
-    background: rgb(15, 16, 74);
+    background: rgb(6, 6, 42);
         /* background: radial-gradient(circle, rgb(208, 255, 151) 0%, rgb(205, 252, 255)96%); */
 }
 
@@ -29,7 +29,7 @@ body {
 .card {
 
     background: rgb(237, 237, 234);
-        background: radial-gradient(circle, rgb(35, 127, 139) 11%, rgb(15, 16, 74) 100%);
+        background: radial-gradient(circle, rgb(31, 115, 126) 11%, rgb(6, 6, 42) 100%);
 }
 
 .card:hover {
