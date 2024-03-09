@@ -20,7 +20,7 @@
                     :price="$announcement->price /100"
                     :category="$category->name"
                     :created="$announcement->created_at"
-                    route="{{ route('announcements.show', $announcement) }}"
+                    :route="route('category.single.announcement', $announcement )"
                      />
                 </div>
                 @empty

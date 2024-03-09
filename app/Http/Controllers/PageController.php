@@ -20,5 +20,9 @@ class PageController extends Controller
         return view('categories.show-one', compact('category'));
     }
 
+    public function showAnnouncement(Announcement $announcement){
+
+        return view('categories.show_announcement', compact('announcement'));
+    }
 
 }
