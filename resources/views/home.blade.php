@@ -5,13 +5,13 @@
         <h1 class="display-1">Annunci</h1>
         @auth
         <a href=" {{ route('announcements.create') }}" class=" btn btn-success ">Inserisci annuncio</a>
-      </div>
         @endauth
+      </div>
     </div>
 
-    <div class="row mt-5 shadow p-3">
+    <div class="row mt-5 shadow p-3 m-5">
       @foreach($announcements as $announcement)
-      <div class="col-4">
+      <div class="col-12 col-xl-3 col-lg-4 col-md-6 g-3">
         <x-card :title="$announcement->title"
           :category="$announcement->category->name"
           :body="$announcement->body"

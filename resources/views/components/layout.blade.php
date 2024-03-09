@@ -10,14 +10,14 @@
 <body>
     <div class=" container-fluid  ">
         <x-navbar />
-        
+
         {{ $slot }}
-        
-        
-        
-        
+
+
+
+
         <x-footer />
     </div>
-    
+
 </body>
 </html>
