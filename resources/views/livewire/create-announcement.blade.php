@@ -3,8 +3,7 @@
         <div class="col-6 mx-auto ">
 
 
-
-            <h1 class=" mb-3 mt-5 display-5">Crea il tuo annuncio</h1>
+        <h1 class=" mb-3 mt-5 display-5">Crea il tuo annuncio</h1>
 
             <x-back />
             

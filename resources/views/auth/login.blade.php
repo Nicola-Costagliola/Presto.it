@@ -5,7 +5,7 @@
         
         <div class="row mt-2 ">
             <div class="col-md-4 mx-auto ">
-                <div class=" card mt-3  ">
+                <div class=" form card mt-3  ">
 
                     <div class=" card-header text-white  ">
                         Accedi

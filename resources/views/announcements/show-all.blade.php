@@ -4,7 +4,7 @@
             <div class="row">
                 
                 <div class="col-12 shadow p-5 text-center">
-                    <p class=" display-6">Ecco tutti gli annunci: </p>
+                    <p class=" display-6">Tutti gli annunci </p>
                 </div>
                 
                 @foreach ($announcements as $announcement)

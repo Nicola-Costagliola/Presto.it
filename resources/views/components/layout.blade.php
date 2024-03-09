@@ -14,8 +14,6 @@
         {{ $slot }}
 
 
-
-
         <x-footer />
     </div>
 

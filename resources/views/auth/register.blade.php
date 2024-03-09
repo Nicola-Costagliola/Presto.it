@@ -3,7 +3,7 @@
         <h1 class=" mt-3 text-center display-5">Registrati</h1>
         <div class="row">
             <div class="col-md-4 mx-auto ">
-                <div class=" card mt-3  ">
+                <div class=" form card mt-3  ">
                     <div class=" card-header text-white ">
                         Registrati
                     </div>
