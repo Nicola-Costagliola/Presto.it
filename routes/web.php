@@ -25,7 +25,23 @@ Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class,
 
 Route::get('/category/dettaglio/annuncio/{announcement}', [PageController::class, 'showAnnouncement'])->name('category.single.announcement');
 
-Route::get('revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
+// home revisore
+Route::get('revisor/home', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
+
+// accetta annuncio
+Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->name('revisor.acceptAnnouncement');
+
+// rifiuta annuncio
+Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->name('revisor.rejectAnnouncement');
+
+// richiedi di diventare revisore
+Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+
+// rendi un utente revisore
+Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+
+
 
 
 

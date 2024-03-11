@@ -43,8 +43,24 @@
         </div>
         <div class="row">
             <div class="col-12 col-md-6 ">
-                
+
+            <form action="{{ route('revisor.acceptAnnouncement', ['announcement'=>$announcement_to_check]) }}" method="POST">
+            @csrf
+            @method('PATCH')
+                <button type="submit" class="btn btn-success shadow ">Accetta</button>
+            </form>
+
             </div>
+            <div class="col-12 col-md-6 text-end">
+
+            <form action="{{ route('revisor.rejectAnnouncement', ['announcement'=>$announcement_to_check]) }}" method="POST">
+            @csrf
+            @method('PATCH')
+                <button type="submit" class="btn btn-success shadow ">Rifiuta</button>
+            </form>
+
+            </div>
+
         </div>
     </div>
 

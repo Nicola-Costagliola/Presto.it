@@ -2,10 +2,15 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-6">
-                <h5 class="text-white montserrat">Contattaci</h5>
+                <!-- <h5 class="text-white montserrat">Contattaci</h5>
                 <p class="text-white bi bi-envelope-fill montserrat"> Email: info@example.com</p>
                 <p class="text-white bi bi-telephone-fill montserrat"> Telefono: +123 456 789</p>
-            </div>
+            </div> -->
+
+            <p>Vuoi lavorare con noi?</p>
+            <p>Registrati e clicca qui!</p>
+            <a href="{{ route('become.revisor') }}" class="btn btn-warning text-light shadow my-3">Diventa revisore</a>
+
             <div class="col-md-6">
                 <h5 class="text-white montserrat">Seguici</h5>
                 <ul class="list-inline">

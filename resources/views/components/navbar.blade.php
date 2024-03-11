@@ -33,6 +33,7 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{ route('announcements.create') }}">Inserisci annuncio</a>
                 </li>
+                
                 @if(Auth::user()->is_revisor)
                 <li class="nav-item">
                     <a class="nav-link text-white position-relative " aria-current="page" 
