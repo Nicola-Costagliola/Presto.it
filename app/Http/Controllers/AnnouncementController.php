@@ -20,7 +20,7 @@ class AnnouncementController extends Controller
 
     public function showAll (){
 
-        $announcements = Announcement::paginate(5);
+        $announcements = Announcement::paginate(4);
 
         return view('announcements.show-all', compact('announcements'));
     }
