@@ -18,6 +18,7 @@ class BecomeRevisor extends Mailable
      * Create a new message instance.
      */
     public $user;
+
     public function __construct(User $user)
     {
         $this->user = $user;
@@ -29,7 +30,7 @@ class BecomeRevisor extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Become Revisor',
+            subject: 'Richiesta di diventare revisore di ' . $this->user->name ,
         );
     }
 
@@ -38,7 +39,9 @@ class BecomeRevisor extends Mailable
      */
     public function content()
     {
-        return $this->from('presto.it@noreply.com')->view('mail.become_revisor');
+        return new Content(
+            view: 'mail.become_revisor',
+        );
     
     }
 

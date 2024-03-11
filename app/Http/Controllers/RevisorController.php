@@ -32,14 +32,14 @@ class RevisorController extends Controller
 
     public function becomeRevisor()
     {
-        Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
-        return redirect()->back()->with('message', 'Hai richiesto di diventare revisore correttamente');
+        Mail::to('admin@example.com')->send(new BecomeRevisor(Auth::user()));
+        return redirect()->back()->with('message', 'Hai richiesto correttamente di diventare');
     }
 
     public function makeRevisor(User $user)
     {
-        Artisan::call('presto:makeUserRevisor', ["email"=>$user->email]);
-        return redirect('/')->with('message', 'L\'utente è diventato revisore');
+        Artisan::call('presto:MakeUserRevisor', ["email" => $user->email]);
+        return redirect('/')->with('message', 'L\' utente ' . $user->name . ' è diventato revisore');
     }
 
 }
