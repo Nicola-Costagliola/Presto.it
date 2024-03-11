@@ -3,7 +3,7 @@
         <!-- gli elementi inline possono contenere SOLO gli elementi inline senno devi bloccarlo o farlo diventare flex -->
         <a class="navbar-brand d-flex align-items-center " href="{{ route('home') }}">
             <img src="https://picsum.photos/50" class="me-3 rounded-circle " alt="">
-            <a class="testo-primario mb-0 link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-white montserrat"
+            <a class="testo-primario mb-0 link-primary link-offset-2 link-underline-opacity-25 text_title montserrat"
              href="{{ route('home') }}">{{ config('app.name') }}</a>
         </a>
 

@@ -11,8 +11,8 @@
 
             <h5 class="montserrat text-white">Vuoi lavorare con noi?</h5>
             <p class="montserrat text-white">Registrati e clicca qui!</p>
-            <a href="{{ route('become.revisor') }}" class="btn btn-warning text-light shadow my-3 montserrat ">Diventa revisore</a>
-            
+            <a href="{{ route('become.revisor') }}" class="btn btn-primary text-light shadow my-3 montserrat ">Diventa revisore</a>
+
             </div>
 
             <div class="col-md-6">
@@ -27,6 +27,6 @@
     </div>
 
     <div class="text-center mt-3">
-        <p class="text-white montserrat">Presto.it</p>
+        <p class="text_title montserrat">Presto.it</p>
     </div>
 </footer>
