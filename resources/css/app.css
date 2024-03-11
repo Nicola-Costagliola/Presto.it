@@ -2,21 +2,37 @@
 @import "bootstrap-icons";
 
 
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+
+.text_color {
+    color: rgb(83, 115, 231);
+}
+
+.text_color_body {
+    color: rgb(71, 70, 70);
+}
+
 
 
 .navbar{
-    background: rgb(208, 255, 151);
-        background: radial-gradient(circle, rgb(208, 255, 151) 0%, rgb(205, 252, 255) 96%);
+    background: rgb(6, 6, 42) !important;
+        /* background: radial-gradient(circle, rgb(208, 255, 151) 0%, rgb(205, 252, 255) 96%); */
 }
 
 .footer{
-    background: rgb(208, 255, 151);
-        background: radial-gradient(circle, rgb(208, 255, 151) 0%, rgb(205, 252, 255)96%);
+    background: rgb(6, 6, 42);
+        /* background: radial-gradient(circle, rgb(208, 255, 151) 0%, rgb(205, 252, 255)96%); */
 }
 
 body {
-    background: rgb(208, 255, 151);
-        background: radial-gradient(circle, rgb(240, 255, 220) 0%, rgb(218, 253, 255) 96%);
+    background: rgb(238, 241, 243);
+        /* background: radial-gradient(circle, rgb(240, 255, 220) 0%, rgb(218, 253, 255) 96%); */
 }
 
 
@@ -28,8 +44,14 @@ body {
 }
 .card {
 
-    background: rgb(255, 178, 111);
-        background: radial-gradient(circle, rgb(186, 255, 217) 11%, rgb(229, 254, 194) 100%);
+    background: rgb(238, 241, 243);
+        /* background: radial-gradient(circle, rgb(31, 115, 126) 11%, rgb(6, 6, 42) 100%); */
+}
+
+.form {
+
+    background: rgb(238, 241, 243);
+        background: radial-gradient(circle, rgb(238, 241, 243) 11%, rgb(200, 208, 235) 100%);
 }
 
 .card:hover {
@@ -65,7 +87,7 @@ transition: .6s ease;
     top: 0;
     left: 0;
     z-index: -1;
-    background: rgb(239, 255, 186);
+    background: rgb(161, 178, 248);
     transition: all 0.3s ease;
 }
 .btn:hover {

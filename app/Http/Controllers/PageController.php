@@ -11,7 +11,7 @@ class PageController extends Controller
 
     public function home ()
     {
-        $announcements = Announcement::take(6)->orderBy('created_at', 'DESC')->get();
+        $announcements = Announcement::take(8)->orderBy('created_at', 'DESC')->get();
         return view('home',  compact('announcements'));
     }
 
@@ -20,5 +20,9 @@ class PageController extends Controller
         return view('categories.show-one', compact('category'));
     }
 
+    public function showAnnouncement(Announcement $announcement){
+
+        return view('categories.show_announcement', compact('announcement'));
+    }
 
 }
