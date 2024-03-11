@@ -9,7 +9,7 @@
                 
                 @foreach ($announcements as $announcement)
                 
-                <div class="col-3 shadow p-3">
+                <div class="col-12 col-xl-3 col-lg-4 col-md-6 g-3 ">
                     <x-card 
                     :title="$announcement->title"
                     :body="$announcement->body"
