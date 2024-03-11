@@ -11,7 +11,7 @@
         </div>
     </div> -->
 
-    <div class="card shadow border border-primary">
+    <div class="card shadow border border-primary mb-3">
   <img src="https://picsum.photos/100/70" class="card-img-top rounded " alt="...">
   <div class="card-body">
   <h4 class="card-title text-center display-5 text_color_body montserrat">{{ $title }}</h4>
