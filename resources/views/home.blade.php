@@ -15,7 +15,7 @@
         <x-card :title="$announcement->title"
           :category="$announcement->category->name"
           :body="$announcement->body"
-          :price="$announcement->price"
+          :price="$announcement->price /100"
           :created="$announcement->created_at"
           :route="route('announcements.show', $announcement)"
           />
