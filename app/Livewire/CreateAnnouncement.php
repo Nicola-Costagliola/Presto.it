@@ -25,7 +25,7 @@ class CreateAnnouncement extends Component
 
             'title'=>'required',
             'body'=>'required',
-            'price'=>'required|max_digits:8',
+            'price'=>'required|max:100000000|numeric',
 
         ];
 
@@ -38,7 +38,7 @@ class CreateAnnouncement extends Component
             'title.required'=>'Il Titolo è obbligatorio',
             'body.required'=>'La Descrizione è obbligatoria',
             'price.required'=>'Il Prezzo è obbligatorio',
-            'price.max_digits'=>'Il Prezzo deve essere in cifre (massimo 8)',
+            'price.max'=>'Il Prezzo deve essere in cifre (massimo 8)',
 
         ];
     }
@@ -46,9 +46,6 @@ class CreateAnnouncement extends Component
     public function store ()
     {
         $this->validate();
-        
-        $this->price = $this->price * 100;
-
 
         Announcement::create([
             'title' => $this->title,

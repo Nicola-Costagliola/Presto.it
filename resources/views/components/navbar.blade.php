@@ -4,7 +4,7 @@
         <a class="navbar-brand d-flex align-items-center " href="{{ route('home') }}">
             <img src="https://picsum.photos/50" class="me-3 rounded-circle " alt="">
             <a class="testo-primario mb-0 link-primary link-offset-2 link-underline-opacity-25 text_title montserrat"
-             href="{{ route('home') }}">{{ config('app.name') }}</a>
+            href="{{ route('home') }}">{{ config('app.name') }}</a>
         </a>
 
         <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#collasableMenu">
@@ -30,54 +30,54 @@
                     <a class="nav-link text-white montserrat" href="{{ route('announcements.showAll') }}">Annunci</a>
                 </li>
                 @auth
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('announcements.create') }}">Inserisci annuncio</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{{ route('announcements.create') }}">Inserisci annuncio</a>
+                    </li>
 
-                @if(Auth::user()->is_revisor)
-                <li class="nav-item">
-                    <a class="nav-link text-white position-relative " aria-current="page"
-                    href="{{ route('revisor.index') }}">
-                    Annunci da revisionare
-                    <span class=" position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        {{ App\Models\Announcement::toBeRevisionedCount()}}
-                        <span class=" visually-hidden ">unread message</span>
-                    </span>
-                </a>
+                    @if(Auth::user()->is_revisor)
+                        <li class="nav-item">
+                            <a class="nav-link text-white position-relative " aria-current="page"
+                                href="{{ route('revisor.index') }}">
+                                Annunci da revisionare
+                                <span class=" position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                {{ App\Models\Announcement::toBeRevisionedCount()}}
+                                <span class=" visually-hidden ">unread message</span>
+                                </span>
+                            </a>
 
-                </li>
-                @endif
+                        </li>
+                    @endif
                 @endauth
-            </ul>
-
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center ">
-                <form class="d-flex me-4" role="search" action="{{ route('announcements.search')}}" method="GET">
-                    <input class="form-control me-2" name="searched" type="search" placeholder="Cerca" aria-label="Search">
-                    <button class="btn btn-outline text-white montserrat" type="submit">Cerca</button>
-                </form>
-                @guest
-                <li class="nav-item">
-                    <a class="nav-link bi bi-person-fill-add text-white montserrat" href="/register"> Registrati</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link bi bi-box-arrow-in-right text-white montserrat" href="/login"> Accedi</a>
-                </li>
-                @endguest
-
-                @auth
-                <li>
-                    <form action="/logout" method="POST">
-                        @csrf
-                        <button class=" nav-link bi bi-person-fill-add text-white montserrat" type="submit">Esci</button>
-                    </form>
-                </li>
-                @endauth
-            </ul>
-
         </ul>
 
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center ">
+            <form class="d-flex me-4" role="search" action="{{ route('announcements.search')}}" method="GET">
+                <input class="form-control me-2" name="searched" type="search" placeholder="Cerca" aria-label="Search">
+                <button class="btn btn-outline text-white montserrat" type="submit">Cerca</button>
+            </form>
+            @guest
+            <li class="nav-item">
+                <a class="nav-link bi bi-person-fill-add text-white montserrat" href="/register"> Registrati</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link bi bi-box-arrow-in-right text-white montserrat" href="/login"> Accedi</a>
+            </li>
+            @endguest
+
+            @auth
+            <li>
+                <form action="/logout" method="POST">
+                    @csrf
+                    <button class=" nav-link bi bi-person-fill-add text-white montserrat" type="submit">Esci</button>
+                </form>
+            </li>
+            @endauth
+        </ul>
+
+    </ul>
 
 
-    </div>
+
+</div>
 </div>
 </nav>

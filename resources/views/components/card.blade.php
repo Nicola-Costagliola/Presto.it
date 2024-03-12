@@ -1,5 +1,5 @@
 
-<!-- <div class="card shadow">
+{{-- <div class="card shadow">
     <img src="https://picsum.photos/100/70" class="card-img-top p-3 rounded" alt="...">
     <div class="card-body">
         <h4 class="card-title text-center display-5 text-white">{{ $title }}</h4>
@@ -9,7 +9,7 @@
         <a href="{{ $route }}" class=" btn btn-sm btn-primary shadow text-white">Visualizza annuncio</a>
         <p class="card-footer mt-3 mb-0 text-white">Pubblicato il: {{ $created->format('d/m/Y') }}</p>
     </div>
-</div> -->
+</div> --}}
 
 <a href="{{ $route }}">
     <div class=" card shadow border border-primary mb-3 h-100 ">
@@ -27,7 +27,7 @@
                 <small class="text-body-secondary mt-3 mb-0 text_color_body  montserrat ">Pubblicato il: {{
                     $created->format('d/m/Y') }}</small>
             </div>
-            
+
     </div>
 
 

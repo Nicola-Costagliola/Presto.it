@@ -1,19 +1,25 @@
 <footer class="footer shadow text-light text-center py-3 mt-5 container">
     <div class="container mt-5">
         <div class="row">
-            
-                <!-- <h5 class="text-white montserrat">Contattaci</h5>
+
+             <div class="col-6">
+                <h5 class="text-white montserrat">Contattaci</h5>
                 <p class="text-white bi bi-envelope-fill montserrat"> Email: info@example.com</p>
                 <p class="text-white bi bi-telephone-fill montserrat"> Telefono: +123 456 789</p>
-             -->
+             </div>
 
-            <div class="col-md-6">
+            @auth
+                @if(!Auth::user()->is_revisor)
 
-            <h5 class="montserrat text-white">Vuoi lavorare con noi?</h5>
-            <p class="montserrat text-white">Registrati e clicca qui!</p>
-            <a href="{{ route('become.revisor') }}" class="btn btn-primary text-light shadow my-3 montserrat ">Diventa revisore</a>
+                    <div class="col-md-6">
+                        <h5 class="montserrat text-white">Vuoi lavorare con noi?</h5>
+                        <p class="montserrat text-white">Registrati e clicca qui!</p>
+                        <a href="{{ route('become.revisor') }}" class="btn btn-primary text-light shadow my-3 montserrat">Diventa revisore</a>
+                    </div>
 
-            </div>
+                @endif
+            @endauth
+
 
             <div class="col-md-6">
                 <h5 class="text-white montserrat">Seguici</h5>
