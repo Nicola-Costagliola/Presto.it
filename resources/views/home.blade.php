@@ -22,7 +22,7 @@
       </div>
     </div>
     
-    <div class="row mt-5 shadow  container ">
+    <div class="row mt-5 shadow  ">
       @foreach($announcements as $announcement)
       <div class="col-12 col-xl-3 col-lg-4 col-md-6 g-3  ">
         <x-card  :title="$announcement->title"
