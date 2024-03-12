@@ -51,6 +51,10 @@
             </ul>
 
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center ">
+                <form class="d-flex me-4" role="search" action="{{ route('announcements.search')}}" method="GET">
+                    <input class="form-control me-2" name="searched" type="search" placeholder="Cerca" aria-label="Search">
+                    <button class="btn btn-outline text-white montserrat" type="submit">Cerca</button>
+                </form>
                 @guest
                 <li class="nav-item">
                     <a class="nav-link bi bi-person-fill-add text-white montserrat" href="/register"> Registrati</a>
@@ -59,15 +63,12 @@
                     <a class="nav-link bi bi-box-arrow-in-right text-white montserrat" href="/login"> Accedi</a>
                 </li>
                 @endguest
-                <form class="d-flex" role="search" action="{{ route('announcements.search')}}" method="GET">
-                    <input class="form-control me-2" name="searched" type="search" placeholder="Cerca" aria-label="Search">
-                    <button class="btn btn-outline text-white montserrat" type="submit">Cerca</button>
-                </form>
+
                 @auth
                 <li>
                     <form action="/logout" method="POST">
                         @csrf
-                        <button class=" dropdown-item bi bi-arrow-bar-left  text-white montserrat" type="submit">Esci</button>
+                        <button class=" nav-link bi bi-person-fill-add text-white montserrat" type="submit">Esci</button>
                     </form>
                 </li>
                 @endauth
