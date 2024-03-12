@@ -19,9 +19,10 @@ class BecomeRevisor extends Mailable
      */
     public $user;
 
-    public function __construct(User $user)
+    public function __construct(User $user, public $msg )
     {
         $this->user = $user;
+
     }
 
     /**
@@ -42,7 +43,7 @@ class BecomeRevisor extends Mailable
         return new Content(
             view: 'mail.become_revisor',
         );
-    
+
     }
 
     /**

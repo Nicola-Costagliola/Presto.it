@@ -12,6 +12,7 @@
         <h2>ecco i suoi dati</h2>
         <p>Nome: {{ $user->name }}</p>
         <p>Email: {{ $user->email }}</p>
+        <p>Motivo richiesta: {{ $msg }}</p>
         <p>Se vuoi renderlo revisore clicca qui</p>
         <button>
             <a href="{{ route('make.revisor', $user )}}">Rendi revisore</a>

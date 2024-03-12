@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Mail;
 
 class RevisorController extends Controller
 {
-    public function index() 
+    public function index()
     {
         $announcement_to_check = Announcement::where('is_accepted', null)->first();
         return view('revisor.index', compact('announcement_to_check'));
@@ -38,11 +38,12 @@ class RevisorController extends Controller
     public function becomeRevisorSend(Request $request)
     {
 
-        Mail::to('admin@example.com')->send(new BecomeRevisor(Auth::user()));
-    
+
+        Mail::to('admin@example.com')->send(new BecomeRevisor( Auth::user(), $request->msg ));
+
 
         // Mail::to(''$request->user())->send(new OrderShipped($order));
- 
+
         // return redirect('/orders');
 
         return redirect()->back()->with(['message' => 'La richiesta è stata inviata correttamente']);

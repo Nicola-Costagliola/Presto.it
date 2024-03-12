@@ -1,5 +1,5 @@
 <x-layout>
-    
+
 
     <div class="container mt-4">
     <div class="row">
@@ -20,18 +20,8 @@
                             <div class="row g-3">
 
                                 <div class="col-12">
-                                    <label for="name" class="montserrat text_color_body">Nome</label>
-                                    <input type="text" id="name" name="name" class="form-control">
-                                </div>
-
-                                <div class="col-12">
-                                    <label for="email" class="montserrat text_color_body">Email</label>
-                                    <input type="email" id="email" name="email" class="form-control">
-                                </div>
-
-                                <div class="col-12">
-                                    <label for="message" class="montserrat text_color_body">Messaggio</label>
-                                    <input type="message" id="message" rows="6" class="form-control">
+                                    <label for="msg" class="montserrat text_color_body">Motivo della richiesta</label>
+                                    <textarea name="msg" id="msg" rows="3" class="form-control"></textarea>
                                 </div>
 
                                 <div class="col-12">
@@ -43,7 +33,7 @@
                         </form>
                     </div>
 
-                
+
                 </div>
             </div>
     </div>
