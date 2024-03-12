@@ -6,6 +6,8 @@ use App\Models\Announcement;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
+use function Laravel\Prompts\search;
+
 class PageController extends Controller
 {
 
@@ -23,6 +25,13 @@ class PageController extends Controller
     public function showAnnouncement(Announcement $announcement){
 
         return view('categories.show_announcement', compact('announcement'));
+    }
+
+    public function searchAnnouncements(Request $request)
+    {
+        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(4);
+
+        return view('announcements.show-all', compact('announcements'));
     }
 
 }

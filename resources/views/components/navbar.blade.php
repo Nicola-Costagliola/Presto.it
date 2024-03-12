@@ -33,10 +33,10 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{ route('announcements.create') }}">Inserisci annuncio</a>
                 </li>
-                
+
                 @if(Auth::user()->is_revisor)
                 <li class="nav-item">
-                    <a class="nav-link text-white position-relative " aria-current="page" 
+                    <a class="nav-link text-white position-relative " aria-current="page"
                     href="{{ route('revisor.index') }}">
                     Annunci da revisionare
                     <span class=" position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -44,7 +44,7 @@
                         <span class=" visually-hidden ">unread message</span>
                     </span>
                 </a>
-                    
+
                 </li>
                 @endif
                 @endauth
@@ -59,6 +59,10 @@
                     <a class="nav-link bi bi-box-arrow-in-right text-white montserrat" href="/login"> Accedi</a>
                 </li>
                 @endguest
+                <form class="d-flex" role="search" action="{{ route('announcements.search')}}" method="GET">
+                    <input class="form-control me-2" name="searched" type="search" placeholder="Cerca" aria-label="Search">
+                    <button class="btn btn-outline text-white montserrat" type="submit">Cerca</button>
+                </form>
                 @auth
                 <li>
                     <form action="/logout" method="POST">
@@ -70,6 +74,9 @@
             </ul>
 
         </ul>
+
+
+
     </div>
 </div>
 </nav>

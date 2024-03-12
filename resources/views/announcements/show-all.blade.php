@@ -2,25 +2,34 @@
     <div class="container mt-5 text-center">
         <div class="col-12 mt-5">
             <div class="row">
-                
+
                 <div class="col-12 shadow p-5 text-center">
                     <p class=" display-6 montserrat text_color">Tutti gli annunci </p>
                 </div>
-                
-                @foreach ($announcements as $announcement)
-                
-                <div class="col-12 col-xl-3 col-lg-4 col-md-6 g-3 ">
-                    <x-card 
-                    :title="$announcement->title"
-                    :body="$announcement->body"
-                    :price="$announcement->price /100"
-                    :category="$announcement->category->name"
-                    :created="$announcement->created_at"
-                    route="{{ route('announcements.show', $announcement) }}"
-                    />
-                </div>
-                @endforeach
-                
+
+                @forelse ($announcements as $announcement)
+
+                    <div class="col-12 col-xl-3 col-lg-4 col-md-6 g-3 ">
+                        <x-card
+                        :title="$announcement->title"
+                        :body="$announcement->body"
+                        :price="$announcement->price /100"
+                        :category="$announcement->category->name"
+                        :created="$announcement->created_at"
+                        route="{{ route('announcements.show', $announcement) }}"
+                        />
+                    </div>
+
+                @empty
+                    <div class="row ">
+
+                        <div class="col-12 text-center shadow p-5 mt-5">
+                            <p class="h1 montserrat text_color_body">Non sono presenti annunci per questa ricerca</p>
+                        </div>
+                    </div>
+
+                @endforelse
+
                 <div class=" d-flex  justify-content-center ">
                     <div class=" mt-5 montserrat text_color_body">
                         {{ $announcements->links() }}
@@ -28,7 +37,7 @@
                     </div>
                 </div>
 
-                
+
             </div>
         </div>
     </div>

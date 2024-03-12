@@ -41,6 +41,9 @@ Route::post('/richiesta/revisore/invia', [RevisorController::class, 'becomeRevis
 // rendi un utente revisore
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
+//ricerca annuncio
+Route::get('/ricerca/annuncio', [PageController::class, 'searchAnnouncements'])->name('announcements.search');
+
 
 
 
@@ -51,5 +54,3 @@ Route::middleware('auth')->group( function () {
 
     Route::get('/nuovo/annuncio/', [AnnouncementController::class, 'createAnnouncement'])->name('announcements.create');
 });
-
-
