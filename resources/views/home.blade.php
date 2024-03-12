@@ -21,8 +21,8 @@
         @endauth
       </div>
     </div>
-    
-    <div class="row mt-5 shadow  ">
+
+    <div class="row mt-5 shadow  p-2">
       @foreach($announcements as $announcement)
       <div class="col-12 col-xl-3 col-lg-4 col-md-6 g-3  ">
         <x-card  :title="$announcement->title"
@@ -36,7 +36,6 @@
         @endforeach
       </div>
     </div>
-    
-    
+
+
   </x-layout>
-  
