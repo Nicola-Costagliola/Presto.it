@@ -20,7 +20,8 @@
                     </a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
-                        <li><a class="dropdown-item text_color montserrat" href="{{ route('category.show', $category ) }}">{{ $category->name }}</a></li>
+                        <li><a class="dropdown-item text_color montserrat" href="{{ route('category.show', $category ) }}">
+                            {{ $category->name }}</a></li>
                         <li><hr class="dropdown-divider"></li>
                         @endforeach
                     </ul>
@@ -36,7 +37,7 @@
 
                     @if(Auth::user()->is_revisor)
                         <li class="nav-item">
-                            <a class="nav-link text-white position-relative " aria-current="page"
+                            <a class="nav-link text-white position-relative me-2" aria-current="page"
                                 href="{{ route('revisor.index') }}">
                                 Annunci da revisionare
                                 <span class=" position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -50,9 +51,9 @@
                 @endauth
         </ul>
 
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center ">
-            <form class="d-flex me-4" role="search" action="{{ route('announcements.search')}}" method="GET">
-                <input class="form-control me-2" name="searched" type="search" placeholder="Cerca" aria-label="Search">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center  ">
+            <form class="d-flex " role="search" action="{{ route('announcements.search')}}" method="GET">
+                <input class="form-control me-2 p-0 " name="searched" type="search" placeholder="Cerca" aria-label="Search">
                 <button class="btn btn-outline text-white montserrat" type="submit">Cerca</button>
             </form>
             @guest

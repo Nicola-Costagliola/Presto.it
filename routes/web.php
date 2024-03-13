@@ -34,6 +34,8 @@ Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acc
 // rifiuta annuncio
 Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->name('revisor.rejectAnnouncement');
 
+Route::patch('/revisiona/annuncio/{announcement}', [RevisorController::class, 'reviewedAnnouncement'])->name('revisor.reviewedAnnouncement');
+
 // richiedi di diventare revisore
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 Route::post('/richiesta/revisore/invia', [RevisorController::class, 'becomeRevisorSend'])->middleware('auth')->name('become.revisor.send');

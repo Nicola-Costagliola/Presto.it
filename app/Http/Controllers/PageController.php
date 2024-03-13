@@ -13,7 +13,7 @@ class PageController extends Controller
 
     public function home ()
     {
-        $announcements = Announcement::where('is_accepted', true)->take(8)->orderBy('created_at', 'DESC')->get();
+        $announcements = Announcement::where('is_accepted', true)->take(4)->orderBy('created_at', 'DESC')->get();
         return view('home',  compact('announcements'));
     }
 

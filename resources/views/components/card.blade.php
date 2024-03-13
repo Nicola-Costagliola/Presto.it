@@ -17,10 +17,10 @@
         <div class="card-body h-100  ">
             <h4 class="card-title text-center display-5 text_color_body montserrat">{{ $title }}</h4>
             <p class="card-text text_color_body montserrat fs-4">Categoria: {{ $category }}</p>
-            <!-- <p class="card-text text_color_body montserrat">Descrizione: {{ $body }}</p> -->
+            {{-- <p class="card-text text_color_body montserrat">Descrizione: {{ $body }}</p> --}}
             <p class="card-text text_color_body fs-4"><strong>Prezzo: {{$price}} €</strong></p>
             {{-- <a href="{{ $route }}" class=" btn btn-sm btn-primary shadow text_color_body montserrat">Visualizza annuncio</a> --}}
-            <!-- <p class="card-footer mt-3 mb-0 text_color_body  montserrat"  >Pubblicato il: {{ $created->format('d/m/Y') }}</p> -->
+            {{-- <p class="card-footer mt-3 mb-0 text_color_body  montserrat"  >Pubblicato il: {{ $created->format('d/m/Y') }}</p> --}}
         </div>
 
             <div class="card-footer mt-5  mb-0 text_color_body ">

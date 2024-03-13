@@ -27,7 +27,7 @@ class RevisorController extends Controller
     public function rejectAnnouncement (Announcement $announcement)
     {
         $announcement->setAccepted(false);
-        return redirect()->back()->with('message', 'Annuncio rifiutato');
+        return redirect()->back()->with('message', 'Annuncio respinto');
     }
 
     public function becomeRevisor()
@@ -55,6 +55,12 @@ class RevisorController extends Controller
     {
         Artisan::call('presto:MakeUserRevisor', ["email" => $user->email]);
         return redirect('/')->with('message', 'L\' utente ' . $user->name . ' è diventato revisore');
+    }
+
+    public function reviewedAnnouncement (Announcement $announcement)
+    {
+        $announcement->setAccepted(null);
+        return redirect()->back()->with('message', 'Annuncio da revisionare');
     }
 
 }
