@@ -18,6 +18,11 @@ class RevisorController extends Controller
         return view('revisor.index', compact('announcement_to_check'));
     }
 
+    public function manage()
+    {
+        return view('revisor.manage');
+    }
+
     public function acceptAnnouncement (Announcement $announcement)
     {
         $announcement->setAccepted(true);

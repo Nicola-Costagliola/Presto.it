@@ -36,17 +36,14 @@
                     </li>
 
                     @if(Auth::user()->is_revisor)
-                        <li class="nav-item">
-                            <a class="nav-link text-white position-relative me-2" aria-current="page"
-                                href="{{ route('revisor.index') }}">
-                                Annunci da revisionare
-                                <span class=" position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    <li class="nav-item">
+                        <a class="nav-link text-white position-relative " href="{{ route('revisor.manage') }}">Gestisci annunci
+                            <span class=" position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 {{ App\Models\Announcement::toBeRevisionedCount()}}
                                 <span class=" visually-hidden ">unread message</span>
                                 </span>
-                            </a>
-
-                        </li>
+                        </a>
+                    </li>
                     @endif
                 @endauth
         </ul>

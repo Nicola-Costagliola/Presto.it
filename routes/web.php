@@ -28,6 +28,8 @@ Route::get('/category/dettaglio/annuncio/{announcement}', [PageController::class
 // home revisore
 Route::get('revisor/home', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 
+Route::get('revisor/manage', [RevisorController::class, 'manage'])->middleware('isRevisor')->name('revisor.manage');
+
 // accetta annuncio
 Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->name('revisor.acceptAnnouncement');
 
