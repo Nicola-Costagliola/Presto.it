@@ -47,13 +47,17 @@ class CreateAnnouncement extends Component
     {
         $this->validate();
 
-        Announcement::create([
+        $announcement= Announcement::create([
             'title' => $this->title,
             'body' => $this->body,
             'price' => $this->price,
             'category_id' => $this->category,
         ]);
 
+        $announcement->user_id = auth()->user('')->id;
+
+        $announcement->save();
+        
         $this->resetForm();
 
 
