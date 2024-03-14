@@ -3,12 +3,12 @@
         <div class="row">
             <div class="col-12 mt-4 mb-4 ">
                 <h1 class=" display-2 text-center">
-                    {{ $announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
+                    {{ $announcement ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
                 </h1>
             </div>
         </div>
     </div>
-    @if ($announcement_to_check)
+    @if ($announcement)
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -36,15 +36,15 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-                <h5 class=" card-title ">Titolo: {{ $announcement_to_check->title }}</h5>
-                <p class=" card-title ">Descrizione: {{ $announcement_to_check->body }}</p>
-                <p class=" card-title ">Pubblicato il: {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
+                <h5 class=" card-title ">Titolo: {{ $announcement->title }}</h5>
+                <p class=" card-title ">Descrizione: {{ $announcement->body }}</p>
+                <p class=" card-title ">Pubblicato il: {{ $announcement->created_at }}</p>
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-md-6 ">
 
-            <form action="{{ route('revisor.acceptAnnouncement', ['announcement'=>$announcement_to_check]) }}" method="POST">
+            <form action="{{ route('revisor.acceptAnnouncement', $announcement) }}" method="POST">
             @csrf
             @method('PATCH')
                 <button type="submit" class="btn btn-success shadow ">Accetta</button>
@@ -53,7 +53,7 @@
             </div>
             <div class="col-12 col-md-6 text-end">
 
-            <form action="{{ route('revisor.rejectAnnouncement', ['announcement'=>$announcement_to_check]) }}" method="POST">
+            <form action="{{ route('revisor.rejectAnnouncement',$announcement) }}" method="POST">
             @csrf
             @method('PATCH')
                 <button type="submit" class="btn btn-success shadow ">Rifiuta</button>

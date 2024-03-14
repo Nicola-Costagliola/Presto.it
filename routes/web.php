@@ -26,7 +26,7 @@ Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class,
 Route::get('/category/dettaglio/annuncio/{announcement}', [PageController::class, 'showAnnouncement'])->name('category.single.announcement');
 
 // home revisore
-Route::get('revisor/home', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
+Route::get('revisor/home/{announcement}', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 
 Route::get('revisor/manage', [RevisorController::class, 'manage'])->middleware('isRevisor')->name('revisor.manage');
 

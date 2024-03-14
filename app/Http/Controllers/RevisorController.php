@@ -12,10 +12,10 @@ use Illuminate\Support\Facades\Mail;
 
 class RevisorController extends Controller
 {
-    public function index()
+    public function index(Announcement $announcement)
     {
-        $announcement_to_check = Announcement::where('is_accepted', null)->first();
-        return view('revisor.index', compact('announcement_to_check'));
+    
+        return view('revisor.index', compact('announcement'));
     }
 
     public function manage()
@@ -26,13 +26,13 @@ class RevisorController extends Controller
     public function acceptAnnouncement (Announcement $announcement)
     {
         $announcement->setAccepted(true);
-        return redirect()->back()->with('message', 'Annuncio accettato');
+        return redirect( route('revisor.manage'))->with('message', 'Annuncio accettato');
     }
 
     public function rejectAnnouncement (Announcement $announcement)
     {
         $announcement->setAccepted(false);
-        return redirect()->back()->with('message', 'Annuncio respinto');
+        return redirect( route('revisor.manage'))->with('error', 'Annuncio è stato rifiutato');
     }
 
     public function becomeRevisor()
