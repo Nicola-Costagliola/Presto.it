@@ -23,12 +23,23 @@ class DatabaseSeeder extends Seeder
          \App\Models\Category::factory()->create(['name'=>'Sport']);
          \App\Models\Category::factory()->create(['name'=>'Make-up']);
 
-        
+
+        // \App\Models\User::factory(10)->create();
+
+        \App\Models\User::factory()->create([
+            'name' => 'Revisor',
+            'email' => 'test@example.com',
+            'password' => 'Presto@123',
+            'is_revisor' => true
+        ]);
+
+
          \App\Models\Announcement::factory()->create([
             'title'=>'Pallone Volley',
             'body'=>'MIKASA Pallone Volley Allenamento V330W, Unisex Adulto, Blu/Giallo, 5',
             'price'=>'45',
             'category_id'=>9,
+            'user_id'=>1,
         ]);
 
         \App\Models\Announcement::factory()->create([
@@ -36,6 +47,7 @@ class DatabaseSeeder extends Seeder
             'body'=>'ARENA Cappello da Bagno Poliestere II, Nuoto Unisex Adulto',
             'price'=>'6',
             'category_id'=>9,
+            'user_id' => 1,
         ]);
 
         \App\Models\Announcement::factory()->create([
@@ -43,6 +55,7 @@ class DatabaseSeeder extends Seeder
             'body'=>'Athlyt - Set di manubri rivestiti in neoprene',
             'price'=>'40',
             'category_id'=>9,
+            'user_id' => 1,
         ]);
 
         \App\Models\Announcement::factory()->create([
@@ -50,6 +63,7 @@ class DatabaseSeeder extends Seeder
             'body'=>'Intex Beanless Bag - Poltrona a sacco, Grigio, 1.14 m x 1.14 m x 71 cm',
             'price'=>'40',
             'category_id'=>7,
+            'user_id' => 1,
         ]);
 
         \App\Models\Announcement::factory()->create([
@@ -57,6 +71,7 @@ class DatabaseSeeder extends Seeder
             'body'=>'Morellato Bracciale da donna, Collezione CERCHI, in acciaio, pietra - SAKM63',
             'price'=>'34',
             'category_id'=>7,
+            'user_id' => 1,
         ]);
 
         \App\Models\Announcement::factory()->create([
@@ -64,6 +79,7 @@ class DatabaseSeeder extends Seeder
             'body'=>'B.Catcher Collana con pendenti gemelli in zircone cubico ed argento 925',
             'price'=>'19',
             'category_id'=>7,
+            'user_id' => 1,
         ]);
 
         \App\Models\Announcement::factory()->create([
@@ -71,6 +87,7 @@ class DatabaseSeeder extends Seeder
             'body'=>'Tommy Hilfiger Analogue Quartz Watch for Men, Stainless Steel',
             'price'=>'170',
             'category_id'=>7,
+            'user_id' => 1,
         ]);
 
         \App\Models\Announcement::factory()->create([
@@ -78,6 +95,7 @@ class DatabaseSeeder extends Seeder
             'body'=>'Orecchini Argento Mari Del Sud Piccoli Giovanni Raspini',
             'price'=>'260',
             'category_id'=>7,
+            'user_id' => 1,
         ]);
 
         \App\Models\Announcement::factory()->create([
@@ -85,19 +103,10 @@ class DatabaseSeeder extends Seeder
             'body'=>'Makeup Revolution Correttore e definitore C3, 4 ml',
             'price'=>'5',
             'category_id'=>10,
+            'user_id' => 1,
         ]);
 
 
 
-
-
-        // \App\Models\User::factory(10)->create();
-
-         \App\Models\User::factory()->create([
-            'name' => 'Revisor',
-            'email' => 'test@example.com',
-            'password' => 'Presto@123',
-            'is_revisor' => true
-         ]);
     }
 }
