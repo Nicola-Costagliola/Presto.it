@@ -1,4 +1,4 @@
-<div class=" container mb-5 text-center mt-3 p-5 ">
+<div class=" container mb-5  mt-3 p-5 ">
     <div class="row">
         <div class="col-12 shadow p-3 ">
             <h1 class=" text-center display-4">Gestisci annunci</h1>
@@ -7,7 +7,7 @@
     </div>
     <div class="row">
         {{-- Tabella funzionante --}}
-        <div class="col-12 shadow p-5">
+        {{-- <div class="col-12 shadow p-5">
             <table class="table table-bordered mt-3">
                 <tr>
                     <th>#</th>
@@ -36,14 +36,14 @@
                 @endif
                 @endforeach
             </table>
-        </div>
+        </div> --}}
         {{-- Implementazione according --}}
 
         {{-- la classe di bootstrap collapsaOne-- collapse{{$number}}  per l'according prende un numero in inglese che non riesco a passare e quindi cliccaldo su un annuncio me li apre tutti --}}
 
-        {{-- <div class="col-12 shadow p-5">
+        <div class="col-12 shadow p-5">
             @foreach($announcements as $announcement)
-            {{$number = $numbers}}
+
 
 
             @if($announcement->is_accepted == null && $announcement->is_accepted == false )
@@ -52,11 +52,11 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header ">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapse{{$number}}" aria-expanded="false" aria-controls="flush-collapse{{$number}}">
+                            data-bs-target="#flush-collapse{{$announcement->id}}" aria-expanded="false" aria-controls="flush-collapse{{$announcement->id}}">
                             {{ $announcement->title }}
                         </button>
                     </h2>
-                    <div id="flush-collapse{{$number}}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div id="flush-collapse{{$announcement->id}}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <div class="row">
                                 <div class="col-4 my-auto ">
@@ -120,7 +120,7 @@
 
                 @endif
 
-                @endforeach --}}
+                @endforeach
         </div>
     </div>
 </div>
