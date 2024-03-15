@@ -6,6 +6,18 @@
 
       <div class="col-12 mb-5 p-2 ">
 
+          @if(session()->has('access.denied'))
+          <div class="alert alert-danger montserrat">
+            {{ session('access.denied') }}
+          </div>
+          @endif
+
+          @if(session()->has('message'))
+          <div class="alert alert-success montserrat">
+            {{ session('message') }}
+          </div>
+          @endif
+
         <div class="z-4 position-absolute p-5 m-5 ">
           <h1 class="tracking-in-expand display-1  ">Presto.it</h1>
         </div>
@@ -14,17 +26,7 @@
       </div>
       <div class="col-12 shadow p-5">
 
-        @if(session()->has('access.denied'))
-        <div class="alert alert-danger montserrat">
-          {{ session('access.denied') }}
-        </div>
-        @endif
 
-        @if(session()->has('message'))
-        <div class="alert alert-success montserrat">
-          {{ session('message') }}
-        </div>
-        @endif
 
 
 
