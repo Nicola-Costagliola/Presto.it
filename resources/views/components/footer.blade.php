@@ -1,4 +1,4 @@
-<footer class="footer shadow text-light text-center py-3 mt-5 container">
+<footer class="footer shadow text-light text-center py-3 mt-5 container ">
     <div class="container mt-5">
         <div class="row">
 
@@ -33,6 +33,6 @@
     </div>
 
     <div class="text-center mt-3">
-        <p class="text_title montserrat">Presto.it</p>
+        <p class="text_title montserrat display-6">Presto.it</p>
     </div>
 </footer>
