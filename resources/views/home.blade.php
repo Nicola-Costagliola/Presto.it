@@ -1,17 +1,17 @@
 <x-layout>
   <div class="container mb-5 text-center mt-3 p-5">
 
-  
+
     <div class="row ">
 
-    <div class="col-12 mb-5 p-2 ">
+      <div class="col-12 mb-5 p-2 ">
 
-          <div class="z-4 position-absolute p-5 m-5 ">
+        <div class="z-4 position-absolute p-5 m-5 ">
           <h1 class="tracking-in-expand display-1  ">Presto.it</h1>
-          </div>
-          <img  class="img-fluid opacity-50 card-img " src="https://picsum.photos/2000/1000" alt="" > 
-          
         </div>
+        <img  class="img-fluid opacity-50 card-img " src="https://picsum.photos/2000/1000" alt="" >
+
+      </div>
       <div class="col-12 shadow p-5">
 
         @if(session()->has('access.denied'))
@@ -26,7 +26,7 @@
         </div>
         @endif
 
-      
+
 
         <h1 class="display-3 text_color montserrat">Annunci</h1>
 
@@ -36,10 +36,10 @@
       </div>
     </div>
 
-    <div class="row mt-5 shadow">
+    <div class="row mt-5 shadow p-5 g-3">
       @foreach($announcements as $announcement)
       <div class="col-12 col-xl-4 col-lg-4 col-md-6 align-content-center ">
-        <x-card  :title="$announcement->title"
+          <x-card  :title="$announcement->title"
           :category="$announcement->category->name"
           :body="$announcement->body"
           :price="$announcement->price"
@@ -47,9 +47,8 @@
           :route="route('announcements.show', $announcement)"
           />
         </div>
-        @endforeach
-      </div>
+          @endforeach
     </div>
+  </div>
 
-
-  </x-layout>
+</x-layout>

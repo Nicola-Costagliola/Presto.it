@@ -20,7 +20,7 @@ class AnnouncementController extends Controller
 
     public function showAll (){
 
-        $announcements = Announcement::where('is_accepted', true)->paginate(3);
+        $announcements = Announcement::where('is_accepted', true)->paginate(6);
 
         return view('announcements.show-all', compact('announcements'));
     }

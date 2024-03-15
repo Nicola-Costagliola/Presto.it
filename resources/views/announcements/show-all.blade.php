@@ -1,12 +1,13 @@
 <x-layout>
     <div class="container mt-5 text-center">
-        <div class="col-12 mt-5">
+        <div class="col-12 mt-5 ">
             <div class="row">
 
                 <div class="col-12 shadow p-5 text-center">
                     <p class=" display-6 montserrat text_color">Tutti gli annunci </p>
                 </div>
 
+                <div class="row mt-5 shadow p-5 g-3">
                 @forelse ($announcements as $announcement)
 
                 <div class="col-12 col-xl-4 col-lg-4 col-md-6 align-content-center ">
@@ -27,7 +28,8 @@
                         </div>
                     </div>
 
-                @endforelse
+                    @endforelse
+                </div>
 
                 <div class=" d-flex  justify-content-center ">
                     <div class=" mt-5 montserrat text_color_body">
