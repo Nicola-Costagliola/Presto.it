@@ -40,8 +40,11 @@ a {
 body {
     background: rgb(238, 241, 243);
         /* background: radial-gradient(circle, rgb(240, 255, 220) 0%, rgb(218, 253, 255) 96%); */
+        font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
 }
-
 
 
 .form {
