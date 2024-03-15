@@ -14,7 +14,6 @@ class RevisorController extends Controller
 {
     public function index(Announcement $announcement)
     {
-        $numbers =['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen',];
         return view('revisor.index', compact(['announcement', 'numbers']));
     }
 

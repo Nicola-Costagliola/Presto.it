@@ -53,7 +53,16 @@
                     <h2 class="accordion-header ">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse{{$announcement->id}}" aria-expanded="false" aria-controls="flush-collapse{{$announcement->id}}">
-                            {{ $announcement->title }}
+                            <div class="col-6">
+                                {{ $announcement->title }}
+                            </div>
+                            <div class="col-6">
+                                @if($announcement->is_accepted === null)
+                                <span class="text-warning">Da revisonare</span>
+                                @elseif ($announcement->is_accepted === 0)
+                                <span class="text-danger">Scartato</span>
+                                @endif
+                            </div>
                         </button>
                     </h2>
                     <div id="flush-collapse{{$announcement->id}}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">

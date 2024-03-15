@@ -9,13 +9,13 @@ class RevisorList extends Component
 {
 
     public $announcements = [];
-    
+
 
     // viene richiamato solo appena si inizializza la pagina
-    public function mount() {
-
-        $this->announcements = Announcement::all();
-
+    public function mount()
+    {
+        $this->announcements = Announcement::orderBy('created_at', 'DESC')->orderBy('is_accepted', 'ASC',)->get();
+        // $this->announcements = Announcement::all();
     }
 
 
