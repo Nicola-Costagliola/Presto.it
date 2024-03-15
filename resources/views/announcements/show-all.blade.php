@@ -9,16 +9,15 @@
 
                 @forelse ($announcements as $announcement)
 
-                    <div class="col-12 col-xl-3 col-lg-4 col-md-6 g-3 ">
-                        <x-card
-                        :title="$announcement->title"
-                        :body="$announcement->body"
-                        :price="$announcement->price /100"
-                        :category="$announcement->category->name"
-                        :created="$announcement->created_at"
-                        route="{{ route('announcements.show', $announcement) }}"
-                        />
-                    </div>
+                <div class="col-12 col-xl-4 col-lg-4 col-md-6 align-content-center ">
+                <x-card  :title="$announcement->title"
+                :category="$announcement->category->name"
+                :body="$announcement->body"
+                :price="$announcement->price"
+                :created="$announcement->created_at"
+                :route="route('announcements.show', $announcement)"
+                />
+                </div>
 
                 @empty
                     <div class="row ">

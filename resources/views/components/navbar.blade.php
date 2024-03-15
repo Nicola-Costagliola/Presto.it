@@ -55,10 +55,10 @@
             </form>
             @guest
             <li class="nav-item">
-                <a class="nav-link bi bi-person-fill-add text-white montserrat " href="/register"> Registrati</a>
+                <a class="nav-link bi bi-person-fill-add text-white montserrat m-2 " href="/register"> Registrati</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link bi bi-box-arrow-in-right text-white montserrat " href="/login"> Accedi</a>
+                <a class="nav-link bi bi-box-arrow-in-right text-white montserrat m-2" href="/login"> Accedi</a>
             </li>
             @endguest
 
@@ -66,7 +66,7 @@
             <li>
                 <form action="/logout" method="POST">
                     @csrf
-                    <button class=" nav-link bi bi-person-fill-add text-white montserrat " type="submit">Esci</button>
+                    <button class=" nav-link bi bi-person-fill-add text-white montserrat m-2 " type="submit">Esci</button>
                 </form>
             </li>
             @endauth
