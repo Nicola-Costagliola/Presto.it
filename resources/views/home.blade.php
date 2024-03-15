@@ -29,15 +29,16 @@
       
 
         <h1 class="display-3 text_color montserrat">Annunci</h1>
+
         @auth
         <a href=" {{ route('announcements.create') }}" class=" btn text_color_body montserrat ">Inserisci annuncio</a>
         @endauth
       </div>
     </div>
 
-    <div class="row mt-5 shadow  p-2">
+    <div class="row mt-5 shadow">
       @foreach($announcements as $announcement)
-      <div class="col-12 col-xl-3 col-lg-4 col-md-6 g-3  ">
+      <div class="col-12 col-xl-4 col-lg-4 col-md-6 align-content-center ">
         <x-card  :title="$announcement->title"
           :category="$announcement->category->name"
           :body="$announcement->body"

@@ -34,15 +34,15 @@
 
 <a href="{{ $route }}">
 
-<div class="card mb-3 card reveal reveal.active shadow border border-primary h-100" style="max-width: 700px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="https://picsum.photos/200/500" class="img-fluid rounded-start" alt="...">
+<div class="card card reveal reveal.active shadow border border-primary h-75 ">
+  <div class="row ">
+    <div class="col-md-6">
+      <img src="https://picsum.photos/600/400" class="img-fluid rounded-start h-75 " alt="...">
     </div>
-    <div class="col-md-8">
+    <div class="col-md-6">
 
-    <div class="card-body h-100 ">
-            <h4 class="card-title text-center  text_color_body display-6 montserrat">{{ $title }}</h4>
+    <div class="card-body h-75 align-content-center ">
+            <h4 class="card-title text-center  text_color_body display-6 montserrat ">{{ $title }}</h4>
             <p class="card-text text_color_body montserrat fs-5">Categoria: {{ $category }}</p>
             <!-- {{-- <p class="card-text text_color_body montserrat">Descrizione: {{ $body }}</p> --}} -->
             <p class="card-text text_color_body fs-5"><strong>Prezzo: {{$price}} €</strong></p>
