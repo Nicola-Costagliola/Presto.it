@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container">
+    <div class="container ">
         <h1 class=" mt-3  text-center display-5 text_color">Accedi</h1>
 
 

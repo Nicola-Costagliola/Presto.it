@@ -22,15 +22,15 @@
                         @foreach ($categories as $category)
                         <li><a class="dropdown-item text_color montserrat" href="{{ route('category.show', $category ) }}">
                             {{ $category->name }}</a></li>
-                        <li><hr class="dropdown-divider "></li>
-                        @endforeach
-                    </ul>
+                            <li><hr class="dropdown-divider "></li>
+                            @endforeach
+                        </ul>
 
-                </li>
-                <li class="nav-item my-auto">
-                    <a class="nav-link text-white montserrat p-0 ms-3 mt-md-2" href="{{ route('announcements.showAll') }}">Annunci</a>
-                </li>
-                @auth
+                    </li>
+                    <li class="nav-item my-auto">
+                        <a class="nav-link text-white montserrat p-0 ms-3 mt-md-2" href="{{ route('announcements.showAll') }}">Annunci</a>
+                    </li>
+                    @auth
                     <li class="nav-item ">
                         <a class="nav-link text-white p-0 ms-3 mt-md-2" href="{{ route('announcements.create') }}">Inserisci annuncio</a>
                     </li>
@@ -41,41 +41,41 @@
                             <span class=" position-absolute top-0 start-25 ms-2 translate-middle badge rounded-pill bg-danger">
                                 {{ App\Models\Announcement::toBeRevisionedCount()}}
                                 <span class=" visually-hidden ">unread message</span>
-                                </span>
+                            </span>
                         </a>
                     </li>
                     @endif
-                @endauth
-        </ul>
+                    @endauth
+                </ul>
 
-        <ul class="navbar-nav text-center  ">
-            <form class="d-flex " role="search" action="{{ route('announcements.search')}}" method="GET">
-                <input class="form-control p-0 ms-3 " name="searched" type="search" placeholder="Cerca" aria-label="Search">
-                <button class="btn btn-outline text-white montserrat ms-2 p-1 " type="submit">Cerca</button>
-            </form>
-            @guest
-            <li class="nav-item">
-                <a class="nav-link bi bi-person-fill-add text-white montserrat  " href="/register"> Registrati</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bi bi-box-arrow-in-right text-white montserrat " href="/login"> Accedi</a>
-            </li>
-            @endguest
+                <ul class="navbar-nav text-center  ">
+                    <form class="d-flex " role="search" action="{{ route('announcements.search')}}" method="GET">
+                        <input class="form-control p-0 ms-3 " name="searched" type="search" placeholder="Cerca" aria-label="Search">
+                        <button class="btn btn-outline text-white montserrat ms-2 p-1 " type="submit">Cerca</button>
+                    </form>
+                    @guest
+                    <li class="nav-item">
+                        <a class="nav-link bi bi-person-fill-add text-white montserrat  " href="/register"> Registrati</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bi bi-box-arrow-in-right text-white montserrat " href="/login"> Accedi</a>
+                    </li>
+                    @endguest
 
-            @auth
-            <li class="nav-item my-auto">
-                <form action="/logout" method="POST">
-                    @csrf
-                    <button class=" nav-link bi bi-person-fill-add text-white montserrat p-0 ms-3 mt-md-5 ms-md-auto" type="submit">Esci</button>
-                </form>
-            </li>
-            @endauth
-        </ul>
+                    @auth
+                    <li class="nav-item my-auto">
+                        <form action="/logout" method="POST">
+                            @csrf
+                            <button class=" nav-link bi bi-person-fill-add text-white montserrat p-0 ms-3 " type="submit">Esci</button>
+                        </form>
+                    </li>
+                    @endauth
+                </ul>
 
-    </ul>
+            </ul>
 
 
 
-</div>
-</div>
+        </div>
+    </div>
 </nav>

@@ -24,7 +24,7 @@
         <img  class="img-fluid opacity-50 card-img " src="https://picsum.photos/2000/1000" alt="" >
 
       </div>
-      <div class="col-12 shadow p-5">
+      <div class="col-12 shadow p-5 reveal reveal.active">
 
 
 
