@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse " id="collasableMenu">
             <ul class="navbar-nav mx-auto text-center">
                 <li class="nav-item dropdown my-auto ">
-                    <a class="nav-link dropdown-toggle text-white montserrat p-0 ms-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle text-white montserrat p-0 ms-3 mt-md-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie
                     </a>
                     <ul class="dropdown-menu">
@@ -28,16 +28,16 @@
 
                 </li>
                 <li class="nav-item my-auto">
-                    <a class="nav-link text-white montserrat p-0 ms-3" href="{{ route('announcements.showAll') }}">Annunci</a>
+                    <a class="nav-link text-white montserrat p-0 ms-3 mt-md-2" href="{{ route('announcements.showAll') }}">Annunci</a>
                 </li>
                 @auth
                     <li class="nav-item ">
-                        <a class="nav-link text-white p-0 ms-3" href="{{ route('announcements.create') }}">Inserisci annuncio</a>
+                        <a class="nav-link text-white p-0 ms-3 mt-md-2" href="{{ route('announcements.create') }}">Inserisci annuncio</a>
                     </li>
 
                     @if(Auth::user()->is_revisor)
                     <li class="nav-item  ">
-                        <a class="nav-link text-white position-relative p-0 ms-3" href="{{ route('revisor.manage') }}">Gestisci annunci
+                        <a class="nav-link text-white position-relative p-0 ms-3 mt-md-2" href="{{ route('revisor.manage') }}">Gestisci annunci
                             <span class=" position-absolute top-0 start-25 ms-2 translate-middle badge rounded-pill bg-danger">
                                 {{ App\Models\Announcement::toBeRevisionedCount()}}
                                 <span class=" visually-hidden ">unread message</span>
@@ -50,8 +50,8 @@
 
         <ul class="navbar-nav text-center  ">
             <form class="d-flex " role="search" action="{{ route('announcements.search')}}" method="GET">
-                <input class="form-control p-0 ms-3" name="searched" type="search" placeholder="Cerca" aria-label="Search">
-                <button class="btn btn-outline text-white montserrat ms-2 p-1" type="submit">Cerca</button>
+                <input class="form-control p-0 ms-3 " name="searched" type="search" placeholder="Cerca" aria-label="Search">
+                <button class="btn btn-outline text-white montserrat ms-2 p-1 " type="submit">Cerca</button>
             </form>
             @guest
             <li class="nav-item">
@@ -66,7 +66,7 @@
             <li class="nav-item my-auto">
                 <form action="/logout" method="POST">
                     @csrf
-                    <button class=" nav-link bi bi-person-fill-add text-white montserrat p-0 ms-3 " type="submit">Esci</button>
+                    <button class=" nav-link bi bi-person-fill-add text-white montserrat p-0 ms-3 mt-md-5 ms-md-auto" type="submit">Esci</button>
                 </form>
             </li>
             @endauth
