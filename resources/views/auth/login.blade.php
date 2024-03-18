@@ -1,11 +1,11 @@
 <x-layout>
-    <div class="container">
-        <h1 class=" mt-3  text-center display-5 text_color ">Accedi</h1>
+    <div class="container ">
+        <h1 class=" mt-3  text-center display-5 text_color">Accedi</h1>
 
-        
+
         <div class="row mt-2 ">
-            <div class="col-md-4 mx-auto ">
-                <div class=" form card mt-3  ">
+            <div class=" col-12 col-lg-6 mx-auto ">
+                <div class=" form card mt-3  shadow">
 
                     <div class=" card-header text_color_body bi bi-person-circle "> Accedi
                     </div>
@@ -31,8 +31,8 @@
 
                             </div>
                         </form>
-                        
-                       
+
+
                     </div>
 
                 </div>
@@ -41,6 +41,6 @@
         </div>
 
         <x-back />
-        
+
     </div>
 </x-layout>
