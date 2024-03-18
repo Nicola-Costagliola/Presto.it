@@ -1,4 +1,4 @@
-<footer class="footer shadow text-light text-center py-3 mt-5 container ">
+<footer class="footer shadow text-light text-center py-3 mt-5 container-fluid position-relative bottom-0 end-0">
     <div class="container mt-5">
         <div class="row">
 
@@ -23,7 +23,6 @@
 
             <div class="col-md-6">
                 <h5 class="text-white montserrat">Seguici</h5>
-                <ul class="list-inline">
                     <li class="list-inline-item link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover bi bi-facebook text-white montserrat"><a href="#"> Facebook</a></li>
                     <li class=" list-inline-item link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover bi bi-telegram text-white montserrat"><a href="#"> Twitter</a></li>
                     <li class="list-inline-item link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover bi bi-instagram text-white montserrat"><a href="#"> Instagram</a></li>

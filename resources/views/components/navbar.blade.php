@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-white shadow container justify-content-around">
+<nav class="navbar navbar-expand-lg bg-white shadow container-fluid justify-content-around">
     <div class="container-fluid">
         <!-- gli elementi inline possono contenere SOLO gli elementi inline senno devi bloccarlo o farlo diventare flex -->
         <a class="navbar-brand d-flex align-items-center " href="{{ route('home') }}">
@@ -7,7 +7,7 @@
             href="{{ route('home') }}">{{ config('app.name') }}</a>
         </a>
 
-        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#collasableMenu">
+        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collasableMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -59,6 +59,11 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link bi bi-box-arrow-in-right text-white montserrat " href="/login"> Accedi</a>
+                    </li>
+                    <li class="nav-item">
+                        <x-_locale lang="it" />
+                        <x-_locale lang="en" />
+                        <x-_locale lang="es" />
                     </li>
                     @endguest
 

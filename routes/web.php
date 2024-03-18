@@ -49,3 +49,5 @@ Route::middleware('isRevisor')->group( function () {
     Route::patch('/revisiona/annuncio/{announcement}', [RevisorController::class, 'reviewedAnnouncement'])->name('revisor.reviewedAnnouncement');
 
 });
+
+Route::post('/lingua/{lang}', [PageController::class, 'setLocale'])->name('setLocale');

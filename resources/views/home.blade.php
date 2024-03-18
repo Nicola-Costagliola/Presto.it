@@ -30,7 +30,7 @@
 
 
 
-        <h1 class="display-3 text_color montserrat">Annunci</h1>
+        <h1 class="display-3 text_color montserrat">{{__('messages.welcome')}}</h1>
 
         @auth
         <a href=" {{ route('announcements.create') }}" class=" btn text_color_body montserrat ">Inserisci annuncio</a>
