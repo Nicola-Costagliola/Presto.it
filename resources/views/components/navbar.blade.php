@@ -7,7 +7,7 @@
             href="{{ route('home') }}">{{ config('app.name') }}</a>
         </a>
 
-        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#collasableMenu">
+        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collasableMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
 
