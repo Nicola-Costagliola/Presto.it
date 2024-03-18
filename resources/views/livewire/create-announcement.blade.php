@@ -1,5 +1,4 @@
 <div>
-    <form wire:submit.prevent="store">
         <div class="col-6 mx-auto ">
 
 
