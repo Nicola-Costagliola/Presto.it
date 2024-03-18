@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-white shadow container justify-content-around">
+<nav class="navbar navbar-expand-lg bg-white shadow container-fluid justify-content-around">
     <div class="container-fluid">
         <!-- gli elementi inline possono contenere SOLO gli elementi inline senno devi bloccarlo o farlo diventare flex -->
         <a class="navbar-brand d-flex align-items-center " href="{{ route('home') }}">
