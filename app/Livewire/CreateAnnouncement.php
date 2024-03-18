@@ -57,7 +57,7 @@ class CreateAnnouncement extends Component
         $announcement->user_id = auth()->user('')->id;
 
         $announcement->save();
-        
+
         $this->resetForm();
 
 

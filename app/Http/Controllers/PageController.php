@@ -17,8 +17,10 @@ class PageController extends Controller
         return view('home',  compact('announcements'));
     }
 
-    public function categoryShow(Category $category){
+    public function categoryShow(Category $category)
+    {
 
+        
         return view('categories.show-one', compact('category'));
     }
 
