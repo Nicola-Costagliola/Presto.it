@@ -81,10 +81,10 @@
                                     @else
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="https://picsum.photos/150/91" class="d-block w-100 h-100 " alt="...">
+                                            <img src="https://picsum.photos/200/300" class="img-fluid p-1 rounded " alt="...">
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="https://picsum.photos/150/92" class="d-block w-100 h-100 " alt="...">
+                                            <img src="https://picsum.photos/200/300" class=" img-fluid p-1 rounded " alt="...">
                                         </div>
                                     </div>
                                 </div>
