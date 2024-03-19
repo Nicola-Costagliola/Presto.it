@@ -171,6 +171,7 @@ transition: .6s ease;
 }
 
 .img-preview {
-   width: auto;
-   height: 100px;
+
+   max-width:150px;
+   height: 150px;
 }

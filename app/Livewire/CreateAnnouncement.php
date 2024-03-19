@@ -21,8 +21,10 @@ class CreateAnnouncement extends Component
 
     public $category= 1;
 
-    #[Validate]
-    public $temporary_images ;
+    #[Validate(['temporary_images.*' => 'image|max:2048'])]
+    public $temporary_images;
+
+    #[Validate(['images.*' => 'image|max:2048'])]
     public $images = [];
 
     public $announcement;
@@ -36,8 +38,6 @@ class CreateAnnouncement extends Component
             'title'=>'required',
             'body'=>'required',
             'price'=>'required|max:100000000|numeric',
-            'temporary_images.*'=> 'image|max:2048',
-
         ];
 
     }
@@ -50,9 +50,10 @@ class CreateAnnouncement extends Component
             'body.required'=>'La Descrizione è obbligatoria',
             'price.required'=>'Il Prezzo è obbligatorio',
             'price.max'=>'Il Prezzo deve essere in cifre (massimo 8)',
-            'temporary_images.required'=> 'L\'immagine è richiesta',
             'temporary_images.*.image'=> 'I file devono essere immagini',
             'temporary_images.*.max'=> 'L\'immagine dev\'essere massimo di 2048',
+            'images.image'=> 'I file devono essere immagini',
+            'images.max'=> 'L\'immagine dev\'essere massimo di 2048',
 
         ];
     }
@@ -79,7 +80,9 @@ class CreateAnnouncement extends Component
     {
         $this->validate();
 
-        $announcement= Announcement::create([
+        
+
+        $this->announcement= Announcement::create([
             'title' => $this->title,
             'body' => $this->body,
             'price' => $this->price,
@@ -88,16 +91,16 @@ class CreateAnnouncement extends Component
 
 
 
-        $announcement->user_id = auth()->user('')->id;
+        $this->announcement->user_id = auth()->user('')->id;
 
-        $announcement->save();
+        $this->announcement->save();
 
 
         if (count($this->images)) {
 
             foreach ($this->images as $image) {
 
-                $announcement->images()->create(['path'=>$image->store('images', 'public')]);
+                $this->announcement->images()->create(['path'=>$image->store('images', 'public')]);
             }
         }
 
@@ -114,7 +117,6 @@ class CreateAnnouncement extends Component
         $this->body = '';
         $this->price = '';
         $this->category =1;
-        $this->images ='';
         $this->images =[];
         $this->temporary_images =[];
 

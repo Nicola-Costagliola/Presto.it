@@ -11,7 +11,11 @@
                 @forelse ($announcements as $announcement)
 
                 <div class="col-12 col-xl-4 col-lg-4 col-md-6 align-content-center ">
-                <x-card  :title="$announcement->title"
+                <x-card  
+                :title="$announcement->title"
+                :img="!$announcement->images()->get()->isEmpty() 
+                ? Storage::url($announcement->images()->first()->path) 
+                : 'https://picsum.photos/200' "
                 :category="$announcement->category->name"
                 :body="$announcement->body"
                 :price="$announcement->price"
