@@ -1,4 +1,7 @@
 <div>
+
+        <form wire:submit.prevent="store" >
+
         <div class="col-6 mx-auto ">
 
 
@@ -37,6 +40,39 @@
                     id="price" wire:model="price">
                     @error('price')<span class=" text-danger "> {{ $message }}</span> @enderror
                 </div>
+
+
+                <div class="col-12">
+
+                <input wire:model="temporary_images" type="file" multiple class="form-control @error('temporary_images.*') is-invalid @enderror " placeholder="img">
+                @error('temporary_images')<span class=" text-danger "> {{ $message }}</span> @enderror
+
+                </div>
+
+                @if(!empty($images))
+
+                <div class="row">
+                    <div class="col-12">
+                        <p>Foto Preview:</p>
+                        <div class="row border-4 shadow py-2">
+
+                            @foreach($images as $key => $image)
+
+                            <div class="col my-3">
+                                <div class="img-preview shadow rounded mx-auto" style="background-image: url({{ $image->temporaryUrl() }});">
+
+                                </div>
+
+                                <button type="button" class="btn btn-danger shadow d-block" wire:click="removeImage({{$key}})">Cancella</button>
+                            </div>
+
+                            @endforeach
+
+                        </div>
+                    </div>
+                </div>
+
+                @endif
 
                 <button type="submit" class=" btn btn-primary shadow px-4 py-2 mt-4 montserrat text_color_body ">Crea</button>
             </div>
