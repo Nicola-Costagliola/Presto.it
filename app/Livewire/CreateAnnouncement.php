@@ -86,15 +86,18 @@ class CreateAnnouncement extends Component
             'category_id' => $this->category,
         ]);
 
-        
+
 
         $announcement->user_id = auth()->user('')->id;
 
         $announcement->save();
 
+
         if (count($this->images)) {
+
             foreach ($this->images as $image) {
-                $this->announcement->images()->create(['path'=>$image->store('images', 'public')]);
+
+                $announcement->images()->create(['path'=>$image->store('images', 'public')]);
             }
         }
 
@@ -111,6 +114,9 @@ class CreateAnnouncement extends Component
         $this->body = '';
         $this->price = '';
         $this->category =1;
+        $this->images ='';
+        $this->images =[];
+        $this->temporary_images =[];
 
     }
 

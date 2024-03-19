@@ -65,7 +65,6 @@ class CreateAnnouncementFromCategory extends Component
 
         $this->resetForm();
 
-
         session()->flash('success', 'Annuncio creato correttamente');
     }
 

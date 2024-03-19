@@ -41,10 +41,10 @@
                     @error('price')<span class=" text-danger "> {{ $message }}</span> @enderror
                 </div>
 
-            
+
                 <div class="col-12">
 
-                <input wire:model="temporary_images" type="file" name="images" multiple class="form-control @error('temporary_images.*') is-invalid @enderror " placeholder="img">
+                <input wire:model="temporary_images" type="file" multiple class="form-control @error('temporary_images.*') is-invalid @enderror " placeholder="img">
                 @error('temporary_images')<span class=" text-danger "> {{ $message }}</span> @enderror
 
                 </div>
@@ -59,8 +59,8 @@
                             @foreach($images as $key => $image)
 
                             <div class="col my-3">
-                                <div class="img-preview shadow rounded mx-auto" :style="background-image: url({{ $image->temporaryUrl() }});">
-                                    
+                                <div class="img-preview shadow rounded mx-auto" style="background-image: url({{ $image->temporaryUrl() }});">
+
                                 </div>
 
                                 <button type="button" class="btn btn-danger shadow d-block" wire:click="removeImage({{$key}})">Cancella</button>
