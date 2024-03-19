@@ -14,7 +14,7 @@ class RevisorList extends Component
     // viene richiamato solo appena si inizializza la pagina
     public function mount()
     {
-        $this->announcements = Announcement::orderBy('created_at', 'DESC')->orderBy('is_accepted', 'ASC',)->get();
+        $this->announcements = Announcement::orderBy('created_at', 'DESC')->orderBy('is_accepted', 'DESC',)->get();
         // $this->announcements = Announcement::all();
     }
 
