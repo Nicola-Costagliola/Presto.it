@@ -78,6 +78,9 @@
                         <a class="nav-link dropdown-toggle text-white montserrat p-0 ms-3 mt-md-2" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
 
+                            @if(session('lang')=='')
+                            <x-_locale lang="it" />
+                            @endif
                             @if(session('lang')=='it')
                             <x-_locale lang="it" />
                             @endif
