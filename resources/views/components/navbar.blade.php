@@ -60,11 +60,7 @@
                     <li class="nav-item">
                         <a class="nav-link bi bi-box-arrow-in-right text-white montserrat " href="/login"> Accedi</a>
                     </li>
-                    <li class="nav-item">
-                        <x-_locale lang="it" />
-                        <x-_locale lang="en" />
-                        <x-_locale lang="es" />
-                    </li>
+
                     @endguest
 
                     @auth
@@ -75,12 +71,25 @@
                         </form>
                     </li>
                     @endauth
-                </ul>
+                    <button class="nav-item my-auto " type="button" data-bs-toggle="collapse"    data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Lingua
+                    </button>
+                    <div class="collapse" id="collapseExample">
+                        <x-_locale lang="it" />
+                        <x-_locale lang="en" />
+                        <x-_locale lang="es" />
+                    </div>
 
-            </ul>
 
 
 
-        </div>
-    </div>
+
+
+        </ul>
+    </ul>
+
+
+
+
+</div>
+</div>
 </nav>

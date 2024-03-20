@@ -174,3 +174,7 @@ transition: .6s ease;
    max-width:150px;
    height: 150px;
 }
+
+.li-flag{
+  width: 30px;
+}
