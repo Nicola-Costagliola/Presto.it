@@ -77,7 +77,17 @@
                     <li class="nav-item dropdown my-auto ">
                         <a class="nav-link dropdown-toggle text-white montserrat p-0 ms-3 mt-md-2" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
+
+                            @if(session('lang')=='it')
                             <x-_locale lang="it" />
+                            @endif
+                            @if(session('lang')=='es')
+                            <x-_locale lang="es" />
+                            @endif
+                            @if(session('lang')=='en')
+                            <x-_locale lang="en" />
+                            @endif
+
                         </a>
                         <ul class="dropdown-menu li-flag">
                             <li class="dropdown-item p-1">
