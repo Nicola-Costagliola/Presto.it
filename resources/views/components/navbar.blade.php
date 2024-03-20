@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-white shadow container-fluid justify-content-around">
+<nav class="navbar navbar-expand-sm bg-white shadow container-fluid justify-content-around">
     <div class="container-fluid">
         <!-- gli elementi inline possono contenere SOLO gli elementi inline senno devi bloccarlo o farlo diventare flex -->
         <a class="navbar-brand d-flex align-items-center " href="{{ route('home') }}">
@@ -10,12 +10,13 @@
         <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collasableMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
+
+
         <!-- Menu -->
         <div class="collapse navbar-collapse " id="collasableMenu">
             <ul class="navbar-nav mx-auto text-center">
                 <li class="nav-item dropdown my-auto ">
-                    <a class="nav-link dropdown-toggle text-white montserrat p-0 ms-3 mt-md-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle text-white montserrat p-0 ms-3 mt-md-0 mt-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie
                     </a>
                     <ul class="dropdown-menu">
@@ -25,20 +26,20 @@
                         </a></li>
                             <li><hr class="dropdown-divider "></li>
                             @endforeach
-                    </ul>
-                        
-                 </li>
+                        </ul>
+
+                </li>
                     <li class="nav-item my-auto">
-                        <a class="nav-link text-white montserrat p-0 ms-3 mt-md-2" href="{{ route('announcements.showAll') }}">Annunci</a>
+                        <a class="nav-link text-white montserrat p-0 ms-3 mt-md-0 mt-2" href="{{ route('announcements.showAll') }}">Annunci</a>
                     </li>
                     @auth
                     <li class="nav-item ">
-                        <a class="nav-link text-white p-0 ms-3 mt-md-2" href="{{ route('announcements.create') }}">Inserisci annuncio</a>
+                        <a class="nav-link text-white p-0 ms-3 mt-md-0 mt-2" href="{{ route('announcements.create') }}">Inserisci annuncio</a>
                     </li>
                     
                     @if(Auth::user()->is_revisor)
                     <li class="nav-item  ">
-                        <a class="nav-link text-white position-relative p-0 ms-3 mt-md-2" href="{{ route('revisor.manage') }}">Gestisci annunci
+                        <a class="nav-link text-white position-relative p-0 ms-3 mt-md-0 mt-2" href="{{ route('revisor.manage') }}">Gestisci annunci
                             <span class=" position-absolute top-0 start-25 ms-2 translate-middle badge rounded-pill bg-danger">
                                 {{ App\Models\Announcement::toBeRevisionedCount()}}
                                 <span class=" visually-hidden ">unread message</span>
@@ -48,40 +49,74 @@
                     @endif
                     @endauth
                 </ul>
-                
+
                 <ul class="navbar-nav text-center  ">
                     <form class="d-flex " role="search" action="{{ route('announcements.search')}}" method="GET">
-                        <input class="form-control p-0 ms-3 " name="searched" type="search" placeholder="Cerca" aria-label="Search">
-                        <button class="btn btn-outline text-white montserrat ms-2 p-1 " type="submit">Cerca</button>
+                        <input class="form-control p-0 ms-3 mt-md-0 mt-2" name="searched" type="search" placeholder="Cerca" aria-label="Search">
+                        <button class="btn btn-outline text-white montserrat ms-2 p-1 mt-md-0 mt-2" type="submit">Cerca</button>
                     </form>
-                    <li class="nav-item">
-                        <x-_locale lang="it" />
-                        <x-_locale lang="en" />
-                        <x-_locale lang="es" />
-                    </li>
                     @guest
-                    <li class="nav-item">
-                        <a class="nav-link bi bi-person-fill-add text-white montserrat  " href="/register"> Registrati</a>
+                    <li class="nav-item my-auto">
+                        <a class="nav-link bi bi-person-fill-add text-white montserrat ms-3 p-0 mt-md-0 mt-2" href="/register"> Registrati</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link bi bi-box-arrow-in-right text-white montserrat " href="/login"> Accedi</a>
+                    <li class="nav-item my-auto">
+                        <a class="nav-link bi bi-box-arrow-in-right text-white ms-3 montserrat p-0 mt-md-0 mt-2" href="/login"> Accedi</a>
                     </li>
+
+
                     @endguest
                     
                     @auth
                     <li class="nav-item my-auto">
                         <form action="/logout" method="POST">
                             @csrf
-                            <button class=" nav-link bi bi-person-fill-add text-white montserrat p-0 ms-3 " type="submit">Esci</button>
+                            <button class=" nav-link bi bi-person-fill-add text-white montserrat p-0 ms-3 mt-md-0 mt-2" type="submit">Esci</button>
                         </form>
                     </li>
                     @endauth
-                </ul>
-                
-            </ul>
-            
-            
-            
-        </div>
-    </div>
+
+                    <li class="nav-item dropdown my-auto ">
+                        <a class="nav-link dropdown-toggle text-white montserrat p-0 ms-3 mt-md-0 mt-2" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+
+                            @if(session('lang')=='')
+                            <x-_locale lang="it" />
+                            @endif
+                            @if(session('lang')=='it')
+                            <x-_locale lang="it" />
+                            @endif
+                            @if(session('lang')=='es')
+                            <x-_locale lang="es" />
+                            @endif
+                            @if(session('lang')=='en')
+                            <x-_locale lang="en" />
+                            @endif
+
+                        </a>
+                        <ul class="dropdown-menu li-flag text-center">
+                            <li class="dropdown-item p-1 ">
+                                <x-_locale lang="it" />
+                            </li>
+                            <li class="dropdown-item p-1">
+                                <x-_locale lang="en" />
+                            </li>
+                            <li class="dropdown-item p-1">
+                                <x-_locale lang="es" />
+                            </li>
+                        </ul>
+                    </li>
+
+
+
+
+
+
+        </ul>
+    </ul>
+
+
+
+
+</div>
+</div>
 </nav>
