@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Jobs\ResizeImage;
 
 use App\Models\Announcement;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
@@ -112,7 +113,7 @@ class CreateAnnouncement extends Component
 
                 dispatch(new ResizeImage($newImage->path, 300, 300));
 
-                Storage::deleteDirectory(storage_path('/app/livewire-tmp'));
+                File::deleteDirectory(storage_path('/app/livewire-tmp'));
             }
         }
 
