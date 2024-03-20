@@ -25,7 +25,7 @@ class CreateAnnouncement extends Component
     public $category= 1;
 
     #[Validate(['temporary_images.*' => 'image|max:2048'])]
-    public $temporary_images;
+    public $temporary_images= [];
 
     #[Validate(['images.*' => 'image|max:2048'])]
     public $images = [];
@@ -81,6 +81,7 @@ class CreateAnnouncement extends Component
 
     public function store ()
     {
+
         $this->validate();
 
 
@@ -115,7 +116,7 @@ class CreateAnnouncement extends Component
             }
         }
 
-         $this->resetForm();
+         $this->reset();
 
 
         session()->flash('success', 'Annuncio creato correttamente');
@@ -128,8 +129,8 @@ class CreateAnnouncement extends Component
         $this->body = '';
         $this->price = '';
         $this->category =1;
-        $this->images =[];
-        $this->temporary_images =[];
+        $this->images = [];
+        $this->temporary_images = [];
 
     }
 

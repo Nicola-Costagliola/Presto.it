@@ -53,6 +53,11 @@
                         <input class="form-control p-0 ms-3 " name="searched" type="search" placeholder="Cerca" aria-label="Search">
                         <button class="btn btn-outline text-white montserrat ms-2 p-1 " type="submit">Cerca</button>
                     </form>
+                    <li class="nav-item">
+                        <x-_locale lang="it" />
+                        <x-_locale lang="en" />
+                        <x-_locale lang="es" />
+                    </li>
                     @guest
                     <li class="nav-item">
                         <a class="nav-link bi bi-person-fill-add text-white montserrat  " href="/register"> Registrati</a>
@@ -60,7 +65,10 @@
                     <li class="nav-item">
                         <a class="nav-link bi bi-box-arrow-in-right text-white montserrat " href="/login"> Accedi</a>
                     </li>
+<<<<<<< HEAD
 
+=======
+>>>>>>> b5fd6ec62582cb03fd70a2fbb2afa1cebdcdc555
                     @endguest
 
                     @auth
