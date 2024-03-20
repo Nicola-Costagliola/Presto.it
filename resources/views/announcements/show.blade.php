@@ -11,27 +11,35 @@
         <div class="row">
             <div class="col-12 shadow p-3">
                 
-                <div id="carouselExampleFade" class="carousel slide carousel-fade">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active ">
-                            <img src="https://picsum.photos/1200/300" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/1200/301" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/1200/302" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/1200/299" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
+        
+                                    @if($announcement->images->isNotEmpty())
+
+                                    <div class="carousel-inner">
+                                        @foreach($announcement->images as $image)
+                                        <div class="carousel-item @if($loop->first)active @endif">
+                                            <img src="{{ $image->getUrl(300,300) }}" class=" img-fluid p-1 rounded" alt="...">
+                                        </div>
+                                        @endforeach
+                                    </div>
+                                    @else
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="https://picsum.photos/200/300" class="img-fluid p-1 rounded " alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="https://picsum.photos/200/300" class=" img-fluid p-1 rounded " alt="...">
+                                        </div>
+                                    </div>
+                                    @endif
+                                </div>
+                                
+                    <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-black " aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <button class="carousel-control-next" type="button" data-bs-target="#showCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-black " aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>

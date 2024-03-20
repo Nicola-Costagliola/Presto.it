@@ -44,7 +44,7 @@
           <x-card 
           :title="$announcement->title"
           :img="!$announcement->images()->get()->isEmpty() 
-          ? Storage::url($announcement->images()->first()->path) 
+          ? $announcement->images()->first()->getUrl(300,300)
           : 'https://picsum.photos/200'"
           :category="$announcement->category->name"
           :body="$announcement->body"
