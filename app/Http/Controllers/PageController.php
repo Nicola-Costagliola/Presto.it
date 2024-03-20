@@ -20,7 +20,7 @@ class PageController extends Controller
     public function categoryShow(Category $category)
     {
         $announcements = $category->announcements()->where('is_accepted', true)->orderBy('created_at', 'DESC')->get();
-        
+
         return view('categories.show-one', compact('category', 'announcements'));
     }
 
@@ -36,10 +36,10 @@ class PageController extends Controller
         return view('announcements.show-all', compact('announcements'));
     }
 
-    public function setLocale($lang) 
+    public function setLocale($lang)
     {
         session()->put('locale', $lang);
-        return redirect()->back();
+        return redirect()->back()->with(['lang'=> $lang]);
     }
 
 }

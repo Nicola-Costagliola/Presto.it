@@ -11,6 +11,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
+
         <!-- Menu -->
         <div class="collapse navbar-collapse " id="collasableMenu">
             <ul class="navbar-nav mx-auto text-center">
@@ -26,7 +27,7 @@
                             @endforeach
                         </ul>
 
-                    </li>
+                </li>
                     <li class="nav-item my-auto">
                         <a class="nav-link text-white montserrat p-0 ms-3 mt-md-2" href="{{ route('announcements.showAll') }}">Annunci</a>
                     </li>
@@ -60,11 +61,8 @@
                     <li class="nav-item">
                         <a class="nav-link bi bi-box-arrow-in-right text-white montserrat " href="/login"> Accedi</a>
                     </li>
-                    <li class="nav-item">
-                        <x-_locale lang="it" />
-                        <x-_locale lang="en" />
-                        <x-_locale lang="es" />
-                    </li>
+
+
                     @endguest
 
                     @auth
@@ -75,12 +73,49 @@
                         </form>
                     </li>
                     @endauth
-                </ul>
 
-            </ul>
+                    <li class="nav-item dropdown my-auto ">
+                        <a class="nav-link dropdown-toggle text-white montserrat p-0 ms-3 mt-md-2" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+
+                            @if(session('lang')=='')
+                            <x-_locale lang="it" />
+                            @endif
+                            @if(session('lang')=='it')
+                            <x-_locale lang="it" />
+                            @endif
+                            @if(session('lang')=='es')
+                            <x-_locale lang="es" />
+                            @endif
+                            @if(session('lang')=='en')
+                            <x-_locale lang="en" />
+                            @endif
+
+                        </a>
+                        <ul class="dropdown-menu li-flag">
+                            <li class="dropdown-item p-1">
+                                <x-_locale lang="it" />
+                            </li>
+                            <li class="dropdown-item p-1">
+                                <x-_locale lang="en" />
+                            </li>
+                            <li class="dropdown-item p-1">
+                                <x-_locale lang="es" />
+                            </li>
+                        </ul>
+                    </li>
 
 
 
-        </div>
-    </div>
+
+
+
+        </ul>
+    </ul>
+
+
+
+
+</div>
+</div>
 </nav>
