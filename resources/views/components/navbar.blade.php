@@ -11,6 +11,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
+
         <!-- Menu -->
         <div class="collapse navbar-collapse " id="collasableMenu">
             <ul class="navbar-nav mx-auto text-center">
@@ -26,7 +27,7 @@
                             @endforeach
                         </ul>
 
-                    </li>
+                </li>
                     <li class="nav-item my-auto">
                         <a class="nav-link text-white montserrat p-0 ms-3 mt-md-2" href="{{ route('announcements.showAll') }}">Annunci</a>
                     </li>
@@ -53,11 +54,6 @@
                         <input class="form-control p-0 ms-3 " name="searched" type="search" placeholder="Cerca" aria-label="Search">
                         <button class="btn btn-outline text-white montserrat ms-2 p-1 " type="submit">Cerca</button>
                     </form>
-                    <li class="nav-item">
-                        <x-_locale lang="it" />
-                        <x-_locale lang="en" />
-                        <x-_locale lang="es" />
-                    </li>
                     @guest
                     <li class="nav-item">
                         <a class="nav-link bi bi-person-fill-add text-white montserrat  " href="/register"> Registrati</a>
@@ -65,10 +61,8 @@
                     <li class="nav-item">
                         <a class="nav-link bi bi-box-arrow-in-right text-white montserrat " href="/login"> Accedi</a>
                     </li>
-<<<<<<< HEAD
 
-=======
->>>>>>> b5fd6ec62582cb03fd70a2fbb2afa1cebdcdc555
+
                     @endguest
 
                     @auth
@@ -79,13 +73,24 @@
                         </form>
                     </li>
                     @endauth
-                    <button class="nav-item my-auto " type="button" data-bs-toggle="collapse"    data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Lingua
-                    </button>
-                    <div class="collapse" id="collapseExample">
-                        <x-_locale lang="it" />
-                        <x-_locale lang="en" />
-                        <x-_locale lang="es" />
-                    </div>
+
+                    <li class="nav-item dropdown my-auto ">
+                        <a class="nav-link dropdown-toggle text-white montserrat p-0 ms-3 mt-md-2" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <x-_locale lang="it" />
+                        </a>
+                        <ul class="dropdown-menu li-flag">
+                            <li class="dropdown-item p-1">
+                                <x-_locale lang="it" />
+                            </li>
+                            <li class="dropdown-item p-1">
+                                <x-_locale lang="en" />
+                            </li>
+                            <li class="dropdown-item p-1">
+                                <x-_locale lang="es" />
+                            </li>
+                        </ul>
+                    </li>
 
 
 
