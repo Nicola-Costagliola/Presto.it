@@ -16,6 +16,8 @@ use Livewire\Attributes\Validate;
 class CreateAnnouncementFromCategory extends Component
 {
 
+    use WithFileUploads;
+
     #[Validate]
     public $title;
     #[Validate]
@@ -60,6 +62,24 @@ class CreateAnnouncementFromCategory extends Component
         ];
     }
 
+    public function updatedTemporaryImages()
+    {
+        if ($this->validate([
+            'temporary_images.*' => 'image|max:2048',
+        ])) {
+            foreach ($this->temporary_images as $image) {
+                $this->images[] = $image;
+            }
+        }
+    }
+
+    public function removeImage($key)
+    {
+        if (in_array($key, array_keys($this->images))) {
+            unset($this->images[$key]);
+        }
+    }
+
     public function store()
     {
 
@@ -82,8 +102,8 @@ class CreateAnnouncementFromCategory extends Component
             foreach ($this->images as $image) {
 
                 // $this->announcement->images()->create(['path'=>$image->store('images', 'public')]);
-                $newFileName = "announcements/{$this->announcement->id}";
-                $newImage = $this->announcement->images()->create([
+                $newFileName = "announcements/{$announcement->id}";
+                $newImage = $announcement->images()->create([
                     'path'=> $image->store($newFileName, 'public')
                 ]);
 
@@ -103,6 +123,8 @@ class CreateAnnouncementFromCategory extends Component
         $this->title = '';
         $this->body = '';
         $this->price = '';
+        $this->images = [];
+        $this->temporary_images = [];
     }
 
 
