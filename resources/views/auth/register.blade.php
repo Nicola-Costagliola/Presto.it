@@ -14,7 +14,7 @@
                                 <div class="col-12">
                                     <label for="name" class="text_color_body bi bi-person"> Inserisci il tuo nome</label>
                                     <input type="text" id="name" name="name" class="form-control @error('name') is-invalid @enderror" value=" {{ old('name') }} ">
-                                    @error('name') <span class=" text-danger small "> {{ $message }} </span>  @enderror
+                                    @error('name') <span class=" text-danger small "> {{ __('messages.name') }} </span>  @enderror
                                 </div>
                                 <div class="col-12">
                                     <label for="email" class="text_color_body bi bi-envelope"> Inserisci la tua Email</label>

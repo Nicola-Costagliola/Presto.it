@@ -1,5 +1,7 @@
 <?php
 
 return [
-    'welcome' => 'italiano'
+    'welcome' => 'italiano',
+    'name' => 'l\'attributo nome è obbligatorio',
+
 ];

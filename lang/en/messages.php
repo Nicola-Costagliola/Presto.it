@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'welcome' => 'inglese'
+    'welcome' => 'inglese',
+    'name' => 'the attribute name is required',
 ];

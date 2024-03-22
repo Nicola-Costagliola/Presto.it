@@ -6,7 +6,7 @@
             <a class="testo-primario mb-0 link-primary link-offset-2 link-underline-opacity-25 text_title montserrat display-6 "
             href="{{ route('home') }}">{{ config('app.name') }}</a>
         </a>
-
+        
         <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collasableMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -22,7 +22,8 @@
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
                         <li><a class="dropdown-item text_color montserrat" href="{{ route('category.show', $category ) }}">
-                            {{ $category->name }}</a></li>
+                            {{ $category->name }}
+                        </a></li>
                             <li><hr class="dropdown-divider "></li>
                             @endforeach
                         </ul>
@@ -35,7 +36,7 @@
                     <li class="nav-item ">
                         <a class="nav-link text-white p-0 ms-3 mt-md-0 mt-2" href="{{ route('announcements.create') }}">Inserisci annuncio</a>
                     </li>
-
+                    
                     @if(Auth::user()->is_revisor)
                     <li class="nav-item  ">
                         <a class="nav-link text-white position-relative p-0 ms-3 mt-md-0 mt-2" href="{{ route('revisor.manage') }}">Gestisci annunci
@@ -49,7 +50,7 @@
                     @endauth
                 </ul>
 
-                <ul class="navbar-nav text-center my-auto ">
+                <ul class="navbar-nav text-center  ">
                     <form class="d-flex " role="search" action="{{ route('announcements.search')}}" method="GET">
                         <input class="form-control p-0 ms-3 mt-md-0 mt-2" name="searched" type="search" placeholder="Cerca" aria-label="Search">
                         <button class="btn btn-outline text-white montserrat ms-2 p-1 mt-md-0 mt-2" type="submit">Cerca</button>
@@ -64,7 +65,7 @@
 
 
                     @endguest
-
+                    
                     @auth
                     <li class="nav-item my-auto">
                         <form action="/logout" method="POST">
