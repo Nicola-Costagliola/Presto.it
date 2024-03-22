@@ -25,11 +25,22 @@ a {
     color: rgb(71, 70, 70);
 }
 
+.background {
+  background-image: url(https://picsum.photos/2000/1000);
+  background-size: cover;
+  
+  
+}
 
 
 .navbar{
     background: rgb(9, 52, 116) !important;
         /* background: radial-gradient(circle, rgb(208, 255, 151) 0%, rgb(205, 252, 255) 96%); */
+}
+
+
+.hero-header, .page-header {
+    margin-top: 97px !important;
 }
 
 .footer{
@@ -151,7 +162,8 @@ transition: .6s ease;
         color: rgb(10, 10, 10);
 
 }
-.btn:after {
+
+ .btn:after {
     position: absolute;
     content: "";
     width: 100%;
@@ -171,7 +183,7 @@ transition: .6s ease;
     top: auto;
     bottom: 0;
     height: 100%;
-}
+}  
 
 .img-preview {
    max-width:150px;

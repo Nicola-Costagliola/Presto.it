@@ -13,13 +13,13 @@
 </head>
 <body>
     <x-navbar />
-    <div class=" container-fluid wrap">
+    <div class=" container-fluid wrap p-0">
 
         {{ $slot }}
 
 
     </div>
-    
+
     <x-footer />
 
 </body>
