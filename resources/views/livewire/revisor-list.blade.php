@@ -40,7 +40,7 @@
                                 <div class="accordion-body">
 
                                     <div class="row">
-                                        <div class="col-4 my-auto p-1">
+                                        <div class="col-12 col-md-4 my-auto p-1">
 
                                             <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
 
@@ -79,7 +79,7 @@
                                             
                                         </div>
 
-                                        <div class="col-6">
+                                        <div class="col-12 col-md-6">
                                             <p>Titolo: <span class="fs-5">{{ $announcement->title }}</span></p>
                                             <p>Categoria: <span class="fs-5">{{ $announcement->category->name }}</span></p>
                                             <p>Descrizione: <span class="fs-5">{{ $announcement->body }}</span></p>
@@ -90,7 +90,7 @@
                                 
                                         </div>
 
-                                        <div class="col-1 mt-auto ms-auto me-5">
+                                        <div class="col-12 col-md-1 mt-md-auto ms-md-auto me-4 d-flex justify-content-around  d-md-block ">
                                     
                                             <form action="{{ route('revisor.acceptAnnouncement', $announcement) }}" method="POST">
                                                 @csrf
