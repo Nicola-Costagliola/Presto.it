@@ -87,7 +87,6 @@
     <div class="row mt-5 shadow p-5 g-3">
       @foreach($announcements as $announcement)
       <div class="col-12 col-xl-4 col-lg-4 col-md-6 align-content-center ">
-<<<<<<< HEAD
           <x-card 
           :title="$announcement->title"
           :img="!$announcement->images()->get()->isEmpty() 
@@ -101,21 +100,6 @@
           />
         </div>
           @endforeach
-=======
-        <x-card
-        :title="$announcement->title"
-        :img="!$announcement->images()->get()->isEmpty()
-        ? $announcement->images()->first()->getUrl(400,300)
-        : 'https://picsum.photos/200'"
-        :category="$announcement->category->name"
-        :body="$announcement->body"
-        :price="$announcement->price"
-        :created="$announcement->created_at"
-        :route="route('announcements.show', $announcement)"
-        />
-      </div>
-      @endforeach
->>>>>>> 0436d50ebe72327b1ae68d2b396c7cf1b4f1b56a
     </div>
   </div>
 
