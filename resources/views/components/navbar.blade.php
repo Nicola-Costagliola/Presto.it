@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-md bg-white shadow container-fluid justify-content-around">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-md bg-white shadow container-fluid justify-content-around fixed-top ">
+    <div class="container-fluid  ">
         <!-- gli elementi inline possono contenere SOLO gli elementi inline senno devi bloccarlo o farlo diventare flex -->
         <a class="navbar-brand d-flex align-items-center " href="{{ route('home') }}">
             <img src="https://picsum.photos/50" class=" rounded-circle " alt="">
@@ -21,7 +21,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
-                        <li><a class="dropdown-item text_color montserrat" href="{{ route('category.show', $category ) }}">
+                        <li><a class="dropdown-item text_color montserrat" href="{{ route('category.show', $category) }}">
                             @switch(session('lang'))
                             @case('it')
                             {{ $category->name_it }}
@@ -64,7 +64,7 @@
 
                 <ul class="navbar-nav text-center  ">
                     <form class="d-flex " role="search" action="{{ route('announcements.search')}}" method="GET">
-                        <input class="form-control p-0 ms-3 mt-md-0 mt-2" name="searched" type="search" placeholder="Cerca" aria-label="Search">
+                        <input class="form-control p-0 ms-3 mt-md-0 mt-2 rounded-pill" name="searched" type="search" placeholder="  Cerca" aria-label="Search">
                         <button class="btn btn-outline text-white montserrat ms-2 p-1 mt-md-0 mt-2" type="submit">{{ __('messages.cerca') }}</button>
                     </form>
                     @guest

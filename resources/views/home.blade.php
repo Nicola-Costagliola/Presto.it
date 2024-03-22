@@ -3,11 +3,11 @@
 <!-- <div class=" background container-fluid position-absolute ">
   <img src="https://picsum.photos/2000/800" class="img-fluid opacity-25 " alt="">
 </div> -->
-  <div class="container-fluid py-5 mb-5 hero-header background  ">
+  <div class="container-fluid py-5  background  kenburns-top">
 
-    <div class="container py-5   ">
+    <div class="container py-5  tracking-in-expand ">
       <div class="row  g-5 align-items-center ">
-        <div class="col-12 col-lg-7">
+        <div class="col-12 col-lg-7 ">
           <h1 class="mb-5 display-3 text-primary  ">Pesto.it</h1>
           <h4 class="mb-3 text-secondary">{{ __('messages.slogan')}}</h4>
 
@@ -15,7 +15,7 @@
             <form class="d-flex " role="search" action="{{ route('announcements.search')}}" method="GET">
               <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" name="searched" type="search" placeholder="Cerca"
               aria-label="Search">
-              <button class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-black h-100" style="top: 0; right: 25%;" type="submit">Cerca</button>
+              <button class="bn632-hover bn26 py-3 px-4 position-absolute opacity-75 h-100" style="top: 0; right: 25%;" type="submit">Cerca</button>
             </form>
           </div>
         </div>
@@ -27,9 +27,9 @@
               @foreach ($categories as $category)
 
 
-              <div class="carousel-inner shadow" role="listbox">
+              <div class="carousel-inner shadow " role="listbox">
                 <div class="carousel-item @if($loop->first)active @endif rounded ">
-                  <a href="{{ route('category.show', $category ) }}" class="display-6  px-4 py-2 text-white position-absolute my-5 mx-3 text-black  ">
+                  <a href="{{ route('category.show', $category ) }}" class="text_color_body  display-6  px-4 py-2 text_color   position-absolute my-5 mx-3  ">
                     @switch(session('lang'))
                             @case('it')
                             {{ $category->name_it }}
