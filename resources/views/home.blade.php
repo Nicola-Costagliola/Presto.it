@@ -18,15 +18,15 @@
 
 
           <div class="col-12 col-lg-5">
-            <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
+            <div id="carouselId" class="carousel" data-bs-ride="carousel">
 
               @foreach ($categories as $category)
 
 
               <div class="carousel-inner" role="listbox">
                 <div class="carousel-item @if($loop->first)active @endif rounded">
+                  <a href="{{ route('category.show', $category ) }}" class="btn px-4 py-2 text-white rounded position-absolute">{{$category->name}}</a>
                   <img src="https://picsum.photos/400/300" alt="" class="img-fluid w-100 h-100 bg-secondary rounded">
-                  <a href="{{ route('category.show', $category ) }}" class="btn px-4 py-2 text-white rounded">{{$category->name}}</a>
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
