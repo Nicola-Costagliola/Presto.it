@@ -23,7 +23,7 @@
                     <select class="form-select montserrat " id="categories" wire:model="category">
 
                         @foreach ($categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        <option value="{{ $category->id }}">{{ $category->name_it }}</option>
                         @endforeach
 
                     </select>

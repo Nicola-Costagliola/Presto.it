@@ -32,6 +32,8 @@
                             @case('en')
                             {{ $category->name_en }}
                             @break
+                            @default
+                            {{ $category->name_it }}
                             @endswitch
                         </a></li>
                             <li><hr class="dropdown-divider "></li>

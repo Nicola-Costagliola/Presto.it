@@ -16,7 +16,7 @@
                 :img="!$announcement->images()->get()->isEmpty() 
                 ? $announcement->images()->first()->getUrl(400,300) 
                 : 'https://picsum.photos/200' "
-                :category="$announcement->category->name"
+                :category="$announcement->category->name_it"
                 :body="$announcement->body"
                 :price="$announcement->price"
                 :created="$announcement->created_at"

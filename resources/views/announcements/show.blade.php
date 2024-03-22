@@ -56,7 +56,7 @@
                     <div class="col-12 mt-3">
                         <h3 class="display-5 text_color_body montserrat">{{ $announcement->title }}</h3>
                         
-                        <p class="card-text text_color_body montserrat">Categoria: {{ $announcement->category->name }}</p>
+                        <p class="card-text text_color_body montserrat">Categoria: {{ $announcement->category->name_it }}</p>
                         <p class="card-text text_color_body montserrat">Descrizione: {{ $announcement->body }}</p>
                         <p class="card-text text_color_body montserrat"><strong>Prezzo: {{$announcement->price}} €</strong></p>
                         
@@ -64,7 +64,7 @@
                         
                         <p><a class="btn shadow btn-secondary text_color_body montserrat "
                             href=" {{route('category.show', ['category' => $announcement->category]) }} ">
-                            Esplora la categoria {{$announcement->category->name}}
+                            Esplora la categoria {{$announcement->category->name_it}}
                         </a></p>
                         @auth
                         @if(Auth::user()->is_revisor)

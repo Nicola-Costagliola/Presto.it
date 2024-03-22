@@ -81,7 +81,7 @@
 
                                         <div class="col-12 col-md-6">
                                             <p>Titolo: <span class="fs-5">{{ $announcement->title }}</span></p>
-                                            <p>Categoria: <span class="fs-5">{{ $announcement->category->name }}</span></p>
+                                            <p>Categoria: <span class="fs-5">{{ $announcement->category->name_it }}</span></p>
                                             <p>Descrizione: <span class="fs-5">{{ $announcement->body }}</span></p>
                                             <p>Prezzo: <span class="fs-5">{{ $announcement->price }} €</span></p>
                                             <p>Autore: <span class="fs-5">{{ $announcement->user->name }}</span></p>

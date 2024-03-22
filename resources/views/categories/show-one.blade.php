@@ -8,7 +8,7 @@
                 <div class="col-12 shadow p-5 text-center">
 
                     <p class=" display-6 montserrat text_color_body">Ecco tutti gli annunci della categoria: </p>
-                    <h3 class=" display-5 fw-semibold montserrat text_color">{{$category->name}}</h3>
+                    <h3 class=" display-5 fw-semibold montserrat text_color">{{$category->name_it}}</h3>
 
                 </div>
 
@@ -23,7 +23,7 @@
                     : 'https://picsum.photos/200' "
                     :body="$announcement->body"
                     :price="$announcement->price"
-                    :category="$category->name"
+                    :category="$category->name_it"
                     :created="$announcement->created_at"
                     :route="route('announcements.show', $announcement)" />
                 </div>

@@ -20,7 +20,7 @@
                 <div class="col-12">
                     <label for="category" class="montserrat text_color_body text_color_body">Categoria</label>
 
-                           <p type="text" wire:model="category" class=" form-control montserrat text_color_body" value="{{$category}}" id="category">{{ $category->name }}</p>
+                           <p type="text" wire:model="category" class=" form-control montserrat text_color_body" value="{{$category}}" id="category">{{ $category->name_it}}</p>
 
                 </div>
                 <div class="col-12">

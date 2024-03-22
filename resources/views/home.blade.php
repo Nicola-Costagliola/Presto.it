@@ -29,7 +29,21 @@
 
               <div class="carousel-inner shadow" role="listbox">
                 <div class="carousel-item @if($loop->first)active @endif rounded ">
-                  <a href="{{ route('category.show', $category ) }}" class="display-6  px-4 py-2 text-white position-absolute my-5 mx-3 text-black  ">{{$category->name}}</a>
+                  <a href="{{ route('category.show', $category ) }}" class="display-6  px-4 py-2 text-white position-absolute my-5 mx-3 text-black  ">
+                    @switch(session('lang'))
+                            @case('it')
+                            {{ $category->name_it }}
+                            @break
+                            @case('es')
+                            {{ $category->name_es }}
+                            @break
+                            @case('en')
+                            {{ $category->name_en }}
+                            @break
+                            @default
+                            {{ $category->name_it }}
+                            @endswitch
+                  </a>
                   <img src="https://picsum.photos/400/300" alt="" class="img-fluid w-100 h-100 bg-secondary rounded ">
                 </div>
               </div>
@@ -92,7 +106,7 @@
           :img="!$announcement->images()->get()->isEmpty() 
           ? $announcement->images()->first()->getUrl(400,300)
           : 'https://picsum.photos/400/300'"
-          :category="$announcement->category->name"
+          :category="$announcement->category->name_it"
           :body="$announcement->body"
           :price="$announcement->price"
           :created="$announcement->created_at"
