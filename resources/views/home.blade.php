@@ -1,10 +1,14 @@
 <x-layout>
 
-  <div class="container-fluid py-5 mb-5 hero-header background">
-    <div class="container py-5">
-      <div class="row g-5 align-items-center ">
+<!-- <div class=" background container-fluid position-absolute "> 
+  <img src="https://picsum.photos/2000/800" class="img-fluid opacity-25 " alt="">
+</div> -->
+  <div class="container-fluid py-5 mb-5 hero-header background  ">
+  
+    <div class="container py-5   ">
+      <div class="row  g-5 align-items-center ">
         <div class="col-12 col-lg-7">
-          <h1 class="mb-5 display-3 text-primary">Pesto.it</h1>
+          <h1 class="mb-5 display-3 text-primary  ">Pesto.it</h1>
           <h4 class="mb-3 text-secondary">Con Presto.it trovi subito quello che cerchi</h4>
 
           <div class="position-relative mx-auto">
@@ -18,15 +22,15 @@
 
 
           <div class="col-12 col-lg-5">
-            <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
+            <div id="carouselId" class="carousel " data-bs-ride="carousel">
 
               @foreach ($categories as $category)
 
 
-              <div class="carousel-inner" role="listbox">
-                <div class="carousel-item @if($loop->first)active @endif rounded">
-                  <img src="https://picsum.photos/400/300" alt="" class="img-fluid w-100 h-100 bg-secondary rounded">
-                  <a href="{{ route('category.show', $category ) }}" class="btn px-4 py-2 text-white rounded">{{$category->name}}</a>
+              <div class="carousel-inner shadow" role="listbox">
+                <div class="carousel-item @if($loop->first)active @endif rounded ">
+                  <a href="{{ route('category.show', $category ) }}" class="display-6  px-4 py-2 text-white position-absolute my-5 mx-3 text-black  ">{{$category->name}}</a>
+                  <img src="https://picsum.photos/400/300" alt="" class="img-fluid w-100 h-100 bg-secondary rounded ">
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
@@ -45,6 +49,7 @@
       </div>
     </div>
   </div>
+  
 
 
   <div class="container mb-5 text-center mt-3 p-5">
