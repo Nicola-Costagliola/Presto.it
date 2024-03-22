@@ -3,12 +3,12 @@
 
         <div class="row mt-5  ">
 
-            <h1 class=" mt-3  text-center display-5 text_color mt-5">Accedi</h1>
+            <h1 class=" mt-3  text-center display-5 text_color mt-5">{{ __('messages.accedi') }}</h1>
 
             <div class=" col-12 col-lg-6 mx-auto ">
                 <div class=" form card mt-3  shadow">
 
-                    <div class=" card-header text_color_body bi bi-person-circle "> Accedi
+                    <div class=" card-header text_color_body bi bi-person-circle ">{{ __('messages.accedi') }}
                     </div>
                     <div class=" card-body ">
                         <form action="/login" method="POST">
@@ -29,7 +29,7 @@
                                     <input type="checkbox" id="remember" name="remember" class="" value="true">
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" class=" btn btn-primary text_color_body "> Entra
+                                    <button type="submit" class=" btn btn-primary text_color_body ">{{ __('messages.entra') }}
                                     </button>
 
                                 </div>

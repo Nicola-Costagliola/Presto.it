@@ -9,7 +9,7 @@
       <div class="row  g-5 align-items-center ">
         <div class="col-12 col-lg-7">
           <h1 class="mb-5 display-3 text-primary  ">Pesto.it</h1>
-          <h4 class="mb-3 text-secondary">Con Presto.it trovi subito quello che cerchi</h4>
+          <h4 class="mb-3 text-secondary">{{ __('messages.slogan')}}</h4>
 
           <div class="position-relative mx-auto">
             <form class="d-flex " role="search" action="{{ route('announcements.search')}}" method="GET">
@@ -76,10 +76,10 @@
       </div>
       <div class="col-12 shadow p-5 reveal reveal.active">
 
-        <h1 class="display-3 text_color montserrat">{{__('messages.welcome')}}</h1>
+        <h1 class="display-3 text_color montserrat">{{__('messages.annunci')}}</h1>
 
         @auth
-        <a href=" {{ route('announcements.create') }}" class=" btn text_color_body montserrat ">Inserisci annuncio</a>
+        <a href=" {{ route('announcements.create') }}" class=" btn text_color_body montserrat ">{{ __('messages.inserisciAnnuncio')}}</a>
         @endauth
       </div>
     </div>

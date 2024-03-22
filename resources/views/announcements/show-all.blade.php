@@ -4,7 +4,7 @@
             <div class="row">
 
                 <div class="col-12 shadow p-5 text-center">
-                    <p class=" display-6 montserrat text_color">Tutti gli annunci </p>
+                    <p class=" display-6 montserrat text_color">{{ __('messages.tuttiAnnunci') }}</p>
                 </div>
 
                 <div class="row mt-5 shadow p-5 g-3">
@@ -28,7 +28,7 @@
                     <div class="row ">
 
                         <div class="col-12 text-center shadow p-5 mt-5">
-                            <p class="h1 montserrat text_color_body">Non sono presenti annunci per questa ricerca</p>
+                            <p class="h1 montserrat text_color_body">{{ __('messages.noAnnunciRicerca') }}</p>
                         </div>
                     </div>
 

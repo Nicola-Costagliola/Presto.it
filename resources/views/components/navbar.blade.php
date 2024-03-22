@@ -17,12 +17,22 @@
             <ul class="navbar-nav mx-auto text-center">
                 <li class="nav-item dropdown my-auto ">
                     <a class="nav-link dropdown-toggle text-white montserrat p-0 ms-3 mt-md-0 mt-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorie
+                        {{ __('messages.categorie') }}
                     </a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
                         <li><a class="dropdown-item text_color montserrat" href="{{ route('category.show', $category ) }}">
-                            {{ $category->name }}
+                            @switch(session('lang'))
+                            @case('it')
+                            {{ $category->name_it }}
+                            @break
+                            @case('es')
+                            {{ $category->name_es }}
+                            @break
+                            @case('en')
+                            {{ $category->name_en }}
+                            @break
+                            @endswitch
                         </a></li>
                             <li><hr class="dropdown-divider "></li>
                             @endforeach
@@ -30,16 +40,16 @@
 
                 </li>
                     <li class="nav-item my-auto">
-                        <a class="nav-link text-white montserrat p-0 ms-3 mt-md-0 mt-2" href="{{ route('announcements.showAll') }}">Annunci</a>
+                        <a class="nav-link text-white montserrat p-0 ms-3 mt-md-0 mt-2" href="{{ route('announcements.showAll') }}">{{ __('messages.annunci') }}</a>
                     </li>
                     @auth
                     <li class="nav-item ">
-                        <a class="nav-link text-white p-0 ms-3 mt-md-0 mt-2" href="{{ route('announcements.create') }}">Inserisci annuncio</a>
+                        <a class="nav-link text-white p-0 ms-3 mt-md-0 mt-2" href="{{ route('announcements.create') }}">{{ __('messages.inserisciAnnuncio') }}</a>
                     </li>
                     
                     @if(Auth::user()->is_revisor)
                     <li class="nav-item  ">
-                        <a class="nav-link text-white position-relative p-0 ms-3 mt-md-0 mt-2" href="{{ route('revisor.manage') }}">Gestisci annunci
+                        <a class="nav-link text-white position-relative p-0 ms-3 mt-md-0 mt-2" href="{{ route('revisor.manage') }}">{{ __('messages.gestisciAnnunci') }}
                             <span class=" position-absolute top-0 start-25 ms-2 translate-middle badge rounded-pill bg-danger">
                                 {{ App\Models\Announcement::toBeRevisionedCount()}}
                                 <span class=" visually-hidden ">unread message</span>
@@ -53,14 +63,14 @@
                 <ul class="navbar-nav text-center  ">
                     <form class="d-flex " role="search" action="{{ route('announcements.search')}}" method="GET">
                         <input class="form-control p-0 ms-3 mt-md-0 mt-2" name="searched" type="search" placeholder="Cerca" aria-label="Search">
-                        <button class="btn btn-outline text-white montserrat ms-2 p-1 mt-md-0 mt-2" type="submit">Cerca</button>
+                        <button class="btn btn-outline text-white montserrat ms-2 p-1 mt-md-0 mt-2" type="submit">{{ __('messages.cerca') }}</button>
                     </form>
                     @guest
                     <li class="nav-item my-auto">
-                        <a class="nav-link bi bi-person-fill-add text-white montserrat ms-3 p-0 mt-md-0 mt-2" href="/register"> Registrati</a>
+                        <a class="nav-link bi bi-person-fill-add text-white montserrat ms-3 p-0 mt-md-0 mt-2" href="/register">{{ __('messages.registrati') }}</a>
                     </li>
                     <li class="nav-item my-auto">
-                        <a class="nav-link bi bi-box-arrow-in-right text-white ms-3 montserrat p-0 mt-md-0 mt-2" href="/login"> Accedi</a>
+                        <a class="nav-link bi bi-box-arrow-in-right text-white ms-3 montserrat p-0 mt-md-0 mt-2" href="/login">{{ __('messages.accedi') }}</a>
                     </li>
 
 
@@ -70,7 +80,7 @@
                     <li class="nav-item my-auto">
                         <form action="/logout" method="POST">
                             @csrf
-                            <button class=" nav-link bi bi-person-fill-add text-white montserrat p-0 ms-3 mt-md-0 mt-2" type="submit">Esci</button>
+                            <button class=" nav-link bi bi-person-fill-add text-white montserrat p-0 ms-3 mt-md-0 mt-2" type="submit">{{ __('messages.esci') }}</button>
                         </form>
                     </li>
                     @endauth
