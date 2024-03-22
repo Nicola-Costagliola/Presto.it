@@ -1,25 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ config('app.name') }}</title>
-</head>
-<body>
-    <div>
-        <h1>Un utente ha richiesto di diventare revisore</h1>
-        <h2>ecco i suoi dati</h2>
-        <p>Nome: {{ $user->name }}</p>
-        <p>Email: {{ $user->email }}</p>
-        <p>Motivo richiesta: {{ $msg }}</p>
-        <p>Se vuoi renderlo revisore clicca qui</p>
-        <button>
-            <a href="{{ route('make.revisor', $user )}}">Rendi revisore</a>
-        </button>
-    </div>
-</body>
-</html> -->
+
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -30,18 +9,7 @@
   <meta name="x-apple-disable-message-reformatting">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta content="telephone=no" name="format-detection">
-  <title>Email</title><!--[if (mso 16)]>
-    <style type="text/css">
-    a {text-decoration: none;}
-    </style>
-    <![endif]--><!--[if gte mso 9]><style>sup { font-size: 100% !important; }</style><![endif]--><!--[if gte mso 9]>
-<xml>
-    <o:OfficeDocumentSettings>
-    <o:AllowPNG></o:AllowPNG>
-    <o:PixelsPerInch>96</o:PixelsPerInch>
-    </o:OfficeDocumentSettings>
-</xml>
-<![endif]-->
+  <title>Email</title>
   <style type="text/css">
 #outlook a {
 	padding:0;
@@ -90,7 +58,7 @@ a[x-apple-data-detectors] {
                  <tr>
                   <td align="center" valign="top" style="padding:0;Margin:0;width:560px">
                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
-                
+
                    </table></td>
                  </tr>
                </table></td>
@@ -111,7 +79,7 @@ a[x-apple-data-detectors] {
                      <tr>
                       <td align="center" style="padding:0;Margin:0;padding-bottom:20px;font-size:0px"><h2 style="Margin:0;line-height:46px;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:46px;font-style:normal;font-weight:bold;color:#333333">Presto.it</h2></td>
                      </tr>
-                     
+
                        </table></td>
                      </tr>
                    </table></td>
@@ -154,7 +122,7 @@ a[x-apple-data-detectors] {
                       <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:10px"><span class="es-button-border" style="border-style:solid;border-color:#2CB543;background:#5C68E2;border-width:0px;display:inline-block;border-radius:6px;width:auto">
                       <a href="{{ route('make.revisor', $user )}}" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:20px;padding:10px 30px 10px 30px;display:inline-block;background:#5C68E2;border-radius:6px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:24px;width:auto;text-align:center;mso-padding-alt:0;mso-border-alt:10px solid #5C68E2;border-left-width:30px;border-right-width:30px">RENDI REVISORE</a></span></td>
                      </tr>
-                    
+
                    </table></td>
                  </tr>
                </table></td>
@@ -163,11 +131,11 @@ a[x-apple-data-detectors] {
          </tr>
        </table>
        <table cellpadding="0" cellspacing="0" class="es-footer" align="center" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;background-color:transparent;background-repeat:repeat;background-position:center top">
-         
+
        </table>
        <table cellpadding="0" cellspacing="0" class="es-content" align="center" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%">
-         
-                   
+
+
    </table>
   </div>
  </body>

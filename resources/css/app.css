@@ -40,10 +40,13 @@ a {
 body {
     background: rgb(238, 241, 243);
         /* background: radial-gradient(circle, rgb(240, 255, 220) 0%, rgb(218, 253, 255) 96%); */
-        font-family: "Montserrat", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: weight;
-            font-style: normal;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+    padding: 0;
+
 }
 
 
@@ -187,4 +190,8 @@ transition: .6s ease;
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
+}
+
+.wrap {
+  min-height: 80vh;
 }

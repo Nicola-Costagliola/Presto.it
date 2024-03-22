@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container">
-        <h1 class=" mt-3 text-center display-5 text_color "> Registrati</h1>
-        <div class="row">
+        <div class="row mt-5 ">
+            <h1 class=" mt-3 text-center display-5 text_color "> Registrati</h1>
             <div class="col-12 col-lg-6  mx-auto ">
                 <div class=" form card mt-3  shadow">
                     <div class=" card-header text_color_body bi bi-person-circle">
@@ -40,7 +40,7 @@
                     </div>
 
                 </div>
-            </form>
+            </div>
         </div>
 
         <x-back />

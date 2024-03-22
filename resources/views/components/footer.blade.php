@@ -1,4 +1,4 @@
-<footer class="footer shadow text-light text-center py-3 mt-5 container-fluid position-relative bottom-0 end-0">
+<footer class="footer shadow text-light text-center py-3  container-fluid mt-3">
     <div class="container mt-5">
         <div class="row">
 
