@@ -16,11 +16,13 @@
                             <div class="row g-3 ">
                                 <div class="col-12">
                                     <label class="text_color_body bi bi-envelope" for="email"> Email</label>
+                                    <p class="fw-lighter m-0 p-0 ">{{ __('messages.emailObb') }}</p>
                                     <input type="email" id="email" name="email" class="form-control @error('email') is-invalid @enderror" value=" {{ old('email') }} ">
                                     @error('email') <span class=" text-danger small "> {{ $message }} </span>  @enderror
                                 </div>
                                 <div class="col-12">
                                     <label for="password" class="text_color_body bi bi-lock-fill"> Password</label>
+                                    <p class="fw-lighter m-0 p-0 ">{{ __('messages.passwordObb') }}</p>
                                     <input type="password" id="password" name="password" class="form-control @error('password') is-invalid @enderror">
                                     @error('password') <span class=" text-danger small "> {{ $message }} </span>  @enderror
                                 </div>

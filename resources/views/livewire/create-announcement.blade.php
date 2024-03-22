@@ -14,6 +14,7 @@
             <div class="row g-3 ">
                 <div class="col-12">
                     <label for="title" class="montserrat text_color_body">Inserisci il titolo del tuo annuncio</label>
+                    <p class="fw-lighter m-0 p-0 ">{{ __('messages.titoloObb') }}</p>
                     <input class=" form-control @error('title') is-invalid @enderror montserrat text_color_body" type="text" id="title" wire:model.blur="title">
                     @error('title')<span class=" text-danger "> {{ $message }}</span> @enderror
                 </div>
@@ -30,12 +31,14 @@
                 </div>
                 <div class="col-12">
                     <label for="body" class="montserrat text_color_body">Inserisci la descrizione</label>
+                    <p class="fw-lighter m-0 p-0 ">{{ __('messages.descObb') }}</p>
                     <textarea class=" form-control @error('body') is-invalid @enderror text_color_body montserrat" type="text" id="body" wire:model.blur="body"></textarea>
                     @error('body')<span class=" text-danger "> {{ $message }}</span> @enderror
                 </div>
 
                 <div class="col-12">
-                    <label for="price" class="montserrat text_color_body">Inserisci il prezzo (con 2 cifre decimali)</label>
+                    <label for="price" class="montserrat text_color_body">Inserisci il prezzo</label>
+                    <p class="fw-lighter m-0 p-0 ">{{ __('messages.prezzoObb') }}</p>
                     <input class=" form-control @error('price') is-invalid @enderror montserrat" type="text"  placeholder="Es. 10.00"
                     id="price" wire:model="price">
                     @error('price')<span class=" text-danger "> {{ $message }}</span> @enderror

@@ -26,6 +26,13 @@ return [
     'inserisciEmail' => 'Insert your email',
     'inserisciPassword' => 'Insert your password',
     'confermaPassword' => 'Confirm password',
+    'titoloObb' => 'The title is required',
+    'descObb' => 'The body is required',
+    'prezzoObb' => 'the price is mandatory and must have a maximum of 2 decimal places',
+    'nomeObb' => 'The name is required',
+    'emailObb' => 'The email is required',
+    'passwordObb' => 'The password is required and must have at least 1 large letter, a symbol and a number',
+    'confPasswordObb' => 'password confirmation is required',
 
 
 

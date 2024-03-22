@@ -26,6 +26,13 @@ return [
     'inserisciEmail' => 'Inserisci la tua email',
     'inserisciPassword' => 'Inserisci la password',
     'confermaPassword' => 'Conferma Password',
+    'titoloObb' => 'Il titolo è obbligatorio',
+    'descObb' => 'La descrizione è obbligatoria',
+    'prezzoObb' => 'Il prezzo è obbligatorio e deve avere massimo 2 cifre decimali',
+    'nomeObb' => 'Il nome è obbligatorio',
+    'emailObb' => 'l\'email è obbligatoria',
+    'passwordObb' => 'La password è obbligatoria deve avere almeno 1 lettera grande, un simbolo e un numero',
+    'confPasswordObb' => 'La conferma della password è obbligatoria',
 
 
 
