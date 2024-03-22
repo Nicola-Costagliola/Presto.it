@@ -1,10 +1,10 @@
 <x-layout>
 
-<!-- <div class=" background container-fluid position-absolute "> 
+<!-- <div class=" background container-fluid position-absolute ">
   <img src="https://picsum.photos/2000/800" class="img-fluid opacity-25 " alt="">
 </div> -->
   <div class="container-fluid py-5 mb-5 hero-header background  ">
-  
+
     <div class="container py-5   ">
       <div class="row  g-5 align-items-center ">
         <div class="col-12 col-lg-7">
@@ -49,7 +49,7 @@
       </div>
     </div>
   </div>
-  
+
 
 
   <div class="container mb-5 text-center mt-3 p-5">
