@@ -25,6 +25,10 @@
                                     @error('password') <span class=" text-danger small "> {{ $message }} </span>  @enderror
                                 </div>
                                 <div class="col-12">
+                                    <label for="remember" class="text_color_body bi bi-lock-fill">{{ __('messages.remember') }}</label>
+                                    <input type="checkbox" id="remember" name="remember" class="" value="true">
+                                </div>
+                                <div class="col-12">
                                     <button type="submit" class=" btn btn-primary text_color_body "> Entra
                                     </button>
 

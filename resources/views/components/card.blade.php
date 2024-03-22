@@ -14,8 +14,8 @@
 <a href="{{ $route }}">
     <div class=" card reveal reveal.active shadow border border-primary mb-3 h-100 ">
         <img src="{{ $img }}" class="card-img-top rounded " alt="...">
-        <div class="card-body h-100  ">
-            <h4 class="card-title text-center display-5 text_color_body montserrat">{{ $title }}</h4>
+        <div class="card-body h-100 ">
+            <h4 class="card-title text-center display-6 text_color_body montserrat">{{ $title }}</h4>
             <p class="card-text text_color_body montserrat fs-4">Categoria: {{ $category }}</p>
             <p class="card-text text_color_body fs-4"><strong>Prezzo: {{$price}} €</strong></p>
         </div>

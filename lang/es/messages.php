@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'welcome' => 'spagnolo'
+    'welcome' => 'spagnolo',
+    'remember' => 'Acuerdame',
 ];

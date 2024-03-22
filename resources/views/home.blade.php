@@ -45,7 +45,7 @@
           :title="$announcement->title"
           :img="!$announcement->images()->get()->isEmpty() 
           ? $announcement->images()->first()->getUrl(400,300)
-          : 'https://picsum.photos/200'"
+          : 'https://picsum.photos/400/300'"
           :category="$announcement->category->name"
           :body="$announcement->body"
           :price="$announcement->price"
