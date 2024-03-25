@@ -5,10 +5,6 @@ a {
     text-decoration: none;
 }
 
-.text_title {
-    color: rgb(255, 0, 0) !important;
-}
-
 .montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -21,6 +17,11 @@ a {
     color: rgb(83, 115, 231);
 }
 
+.display-6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
 .text_color_body {
     color: rgb(71, 70, 70);
 }
@@ -31,10 +32,45 @@ a {
   
 }
 
+.px-0 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
 
 .navbar{
-    background: rgb(9, 52, 116) !important;
+    background: rgb(238, 241, 243) !important;
         /* background: radial-gradient(circle, rgb(208, 255, 151) 0%, rgb(205, 252, 255) 96%); */
+
+       
+}
+
+.navbar .navbar-nav .nav-link {
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: .5s;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.h-nav {
+  height: 126px;
+}
+
+.fixed-top {
+  transition: 0.5s;
+  background: var(--bs-white);
+  border: 0;
 }
 
 .fixed-top {
@@ -45,6 +81,20 @@ a {
   z-index: 1030;
 }
 
+
+.bg-primary {
+  background-color: rgb(50, 90, 219) !important;
+}
+
+.topbar {
+  padding: 20px;
+  border-radius: 230px 100px;
+}
+
+
+.d-lg-block {
+    display: block !important;
+}
 
 .hero-header, .page-header {
     margin-top: 190px !important;
