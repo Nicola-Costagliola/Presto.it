@@ -40,6 +40,8 @@
                                 <div class="accordion-body">
 
                                     <div class="row">
+
+                                        {{-- Carosello --}}
                                         <div class="col-12 col-md-4 my-auto p-1">
 
                                             <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -79,7 +81,35 @@
                                             
                                         </div>
 
-                                        <div class="col-12 col-md-6">
+                                        {{-- Tags & labels --}}
+                                        @if($announcement->images->isNotEmpty())
+                                            <div class="col-12 col-md-3">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <h5 class=" mt-3 ">Tags</h5>
+                                                    @foreach($announcement->images as $image)
+                                                        <div class=" p-2 ">
+                                                                {{-- @if($image->labels)
+                                                                    @foreach($image->labels as $label)
+                                                                    <p class=" d-inline ">{{ $label}} </p>
+                                                                    @endforeach
+                                                                @endif --}}
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 ">
+                                                        <h5>Revisione immagini:</h5>
+                                                        <p>Adulti: <span class="{{ $image->adult }}"></span></p>
+                                                        <p>Satira: <span class="{{ $image->spoof }}"></span></p>
+                                                        <p>Medicina: <span class="{{ $image->medical }}"></span></p>
+                                                        <p>Violenza: <span class="{{ $image->violence }}"></span></p>
+                                                        <p>Contenuto sessuale: <span class="{{ $image->racy }}"></span></p>
+                                                     @endforeach
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endif
+                                        {{-- Descrizione --}}
+                                        <div class="col-12 col-md-4">
                                             <p>Titolo: <span class="fs-5">{{ $announcement->title }}</span></p>
                                             <p>Categoria: <span class="fs-5">{{ $announcement->category->name_it }}</span></p>
                                             <p>Descrizione: <span class="fs-5">{{ $announcement->body }}</span></p>
@@ -90,6 +120,7 @@
                                 
                                         </div>
 
+                                        {{-- Bottoni --}}
                                         <div class="col-12 col-md-1 mt-md-auto ms-md-auto me-4 d-flex justify-content-around  d-md-block ">
                                     
                                             <form action="{{ route('revisor.acceptAnnouncement', $announcement) }}" method="POST">
