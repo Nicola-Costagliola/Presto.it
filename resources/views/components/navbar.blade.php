@@ -1,5 +1,5 @@
 
-<div class="container-fluid fixed-top p-0 navbar shadow"  >
+<div class="container-fluid fixed-top p-0 navbar shadow mb-3 "  >
         <!-- gli elementi inline possono contenere SOLO gli elementi inline senno devi bloccarlo o farlo diventare flex -->
         {{-- <div class="container topbar bg-primary d-none d-lg-block">
             <div class="d-flex justify-content-between">
@@ -61,7 +61,7 @@
                                     @foreach ($categories as $category)
                                             <li>
                                                 <a class="dropdown-item nav-link nav-item  " href="{{ route('category.show', $category) }}">
-                                                @switch(session('lang'))
+                                                @switch(App::currentLocale())
                                                 @case('it')
                                                 {{ $category->name_it }}
                                                 @break
@@ -147,8 +147,7 @@
 
                                     <a class="nav-link dropdown-toggle p-0 ms-3 mt-md-0 mt-2" href="#" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">
-
-                                        @switch(session('lang'))
+                                        @switch(App::currentLocale())
                                                 @case('it')
                                         <x-_locale lang="it" />
                                                 @break

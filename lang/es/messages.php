@@ -11,7 +11,7 @@ return [
     'registrati' => 'Iniciar sesión',
     'accedi' => 'Acceso',
     'esci' => 'Sales',
-    'slogan'=> 'Con Presto.it encontrará inmediatamente lo que busca',
+    'slogan'=> 'Con nosotros encontrará inmediatamente lo que busca',
     'contattaci' => 'Contáctenos',
     'telefono' => 'Teléfono',
     'lavoraConNoi' => 'Trabaja con nosotros',

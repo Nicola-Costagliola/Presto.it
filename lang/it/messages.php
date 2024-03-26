@@ -12,7 +12,7 @@ return [
     'registrati' => 'Registrati',
     'accedi' => 'Accedi',
     'esci' => 'Esci',
-    'slogan'=> 'Con Presto.it trovi subito quello che cerchi',
+    'slogan'=> 'Con noi trovi subito quello che cerchi',
     'contattaci' => 'Contattaci',
     'telefono' => 'Telefono',
     'lavoraConNoi' => 'Lavora con noi',

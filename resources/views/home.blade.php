@@ -8,8 +8,8 @@
     <div class="container py-5  tracking-in-expand ">
       <div class="row  g-5 align-items-center ">
         <div class="col-12 col-lg-7 ">
-          <h1 class="mb-5 display-3 text-primary  ">Pesto.it</h1>
-          <h4 class="mb-3 text-secondary">{{ __('messages.slogan')}}</h4>
+          <h1 class="mb-5 testo-primario text_color display-2 fw-bold ">Presto.it</h1>
+          <h4 class="mb-3 text-secondary display-6 text-wrap ">{{ __('messages.slogan')}}</h4>
 
           <div class="position-relative mx-auto">
             <form class="d-flex " role="search" action="{{ route('announcements.search')}}" method="GET">
@@ -30,7 +30,7 @@
               <div class="carousel-inner shadow " role="listbox">
                 <div class="carousel-item @if($loop->first)active @endif rounded ">
                   <a href="{{ route('category.show', $category ) }}" class="text_color_body  display-6  px-4 py-2 text_color   position-absolute my-5 mx-3  ">
-                    @switch(session('lang'))
+                    @switch(App::currentLocale())
                             @case('it')
                             {{ $category->name_it }}
                             @break
