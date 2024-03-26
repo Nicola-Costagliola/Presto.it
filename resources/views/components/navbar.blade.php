@@ -35,7 +35,7 @@
 
         
         <div class="container">
-            <nav class="navbar navbar-light navbar-expand-lg ">
+            <nav class="navbar navbar-light navbar-expand-lg container-fluid  ">
 
                     <a class="navbar-brand d-flex align-items-center " href="{{ route('home') }}">
                         <img src="https://picsum.photos/50" class=" rounded-circle " alt="">
@@ -44,7 +44,7 @@
                         </a>
                     </a>
                     
-                    <button class="navbar-toggler py-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collasableMenu">
+                    <button class="navbar-toggler collapsed ms-auto " type="button" data-bs-toggle="collapse" data-bs-target="#collasableMenu">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -112,8 +112,8 @@
                         </div>
 
 
-                        <div class="d-flex m-3 me-0 navbar-nav mx-auto">
-                            <ul class="navbar-nav text-center ">
+                        <div class="d-flex m-3 me-0 navbar-nav ms-auto ">
+                            <ul class="navbar-nav text-center">
 
                                 <form class="d-flex " role="search" action="{{ route('announcements.search')}}" method="GET">
                                     <input class="form-control p-0 ms-3 mt-md-0 mt-2 rounded-pill" name="searched" type="search" placeholder="  Cerca" aria-label="Search">
@@ -143,7 +143,7 @@
 
                             @endauth
 
-                                <li class="nav-item dropdown my-auto ">
+                                <li class="nav-item dropdown my-auto">
 
                                     <a class="nav-link dropdown-toggle p-0 ms-3 mt-md-0 mt-2" href="#" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">
