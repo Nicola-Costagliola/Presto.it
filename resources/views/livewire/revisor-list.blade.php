@@ -67,7 +67,7 @@
                                                                 <div class=" p-2 ">
                                                                          @if($image->labels)
                                                                             @foreach($image->labels as $label)
-                                                                            <p class=" d-inline ">{{ $label}} </p>
+                                                                                <p class=" d-inline ">{{ $label}} </p>
                                                                             @endforeach
                                                                         @endif
                                                                 </div>
