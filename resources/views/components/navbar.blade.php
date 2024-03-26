@@ -1,7 +1,7 @@
 
 <div class="container-fluid fixed-top p-0 navbar shadow"  >
         <!-- gli elementi inline possono contenere SOLO gli elementi inline senno devi bloccarlo o farlo diventare flex -->
-        <div class="container topbar bg-primary d-none d-lg-block">
+        {{-- <div class="container topbar bg-primary d-none d-lg-block">
             <div class="d-flex justify-content-between">
                 <div class="top-info ps-2">
 
@@ -31,11 +31,11 @@
 
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         
-        <div class="container px-0  h-nav">
-            <nav class="navbar navbar-light navbar-expand-xl ">
+        <div class="container">
+            <nav class="navbar navbar-light navbar-expand-lg ">
 
                     <a class="navbar-brand d-flex align-items-center " href="{{ route('home') }}">
                         <img src="https://picsum.photos/50" class=" rounded-circle " alt="">
@@ -44,7 +44,7 @@
                         </a>
                     </a>
                     
-                    <button class="navbar-toggler py-2 px-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collasableMenu">
+                    <button class="navbar-toggler py-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collasableMenu">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -134,7 +134,7 @@
                             
                             @auth
 
-                                <li class="nav-item my-auto">
+                                <li class="nav-item my-auto mx-auto ">
                                     <form action="/logout" method="POST">
                                         @csrf
                                         <button class=" nav-link bi bi-person-fill-add p-0 ms-3 mt-md-0 mt-2" type="submit">{{ __('messages.esci') }}</button>
@@ -148,18 +148,19 @@
                                     <a class="nav-link dropdown-toggle p-0 ms-3 mt-md-0 mt-2" href="#" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">
 
-                                        @if(session('lang')=='')
+                                        @switch(session('lang'))
+                                                @case('it')
                                         <x-_locale lang="it" />
-                                        @endif
-                                        @if(session('lang')=='it')
-                                        <x-_locale lang="it" />
-                                        @endif
-                                        @if(session('lang')=='es')
+                                                @break
+                                                @case('es')
                                         <x-_locale lang="es" />
-                                        @endif
-                                        @if(session('lang')=='en')
+                                                @break
+                                                @case('en')
                                         <x-_locale lang="en" />
-                                        @endif
+                                                @break
+                                                @default
+                                        <x-_locale lang="it" />
+                                        @endswitch
 
                                     </a>
                                     <ul class="dropdown-menu li-flag text-center">
