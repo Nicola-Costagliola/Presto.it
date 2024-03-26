@@ -7,16 +7,16 @@
     </div>
 
     <div class="row">
-        
+
         {{-- Implementazione according --}}
-        
+
         {{-- la classe di bootstrap collapsaOne-- collapse{{$number}}  per l'according prende un numero in inglese che non riesco a passare e quindi cliccaldo su un annuncio me li apre tutti --}}
-        
+
         <div class="col-12 shadow p-5">
             @foreach($announcements as $announcement)
-            
+
                 @if($announcement->is_accepted == null && $announcement->is_accepted == false )
-            
+
                     <div class="accordion accordion-flush border" id="accordionFlushExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header ">
@@ -77,8 +77,8 @@
                                                     </button>
 
                                             </div>
-                                        
-                                            
+
+
                                         </div>
 
                                         {{-- Tags & labels --}}
@@ -117,18 +117,18 @@
                                             <p>Autore: <span class="fs-5">{{ $announcement->user->name }}</span></p>
                                             <p>Data creazione:: <span class="fs-5">{{ $announcement->created_at->format('d/m/Y') }}</span>
                                             </p>
-                                
+
                                         </div>
 
                                         {{-- Bottoni --}}
                                         <div class="col-12 col-md-1 mt-md-auto ms-md-auto me-4 d-flex justify-content-around  d-md-block ">
-                                    
+
                                             <form action="{{ route('revisor.acceptAnnouncement', $announcement) }}" method="POST">
                                                 @csrf
                                                 @method('PATCH')
                                                 <button type="submit" class="btn btn-success shadow mb-4">Accetta</button>
                                             </form>
-                                            
+
                                             <form action="{{ route('revisor.rejectAnnouncement',$announcement) }}" method="POST">
                                                 @csrf
                                                 @method('PATCH')
@@ -138,11 +138,11 @@
                                         </div>
 
                                     </div>
-                                    
+
                                 </div>
 
                             </div>
-                    
+
                         </div>
                     </div>
 
@@ -154,4 +154,3 @@
 
     </div>
 </div>
-
