@@ -42,15 +42,37 @@
                                     <div class="row">
 
                                         {{-- Carosello --}}
-                                        <div class="col-12 col-md-4 my-auto p-1">
+                                        <div class="col-12 col-md-9 my-auto p-1">
 
                                             <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
 
                                                 @if($announcement->images->isNotEmpty())
+                                                @foreach($announcement->images as $image)
                                                 <div class="carousel-inner">
-                                                    @foreach($announcement->images as $image)
-                                                    <div class="carousel-item @if($loop->first)active @endif">
-                                                        <img src="{{ $image->getUrl(400,300) }}" class=" d-block w-100 p-1 rounded" alt="...">
+                                                    <div class="row">
+                                                        <div class="carousel-item d-md-flex   @if($loop->first)active @endif">
+                                                            <div class="col-12 col-md-6">
+                                                                <img src="{{ $image->getUrl(400,300) }}" class=" d-block w-100 p-1 rounded" alt="...">
+                                                            </div>
+                                                            <div class="col-12 col-md-4 ps-2 my-auto text-center ">
+                                                                <h5>Revisione immagini:</h5>
+                                                                <p>Adulti: <span class="{{ $image->adult }}"></span></p>
+                                                                <p>Satira: <span class="{{ $image->spoof }}"></span></p>
+                                                                <p>Medicina: <span class="{{ $image->medical }}"></span></p>
+                                                                <p>Violenza: <span class="{{ $image->violence }}"></span></p>
+                                                                <p>Contenuto sessuale: <span class="{{ $image->racy }}"></span></p>
+                                                            </div>
+                                                            <div class="col-12 col-md-2 my-auto mx-auto  ">
+                                                                <h5 class="">Tags</h5>
+                                                                <div class=" p-2 ">
+                                                                         @if($image->labels)
+                                                                            @foreach($image->labels as $label)
+                                                                            <p class=" d-inline ">{{ $label}} </p>
+                                                                            @endforeach
+                                                                        @endif
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     @endforeach
                                                 </div>
@@ -67,12 +89,12 @@
 
                                                     <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel"
                                                     data-bs-slide="prev">
-                                                    <span class="carousel-control-prev-icon bg-black " aria-hidden="true"></span>
+                                                    <span class="bi bi-caret-left-fill text-black fs-1 " aria-hidden="true"></span>
                                                     <span class="visually-hidden">Previous</span>
                                                     </button>
                                                     <button class="carousel-control-next" type="button" data-bs-target="#showCarousel"
                                                     data-bs-slide="next">
-                                                    <span class="carousel-control-next-icon bg-black " aria-hidden="true"></span>
+                                                    <span class="bi bi-caret-right-fill text-black fs-1 " aria-hidden="true"></span>
                                                     <span class="visually-hidden">Next</span>
                                                     </button>
 
@@ -81,35 +103,8 @@
 
                                         </div>
 
-                                        {{-- Tags & labels --}}
-                                        @if($announcement->images->isNotEmpty())
-                                            <div class="col-12 col-md-3">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <h5 class=" mt-3 ">Tags</h5>
-                                                    @foreach($announcement->images as $image)
-                                                        <div class=" p-2 ">
-                                                                {{-- @if($image->labels)
-                                                                    @foreach($image->labels as $label)
-                                                                    <p class=" d-inline ">{{ $label}} </p>
-                                                                    @endforeach
-                                                                @endif --}}
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 ">
-                                                        <h5>Revisione immagini:</h5>
-                                                        <p>Adulti: <span class="{{ $image->adult }}"></span></p>
-                                                        <p>Satira: <span class="{{ $image->spoof }}"></span></p>
-                                                        <p>Medicina: <span class="{{ $image->medical }}"></span></p>
-                                                        <p>Violenza: <span class="{{ $image->violence }}"></span></p>
-                                                        <p>Contenuto sessuale: <span class="{{ $image->racy }}"></span></p>
-                                                     @endforeach
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        @endif
                                         {{-- Descrizione --}}
-                                        <div class="col-12 col-md-4">
+                                        <div class="col-12 col-md-3">
                                             <p>Titolo: <span class="fs-5">{{ $announcement->title }}</span></p>
                                             <p>Categoria: <span class="fs-5">{{ $announcement->category->name_it }}</span></p>
                                             <p>Descrizione: <span class="fs-5">{{ $announcement->body }}</span></p>
@@ -134,8 +129,6 @@
                                                 @method('PATCH')
                                                 <button type="submit" class="btn btn-success shadow mb-2">Rifiuta</button>
                                             </form>
-
-                                        </div>
 
                                     </div>
 

@@ -12,7 +12,7 @@ return [
     'registrati' => 'Sign in',
     'accedi' => 'Login',
     'esci' => 'Logout',
-    'slogan'=> 'With Presto.it you will immediately find what you are looking for',
+    'slogan'=> 'With us you will immediately find what you are looking for',
     'contattaci' => 'Contact us',
     'telefono' => 'Telephone',
     'lavoraConNoi' => 'Work with us',

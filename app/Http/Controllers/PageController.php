@@ -39,7 +39,7 @@ class PageController extends Controller
     public function setLocale($lang)
     {
         session()->put('locale', $lang);
-        return redirect()->back()->with(['lang'=> $lang]);
+        return redirect()->back();
     }
 
 }
