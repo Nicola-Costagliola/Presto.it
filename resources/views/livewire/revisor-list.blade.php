@@ -44,12 +44,12 @@
                                         {{-- Carosello --}}
                                         <div class="col-12 col-md-9 my-auto p-1">
 
-                                            <div id="showCarousel" class="carousel slide shadow" data-bs-ride="carousel">
+                                            <div id="showCarousel" class="carousel slide shadow rounded-2" data-bs-ride="carousel">
 
                                                 @if($announcement->images->isNotEmpty())
                                                     <div class="carousel-inner ">
                                                         @foreach($announcement->images as $image)
-                                                            <div class="carousel-item  @if($loop->first)active   @endif">
+                                                            <div class="carousel-item p-4 @if($loop->first)active   @endif">
                                                                 <div class="row">
 
                                                                     <div class="col-12 col-md-6">
@@ -63,7 +63,7 @@
                                                                         <p>Violenza: <span class="{{ $image->violence }}"></span></p>
                                                                         <p>Contenuto sessuale: <span class="{{ $image->racy }}"></span></p>
                                                                     </div>
-                                                                    <div class="col-12 col-md-2  text-center  text-md-start">
+                                                                    <div class="col-12 col-md-2 text-center text-md-start">
                                                                         <h5 class="">Tags</h5>
                                                                         <div class="">
                                                                             @if($image->labels)
