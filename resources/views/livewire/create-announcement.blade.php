@@ -79,9 +79,11 @@
                 </div>
                 
                 @endif
+
+
+                    <button type="submit" onclick="window.location.href='#'" class=" btn btn-primary shadow px-4 py-2 mt-4 montserrat text_color_body ">Crea</button>
+                 
                 
-                <button type="submit" class=" btn btn-primary shadow px-4 py-2 mt-4 montserrat text_color_body ">Crea</button>
-                {{-- <a href="#success" class=" text-decoration-none ">torna su</a> --}}
             </div>
         </div>
     </form>
