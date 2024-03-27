@@ -13,7 +13,7 @@
 </head>
 <body>
     <x-navbar />
-    <div class=" container-fluid wrap hero-header p-0 ">
+    <div class=" container-fluid wrap hero-header p-0  ">
         {{ $slot }}
 
 

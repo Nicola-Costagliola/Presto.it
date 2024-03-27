@@ -1,4 +1,10 @@
 <footer class="footer shadow text-light text-center py-3  container-fluid mt-5">
+       <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave " id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
     <div class="container mt-5">
         <div class="row">
 
@@ -35,3 +41,8 @@
         <p class="text_title montserrat display-6">Presto.it</p>
     </div>
 </footer>
+
+
+
+
+  

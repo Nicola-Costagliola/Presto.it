@@ -12,7 +12,7 @@
 </a> --}}
 
 <a href="{{ $route }}">
-    <div class="row">
+    <div class="row reveal reveal.active quotes ">
         <div class="col-12">
             <div class="card-sl">
                 <div class="card-img">
