@@ -2,14 +2,17 @@
     <div class="container text-center mt-3 p-2">
         <div class="row">
             <div class="col-12 shadow p-3">
-                <h1 class="display-5 text_color montserrat">Annuncio {{ $announcement->title }}</h1>
+                <h1 class="display-6 fs-2 text_color_body montserrat"><span class="text_color">Annuncio: </span>{{ $announcement->title }}</h1>
             </div>
         </div>
     </div>
+    <div class="container p-0 mt-3">
+        <x-back />
+    </div>
     
-    <div class="container text-center">
+    <div class="container">
             <div class="row">
-                <div class="col-12 shadow p-3">
+                <div class="col-12 col-md-8 shadow p-3">
                 
                     <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
         
@@ -34,11 +37,11 @@
                         @endif
 
                             <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon bg-black " aria-hidden="true"></span>
+                                <span class="bi bi-caret-left-fill text-black fs-1" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#showCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon bg-black " aria-hidden="true"></span>
+                                <span class="bi bi-caret-right-fill text-black fs-1" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
 
@@ -52,26 +55,21 @@
                 </div>
                 @endif
                 
-                <div class="row">
-                    <div class="col-12 mt-3">
-                        <h3 class="display-5 text_color_body montserrat">{{ $announcement->title }}</h3>
-                        
-                        <p class="card-text text_color_body montserrat">Categoria: {{ $announcement->category->name_it }}</p>
-                        <p class="card-text text_color_body montserrat">Descrizione: {{ $announcement->body }}</p>
-                        <p class="card-text text_color_body montserrat"><strong>Prezzo: {{$announcement->price}} €</strong></p>
-                        
-                        <x-back />
-                        
-                        <p><a class="btn shadow btn-secondary text_color_body montserrat "
+                <div class="col-12 col-md-4 shadow p-2">
+                    <div class="col-12 mt-3 ms-2">
+                        <p class="text_color_body montserrat fs-3 "><span class="text_color fw-semibold ">Categoria: </span>{{ $announcement->category->name_it }}</p>
+                        <p class="text_color_body montserrat fs-5"><span class="text_color fw-semibold ">descrizione: </span>{{ $announcement->body }}</p>
+                        <p class="text_color_body montserrat fs-4 "><strong><span class="text_color">Prezzo: </span>{{$announcement->price}} €</strong></p>                        
+                        <p><a class=" btn btn-outline rounded-5  montserrat "
                             href=" {{route('category.show', ['category' => $announcement->category]) }} ">
-                            Esplora la categoria {{$announcement->category->name_it}}
+                            Esplora la categoria: {{$announcement->category->name_it}}
                         </a></p>
                         @auth
                         @if(Auth::user()->is_revisor)
                         <form action="{{ route('revisor.reviewedAnnouncement', $announcement) }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button type="submit" class="btn btn-success shadow ">Da revisionare</button>
+                            <button type="submit" class="btn btn-outline rounded-5  ">Da revisionare</button>
                         </form>
                         
                         @endif

@@ -117,7 +117,7 @@
 
                                 <form class="d-flex " role="search" action="{{ route('announcements.search')}}" method="GET">
                                     <input class="form-control p-0 ms-3 mt-md-0 mt-2 rounded-pill" name="searched" type="search" placeholder="  Cerca" aria-label="Search">
-                                    <button class="btn btn-outline ms-2 p-1 mt-md-0 mt-2" type="submit">{{ __('messages.cerca') }}</button>
+                                    <button class="btn btn-outline ms-2 p-2 mt-md-0 mt-2 rounded-5 " type="submit">{{ __('messages.cerca') }}</button>
                                 </form>
 
                             @guest

@@ -5,6 +5,94 @@ a {
     text-decoration: none;
 }
 
+.card-sl {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-img img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 8px 8px 0px 0;
+}
+
+.card-action {
+  position: relative;
+  float: right;
+  margin-top: -25px;
+  margin-right: 20px;
+  z-index: 2;
+  color: #E26D5C;
+  background: #fff;
+  border-radius: 100%;
+  padding: 15px 20px;
+  font-size: 20px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-action:hover {
+  color: #fff;
+  background: #E26D5C;
+  -webkit-animation: pulse 1.5s infinite;
+}
+
+.card-heading {
+  font-size: 18px;
+  font-weight: bold;
+  background: #fff;
+  padding: 10px 15px;
+}
+
+.card-text {
+  padding: 10px 15px;
+  background: #fff;
+  font-size: 14px;
+  color: #636262;
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  width: 100%;
+  background-color: #1F487E;
+  color: #fff;
+  border-radius: 0 0 8px 8px;
+}
+
+.card-button:hover {
+  text-decoration: none;
+  background-color: #1D3461;
+  color: #fff;
+}
+
+@-webkit-keyframes pulse {
+
+  0% {
+      -moz-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+  }
+
+  70% {
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
+  }
+
+  100% {
+      -moz-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+      box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+  }
+}
+
+
 .montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -27,7 +115,7 @@ a {
 }
 
 .background {
-  background-image: url(/public/image/sfondo_presto.jpg);
+  background-image: url(resources\images\sfondo_presto.jpg);
   background-size: cover;
   
 }
@@ -252,32 +340,35 @@ transition: .6s ease;
 
 
 .btn {
-    border-radius: 78% 22% 87% 13% / 12% 65% 35% 88%;
+    /* border-radius: 78% 22% 87% 13% / 12% 65% 35% 88%; */
         padding: 10px 25px;
+        background-color: rgb(83, 115, 231);
+        color: #fff;
         font-family: "Roboto", sans-serif;
         font-weight: 500;
-        background: transparent;
+        /* background: transparent; */
         outline: none !important;
         cursor: pointer;
         transition: all 0.3s ease;
         position: relative;
         display: inline-block;
-        border: 2px solid rgb(255, 255, 255);
+        border: 2px solid rgba(255, 255, 255, 0.263);
         z-index: 1;
-        color: rgb(10, 10, 10);
+        /* color: rgb(10, 10, 10); */
 
 }
 
 
  .btn:after {
     position: absolute;
+    border-radius:40%;
     content: "";
     width: 100%;
     height: 0;
     top: 0;
     left: 0;
     z-index: -1;
-    background: rgba(255, 0, 0, 0.744);
+    background:rgba(83, 115, 231, 0.716);
     transition: all 0.3s ease;
 
 }
@@ -285,7 +376,7 @@ transition: .6s ease;
     color: rgb(0, 0, 0);
 }
 .btn:hover:after {
-    border-radius: 78% 22% 87% 13% / 12% 65% 35% 88%;
+    /* border-radius: 78% 22% 87% 13% / 12% 65% 35% 88%; */
     top: auto;
     bottom: 0;
     height: 100%;

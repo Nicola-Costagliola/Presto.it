@@ -66,10 +66,10 @@
 
 
 
-  <div class="container mb-5 text-center mt-3 p-5">
+  <div class="container mb-5 mt-3 p-5">
 
 
-    <div class="row ">
+    <div class="row text-center ">
 
       <div class="col-12 mb-5 p-2 ">
 
