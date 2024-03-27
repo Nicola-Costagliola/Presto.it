@@ -1,5 +1,5 @@
 <x-layout>
-  <div class="container-fluid py-5  background  kenburns-top">
+  <div class="container-fluid py-5  background  kenburns-top shadow ">
 
     <div class="container py-5  tracking-in-expand ">
       <div class="row  g-5 align-items-center ">
