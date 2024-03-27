@@ -22,13 +22,18 @@
                 
                 <div class="col-12">
                     <label for="categories" class="montserrat text_color_body text_color_body">Seleziona Categoria</label>
-                    <select class="form-select montserrat " id="categories" wire:model="category">
+                    @if($category)
+                        <p type="text" wire:model="categoryOgg" class=" form-control montserrat text_color_body" 
+                        value="{{$category}}" id="category">{{ $category->name_it}}</p>
+                    @else
+                        <select class="form-select montserrat " id="categories" wire:model="categorySele">
                         
                         @foreach ($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->name_it }}</option>
                         @endforeach
                         
-                    </select>
+                        </select>
+                    @endif
                 </div>
                 <div class="col-12">
                     <label for="body" class="montserrat text_color_body">Inserisci la descrizione</label>

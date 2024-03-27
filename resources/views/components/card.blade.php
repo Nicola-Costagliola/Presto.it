@@ -18,7 +18,7 @@
                 <div class="card-img">
                     <img src="{{ $img }}" alt="immagine annuncio">
                 </div>
-                <a class="card-action" href="#"><i class="bi bi-heart-fill"></i></a>
+                <a class="card-action"><i class="bi bi-heart-fill"></i></a>
                 <div class="card-heading">
                     {{ ucfirst($title) }}
                 </div>

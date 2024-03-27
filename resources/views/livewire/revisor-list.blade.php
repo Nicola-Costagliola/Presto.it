@@ -53,7 +53,7 @@
                                                                 <div class="row">
 
                                                                     <div class="col-12 col-md-6">
-                                                                        <img src="{{ $image->getUrl(400,300) }}" class="w-100 rounded" alt="...">
+                                                                        <img src="{{ $image->getUrl(400,250) }}" class="w-100 rounded" alt="...">
                                                                     </div>
                                                                     <div class="col-12 col-md-4  text-center text-md-start ">
                                                                         <h5>Revisione immagini:</h5>
@@ -81,10 +81,10 @@
                                                 @else
                                                     <div class="carousel-inner">
                                                         <div class="carousel-item active">
-                                                            <img src="https://picsum.photos/400/300" class=" w-50 rounded " alt="...">
+                                                            <img src="https://picsum.photos/400/250" class=" w-50 rounded " alt="...">
                                                         </div>
                                                         <div class="carousel-item">
-                                                            <img src="https://picsum.photos/400/300" class=" w-50 rounded " alt="...">
+                                                            <img src="https://picsum.photos/400/250" class=" w-50 rounded " alt="...">
                                                         </div>
                                                     </div>
                                                 @endif

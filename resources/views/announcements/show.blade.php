@@ -20,18 +20,18 @@
 
                             <div class="carousel-inner">
                                 @foreach($announcement->images as $image)
-                                <div class="carousel-item @if($loop->first)active @endif">
-                                    <img src="{{ $image->getUrl(400,300) }}" class="img-fluid p-1 rounded" alt="...">
+                                <div class="carousel-item text-center  @if($loop->first)active @endif">
+                                    <img src="{{ $image->getUrl(400,250) }}" class=" p-1 rounded" alt="...">
                                 </div>
                                 @endforeach
                             </div>
                         @else
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="https://picsum.photos/400/300" class="img-fluid p-1 rounded " alt="...">
+                                    <img src="https://picsum.photos/400/250" class="img-fluid p-1 rounded " alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="https://picsum.photos/401/300" class="img-fluid p-1 rounded " alt="...">
+                                    <img src="https://picsum.photos/401/250" class="img-fluid p-1 rounded " alt="...">
                                 </div>
                             </div>
                         @endif

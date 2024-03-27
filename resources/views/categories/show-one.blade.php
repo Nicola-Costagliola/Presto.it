@@ -20,7 +20,7 @@
                     :title="$announcement->title"
                     :img="!$announcement->images()->get()->isEmpty()
                     ? Storage::url($announcement->images()->first()->path)
-                    : 'https://picsum.photos/200' "
+                    : 'https://picsum.photos/400/250' "
                     :body="$announcement->body"
                     :price="$announcement->price"
                     :category="$category->name_it"
@@ -38,12 +38,12 @@
                         <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
                         aria-controls="collapseExample">
                         Crea nuovo annuncio per questa categoria
-                    </a>
-                </p>
+                        </a>
+                    </p>
                 <div class="collapse" id="collapseExample">
                     <div class="card card-body">
 
-                        <livewire:create-announcement-from-category :category="$category" />
+                        <livewire:create-announcement :category="$category" />
 
                     </div>
                 </div>

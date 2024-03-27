@@ -26,7 +26,12 @@ class CreateAnnouncement extends Component
     #[Validate]
     public $price;
 
-    public $category= 1;
+    public $category;
+
+    public $categorySele=1;
+    public $categoryOgg;
+
+    public $finalCategory='';
 
     #[Validate(['temporary_images.*' => 'image|max:2048'])]
     public $temporary_images= [];
@@ -35,7 +40,6 @@ class CreateAnnouncement extends Component
     public $images = [];
 
     public $announcement;
-
 
 
     protected function rules() {
@@ -86,6 +90,13 @@ class CreateAnnouncement extends Component
     public function store ()
     {
 
+        if($this->categoryOgg == null){
+         $this->finalCategory = $this->categorySele;
+        } else {
+            $this->finalCategory = $this->categoryOgg->id;
+        }
+
+
         $this->validate();
 
 
@@ -94,7 +105,7 @@ class CreateAnnouncement extends Component
             'title' => $this->title,
             'body' => $this->body,
             'price' => $this->price,
-            'category_id' => $this->category,
+            'category_id' => $this->finalCategory,
         ]);
 
 
@@ -115,7 +126,7 @@ class CreateAnnouncement extends Component
                 ]);
 
                 RemoveFaces::withChain([
-                    new ResizeImage($newImage->path, 400, 300),
+                    new ResizeImage($newImage->path, 400, 250),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id),
                 ])->dispatch($newImage->id);
@@ -136,7 +147,7 @@ class CreateAnnouncement extends Component
         $this->title = '';
         $this->body = '';
         $this->price = '';
-        $this->category =1;
+        $this->categorySele=1;
         $this->images = [];
         $this->temporary_images = [];
 

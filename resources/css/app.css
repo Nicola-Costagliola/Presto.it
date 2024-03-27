@@ -333,9 +333,9 @@ body {
         background: radial-gradient(circle, rgb(238, 241, 243) 11%, rgb(200, 208, 235) 100%);
 }
 
-.card:hover {
+.card-sl:hover {
 
-transition: .6s ease;
+    transition: .6s ease;
     transform: perspective(3px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
     background-size: 720%;
 

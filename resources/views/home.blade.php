@@ -99,8 +99,8 @@
           <x-card 
           :title="$announcement->title"
           :img="!$announcement->images()->get()->isEmpty() 
-          ? $announcement->images()->first()->getUrl(400,300)
-          : 'https://picsum.photos/400/300'"
+          ? $announcement->images()->first()->getUrl(400,250)
+          : 'https://picsum.photos/400/250'"
           :category="$announcement->category->name_it"
           :body="$announcement->body"
           :price="$announcement->price"
