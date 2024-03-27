@@ -16,6 +16,7 @@ class GoogleVisionSafeSearch implements ShouldQueue
 
     private $announcement_image_id;
 
+
     public function __construct($announcement_image_id)
     {
         $this->announcement_image_id = $announcement_image_id;
@@ -27,14 +28,14 @@ class GoogleVisionSafeSearch implements ShouldQueue
     public function handle(): void
     {
         $i = Image::find($this->announcement_image_id);
-        
+
         if(! $i) {
             return;
         }
 
-        $image = file_get_contents(storage_path('app/public/' . $i->path )); 
+        $image = file_get_contents(storage_path('app/public/' . $i->path ));
 
-        putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json') );
+        putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
 
         $imageAnnotator = new ImageAnnotatorClient() ;
         $response = $imageAnnotator->safeSearchDetection($image);
@@ -50,7 +51,7 @@ class GoogleVisionSafeSearch implements ShouldQueue
 
         $likeLihoodName = [
             'text-secondary bi bi-circle-fill', 'text-success bi bi-circle-fill', 'text-success bi bi-circle-fill',
-            'text-warning bi bi-circle-fill', 'text-warning bi bi-circle-fill', 'text-danger bi bi-circle-fill', 
+            'text-warning bi bi-circle-fill', 'text-warning bi bi-circle-fill', 'text-danger bi bi-circle-fill',
         ];
 
         $i->adult = $likeLihoodName[$adult];
