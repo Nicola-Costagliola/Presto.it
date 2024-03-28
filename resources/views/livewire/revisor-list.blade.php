@@ -37,7 +37,8 @@
 
                             <div id="flush-collapse{{$announcement->id}}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
 
-                                <div class="accordion-body">
+                                <div class="accordion-body text_color_body" style="background: rgb(53, 134, 255);
+        background: linear-gradient(180deg, rgba(53, 134, 255, 1) 0%, rgba(22, 61, 104, 1) 68%);">
 
                                     <div class="row">
 
@@ -120,13 +121,13 @@
                                             <form action="{{ route('revisor.acceptAnnouncement', $announcement) }}" method="POST">
                                                 @csrf
                                                 @method('PATCH')
-                                                <button type="submit" class="btn btn-success shadow">Accetta</button>
+                                                <button type="submit" class="bn632-hover bn26  shadow">Accetta</button>
                                             </form>
 
                                             <form action="{{ route('revisor.rejectAnnouncement',$announcement) }}" method="POST">
                                                 @csrf
                                                 @method('PATCH')
-                                                <button type="submit" class="btn btn-success shadow ms-2">Rifiuta</button>
+                                                <button type="submit" class="bn632-hover bn26 shadow ms-2">Rifiuta</button>
                                             </form>
                                         </div>
 

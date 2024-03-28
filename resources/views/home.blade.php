@@ -66,7 +66,7 @@
 
     <div class="row text-center ">
 
-      <div class="col-12 mb-5 p-2 ">
+      <div class="col-12 mb-4 p-2 ">
 
         @if(session()->has('access.denied'))
         <div class="alert alert-danger montserrat">
@@ -88,7 +88,7 @@
         <h1 class="display-3 text_color montserrat">{{__('messages.annunci')}}</h1>
 
         @auth
-        <a href=" {{ route('announcements.create') }}" class=" btn text_color_body montserrat ">{{ __('messages.inserisciAnnuncio')}}</a>
+        <a href=" {{ route('announcements.create') }}" class=" bn632-hover bn26 shadow p-3 mt-1 text_color_body montserrat ">{{ __('messages.inserisciAnnuncio')}}</a>
         @endauth
       </div>
     </div>

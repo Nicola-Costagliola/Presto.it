@@ -5,7 +5,7 @@
             <nav class="navbar navbar-light navbar-expand-lg container-fluid p-0 ">
 
                     <a class="navbar-brand d-flex align-items-center " href="{{ route('home') }}">
-                        <img src="{{asset('Logo/Logo2-no-bg.png')}}" class="img-fluid" style="height: 50px" alt="resources/images/Logo">
+                        <img src="{{asset('Logo/Logo2-no-bg.png')}}" class="img-fluid" style="height: 70px" alt="resources/images/Logo">
                         <a class="testo-primario text_color display-6 "
                         href="{{ route('home') }}"></a>
                     </a>
@@ -83,7 +83,7 @@
 
                                 <form class="d-flex " role="search" action="{{ route('announcements.search')}}" method="GET">
                                     <input class="form-control p-0 ms-3 mt-md-0 mt-2 rounded-pill text_color_body" name="searched" type="search" placeholder="  Cerca" aria-label="Search">
-                                    <button class="btn  ms-2 p-2 mt-md-0 mt-2 rounded-5 " type="submit">{{ __('messages.cerca') }}</button>
+                                    <button class="bn632-hover bn26 shadow m-0 ms-1" type="submit">{{ __('messages.cerca') }}</button>
                                 </form>
 
                             @guest
