@@ -38,11 +38,6 @@
     </div>
 
     <div class="text-center mt-3">
-        <p class="text_title montserrat display-6">Presto.it</p>
+        <p class="text_title montserrat display-6"><img src="{{asset('Logo/Logo2-no-bg.png')}}" style="height: 100px" alt=""></p>
     </div>
 </footer>
-
-
-
-
-  
