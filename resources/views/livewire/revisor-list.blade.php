@@ -17,7 +17,7 @@
 
                 @if($announcement->is_accepted == null && $announcement->is_accepted == false )
 
-                    <div class="accordion accordion-flush shadow border" id="accordionFlushExample">
+                    <div class="accordion accordion-flush shadow" id="accordionFlushExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header ">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -37,24 +37,24 @@
 
                             <div id="flush-collapse{{$announcement->id}}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
 
-                                <div class="accordion-body text_color_body " style="background: #eef1f3;
-        background: linear-gradient(180deg, #163d68 0%, #246cbb 68%);">
+                                <div class="accordion-body text_color_body " style="background: linear-gradient(180deg, #163d68 0%, #246cbb 68%);">
 
                                     <div class="row">
 
                                         {{-- Carosello --}}
-                                        <div class="col-12 col-md-9 my-auto p-1">
+                                        <div class="col-12  my-auto p-1">
 
-                                            <div id="showCarousel" class="carousel slide shadow rounded-2" data-bs-ride="carousel">
+                                            <div id="showCarousel" class="carousel slide shadow " data-bs-ride="carousel">
 
                                                 @if($announcement->images->isNotEmpty())
                                                     <div class="carousel-inner ">
                                                         @foreach($announcement->images as $image)
-                                                            <div class="carousel-item p-4 border @if($loop->first)active   @endif">
+                                                            <div class="carousel-item p-4 shadow border rounded-2 text_color @if($loop->first)active   @endif"
+                                                                style="background:#eef1f3;">
                                                                 <div class="row">
 
                                                                     <div class="col-12 col-md-6 ">
-                                                                        <img src="{{ $image->getUrl(400,250) }}" class="w-100 rounded mt-4" alt="...">
+                                                                        <img src="{{ $image->getUrl(400,250) }}" class="w-100 rounded mt-3" alt="...">
                                                                     </div>
                                                                     <div class="col-12 col-md-4  text-center text-md-start ">
                                                                         <h5>Revisione immagini:</h5>
@@ -105,18 +105,21 @@
                                         </div>
 
                                         {{-- Descrizione --}}
-                                        <div class="col-12 col-md-3">
+                                        <div class="col-12 col-md-4 align-content-center">
                                             <p>Titolo: <span class="fs-5">{{ $announcement->title }}</span></p>
                                             <p>Categoria: <span class="fs-5">{{ $announcement->category->name_it }}</span></p>
-                                            <p>Descrizione: <span class="fs-5">{{ $announcement->body }}</span></p>
+                                            <p>Descrizione: <span class="fs-5 w-100">{{ $announcement->body }}</span></p>
+                                        </div>
+                                        <div class="col-12 col-md-4 align-content-center">
                                             <p>Prezzo: <span class="fs-5">{{ $announcement->price }} €</span></p>
                                             <p>Autore: <span class="fs-5">{{ $announcement->user->name }}</span></p>
                                             <p>Data creazione:: <span class="fs-5">{{ $announcement->created_at->format('d/m/Y') }}</span>
                                             </p>
                                         </div>
 
+
                                         {{-- Bottoni --}}
-                                        <div class="col-12 d-flex justify-content-center mt-2  ">
+                                        <div class="col-12 col-md-4 align-content-center   ">
 
                                             <form action="{{ route('revisor.acceptAnnouncement', $announcement) }}" method="POST">
                                                 @csrf
@@ -127,7 +130,7 @@
                                             <form action="{{ route('revisor.rejectAnnouncement',$announcement) }}" method="POST">
                                                 @csrf
                                                 @method('PATCH')
-                                                <button type="submit" class="bn632-hover bn26 shadow ms-2">Rifiuta</button>
+                                                <button type="submit" class="bn632-hover bn26 shadow ">Rifiuta</button>
                                             </form>
                                         </div>
 

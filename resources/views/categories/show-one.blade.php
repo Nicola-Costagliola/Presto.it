@@ -34,9 +34,10 @@
                     <p class="h1 montserrat text_color_body">Non sono presenti annunci per questa categoria</p>
                     @auth
                     <p class="h2 montserrat text_color">Pubblicane uno:</p>
-                    <p class="btn montserrat text_color_body d-inline-flex ">
+                    <p class=" montserrat d-inline-flex">
                         <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-                        aria-controls="collapseExample">
+                        aria-controls="collapseExample"
+                        class="bn632-hover bn26 shadow align-content-center " style="width: 100%">
                         Crea nuovo annuncio per questa categoria
                         </a>
                     </p>
