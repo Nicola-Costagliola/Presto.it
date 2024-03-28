@@ -17,7 +17,7 @@
 
                 @if($announcement->is_accepted == null && $announcement->is_accepted == false )
 
-                    <div class="accordion accordion-flush border" id="accordionFlushExample">
+                    <div class="accordion accordion-flush shadow border" id="accordionFlushExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header ">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -37,8 +37,8 @@
 
                             <div id="flush-collapse{{$announcement->id}}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
 
-                                <div class="accordion-body text_color_body" style="background: rgb(53, 134, 255);
-        background: linear-gradient(180deg, rgba(53, 134, 255, 1) 0%, rgba(22, 61, 104, 1) 68%);">
+                                <div class="accordion-body text_color_body " style="background: #eef1f3;
+        background: linear-gradient(180deg, #163d68 0%, #246cbb 68%);">
 
                                     <div class="row">
 
@@ -50,11 +50,11 @@
                                                 @if($announcement->images->isNotEmpty())
                                                     <div class="carousel-inner ">
                                                         @foreach($announcement->images as $image)
-                                                            <div class="carousel-item p-4 @if($loop->first)active   @endif">
+                                                            <div class="carousel-item p-4 border @if($loop->first)active   @endif">
                                                                 <div class="row">
 
-                                                                    <div class="col-12 col-md-6">
-                                                                        <img src="{{ $image->getUrl(400,250) }}" class="w-100 rounded" alt="...">
+                                                                    <div class="col-12 col-md-6 ">
+                                                                        <img src="{{ $image->getUrl(400,250) }}" class="w-100 rounded mt-4" alt="...">
                                                                     </div>
                                                                     <div class="col-12 col-md-4  text-center text-md-start ">
                                                                         <h5>Revisione immagini:</h5>
