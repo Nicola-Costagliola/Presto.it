@@ -3,7 +3,10 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use App\Mail\ContactAuthor;
 use Livewire\Attributes\Validate;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class SendEmail extends Component
 {
@@ -27,6 +30,8 @@ class SendEmail extends Component
 
     public function store() {
         
+        Mail::to($this->announcement->user->email)->send(new ContactAuthor( Auth::user(), $this->announcement->title, $this->message));
+
     }
 
     public function render()
