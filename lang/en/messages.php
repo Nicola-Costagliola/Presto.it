@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'welcome' => 'inglese',
+    'welcome' => '  Inglese',
     'name' => 'the attribute name is required',
     'remember' => 'Remember',
     'categorie' => 'Categories',
@@ -21,20 +21,20 @@ return [
     'seguici' => 'Follow us',
     'tuttiAnnunci' => 'Here are all the announcements',
     'noAnnunciRicerca' => 'There are no ads for this search',
-    'entra' => 'login',
+    'entra' => 'Login',
     'inserisciNome' => 'Insert your name',
     'inserisciEmail' => 'Insert your email',
     'inserisciPassword' => 'Insert your password',
     'confermaPassword' => 'Confirm password',
     'titoloObb' => 'The title is required',
     'descObb' => 'The body is required',
-    'prezzoObb' => 'the price is mandatory and must have a maximum of 2 decimal places',
+    'prezzoObb' => 'The price is mandatory and must have a maximum of 2 decimal places',
     'nomeObb' => 'The name is required',
     'emailObb' => 'The email is required',
-    'passwordObb' => 'The password is required and must have at least 1 large letter, a symbol and a number',
+    'passwordObb' => 'The password is mandatory: at least 1 large letter, 1 symbol and 1 number',
     'confPasswordObb' => 'password confirmation is required',
-
-
+    'nome' => 'Name',
+    'confPass' => 'Confirm password',
 
 
 

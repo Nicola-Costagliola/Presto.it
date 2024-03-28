@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'welcome' => 'italiano',
-    'name' => 'l\'attributo nome è obbligatorio',
+    'welcome' => 'Italiano',
+    'name' => 'L\'attributo nome è obbligatorio',
     'remember' => 'Ricordami',
     'categorie' => 'Categorie',
     'annunci' => 'Annunci',
@@ -30,9 +30,11 @@ return [
     'descObb' => 'La descrizione è obbligatoria',
     'prezzoObb' => 'Il prezzo è obbligatorio e deve avere massimo 2 cifre decimali',
     'nomeObb' => 'Il nome è obbligatorio',
-    'emailObb' => 'l\'email è obbligatoria',
-    'passwordObb' => 'La password è obbligatoria deve avere almeno 1 lettera grande, un simbolo e un numero',
+    'emailObb' => 'L\'email è obbligatoria',
+    'passwordObb' => 'La password è obbligatoria: almeno 1 lettera grande, 1 simbolo e 1 numero',
     'confPasswordObb' => 'La conferma della password è obbligatoria',
+    'nome' => 'Nome',
+    'confPass' => 'Conferma password',
 
 
 

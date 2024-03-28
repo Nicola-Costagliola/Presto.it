@@ -89,11 +89,15 @@
                             @guest
 
                                 <li class="nav-item my-auto">
-                                    <a class="nav-link bi bi-person-fill-add  ms-3 p-0 mt-md-0 mt-2 text_color_body" href="/register">{{ __('messages.registrati') }}</a>
+                                    <a class="nav-link ms-3 p-0 mt-md-0 mt-2 text_color_body" href="/register">{{ __('messages.registrati') }}
+                                        <i class="bi bi-person-fill-add"></i>
+                                    </a>
                                 </li>
 
                                 <li class="nav-item my-auto">
-                                    <a class="nav-link bi bi-box-arrow-in-right  ms-3  p-0 mt-md-0 mt-2  text_color_body" href="/login">{{ __('messages.accedi') }}</a>
+                                    <a class="nav-link ms-3  p-0 mt-md-0 mt-2  text_color_body" href="/login">{{ __('messages.accedi') }}
+                                        <i class="bi bi-box-arrow-in-right"></i>
+                                    </a>
                                 </li>
 
                             @endguest
@@ -103,7 +107,9 @@
                                 <li class="nav-item my-auto mx-auto ">
                                     <form action="/logout" method="POST">
                                         @csrf
-                                        <button class=" nav-link bi bi-person-fill-add p-0 ms-3 mt-md-0 text_color_body mt-2" type="submit">{{ __('messages.esci') }}</button>
+                                        <button class=" nav-link p-0 ms-3 mt-md-0 text_color_body mt-2" type="submit">{{ __('messages.esci') }}
+                                            <i class="bi bi-box-arrow-right"></i>
+                                        </button>
                                     </form>
                                 </li>
 

@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container ">
+    <!-- <div class="container ">
 
         <div class="row mt-5  ">
 
@@ -49,5 +49,55 @@
             <x-back />
 
         </div>
+    </div> -->
+
+    <x-back />
+
+    <div class="container-contact100">
+
+        <div class="wrap-contact100">
+
+            <form action="/login" method="POST" class="contact100-form validate-form">
+            @csrf
+
+                <span class="contact100-form-title">{{ __('messages.accedi') }}
+                    <i class="bi bi-person-circle"></i>
+                </span>
+
+                <div class="wrap-input100 validate-input">
+                    
+                    <label class="" for="email"> Email
+                        <i class="bi bi-envelope"></i>
+                    </label>
+                    <span class="label-input100">{{ __('messages.emailObb') }}</span>
+                    <input type="email" id="email" name="email" class="input100 @error('email') is-invalid @enderror" value=" {{ old('email') }} " placeholder="{{ __('messages.inserisciEmail') }}">
+                    @error('email') <span class=" text-danger small "> {{ $message }} </span>  @enderror
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input">
+                <label class="" for="password"> Password
+                        <i class=" bi bi-lock-fill"></i>
+                    </label>
+                    <span class="label-input100">La password è obbligatoria: almeno 1 lettera grande, 1 simbolo e 1 numero </span>
+                    <input type="password" id="password" name="password" class="input100 @error('password') is-invalid @enderror" placeholder="Scrivi la tua password">
+                    @error('email') <span class=" text-danger small "> {{ $message }} </span>  @enderror
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="validate-input mb-3">
+                    <span class="label-input100">{{ __('messages.remember') }}</span>
+                    <input type="checkbox" id="remember" name="remember" class="" value="true">
+                </div>
+
+                <button type="submit" class=" contact100-form-btn ">{{ __('messages.entra') }}
+                </button>
+                
+            </form>
+
+        </div>
+
     </div>
+
+
 </x-layout>

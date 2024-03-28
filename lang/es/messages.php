@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'welcome' => 'spagnolo',
+    'welcome' => 'Spagnolo',
     'remember' => 'Acuerdame',
     'categorie' => 'Categorias',
     'annunci' => 'Anuncios',
@@ -25,13 +25,15 @@ return [
     'inserisciEmail' => 'Inserta tu correo electrónico',
     'inserisciPassword' => 'Introducir la contraseña',
     'confermaPassword' => 'Confirmar Contraseña',
-    'titoloObb' => 'el titulo es obligatorio',
-    'descObb' => 'la descripción es obligatoria',
-    'prezzoObb' => 'el precio es obligatorio y debe tener un máximo de 2 decimales',
+    'titoloObb' => 'El titulo es obligatorio',
+    'descObb' => 'La descripción es obligatoria',
+    'prezzoObb' => 'El precio es obligatorio y debe tener un máximo de 2 decimales',
     'nomeObb' => 'El nombre es obligatorio',
-    'emailObb' => 'correo electronico es requerido',
-    'passwordObb' => 'La contraseña es obligatoria y debe tener al menos 1 letra grande, un símbolo y un número',
-    'confPasswordObb' => 'la confirmación de la contraseña es obligatoria',
+    'emailObb' => 'Correo electronico es requerido',
+    'passwordObb' => 'La contraseña es obligatoria: al menos 1 letra grande, 1 símbolo y 1 número',
+    'confPasswordObb' => 'La confirmación de la contraseña es obligatoria',
+    'nome' => 'Nombre',
+    'confPass' => 'Confirmar Contraseña',
 
 
 
