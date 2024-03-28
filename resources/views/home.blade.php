@@ -96,9 +96,9 @@
     <div class="row mt-5 shadow p-5 g-3">
       @foreach($announcements as $announcement)
       <div class="col-12 col-xl-4 col-lg-4 col-md-6 align-content-center ">
-          <x-card 
+          <x-card
           :title="$announcement->title"
-          :img="!$announcement->images()->get()->isEmpty() 
+          :img="!$announcement->images()->get()->isEmpty()
           ? $announcement->images()->first()->getUrl(400,250)
           : 'https://picsum.photos/400/250'"
           :category="$announcement->category->name_it"

@@ -103,7 +103,7 @@ a {
 }
 
 .text_color_body {
-    color: #163d68;
+    color: #eef1f3;
 }
 
 .background {
@@ -118,7 +118,7 @@ a {
 }
 
 .navbar{
-    background: rgb(238, 241, 243) !important;
+    background: #163d68 !important;
         /* background: radial-gradient(circle, rgb(208, 255, 151) 0%, rgb(205, 252, 255) 96%); */
 
 
@@ -183,11 +183,9 @@ a {
 
 .footer{
         background: rgb(53, 134, 255);
-          background: linear-gradient(180deg, rgba(53, 134, 255, 1) 0%, rgba(22, 61, 104, 1) 68%);
-        /* background: radial-gradient(circle, rgb(208, 255, 151) 0%, rgb(205, 252, 255)96%); */
+        background: linear-gradient(180deg, rgba(53, 134, 255, 1) 0%, rgba(22, 61, 104, 1) 68%);
         position: relative;
         width: 100%;
-        /* background: #3586ff; */
         min-height: 100px;
         padding: 20px 50px;
         display: flex;
@@ -344,13 +342,13 @@ body {
 
 
 .btn {
-    /* border-radius: 78% 22% 87% 13% / 12% 65% 35% 88%; */
+
         padding: 10px 25px;
-        background-color: rgb(83, 115, 231);
-        color: #fff;
+        color: #eef1f3;
+        background-color: #163d68;
         font-family: "Roboto", sans-serif;
         font-weight: 500;
-        /* background: transparent; */
+
         outline: none !important;
         cursor: pointer;
         transition: all 0.3s ease;
@@ -372,7 +370,7 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
-    background:rgba(83, 115, 231, 0.716);
+    background:#163d68;
     transition: all 0.3s ease;
 
 }
@@ -419,12 +417,12 @@ body {
 .bn632-hover.bn26 {
   background-image: linear-gradient(
     to right,
-    rgb(9, 52, 116),
+    #163d68,
     #4481eb,
     #fe0404,
     #3f86ed
   );
-  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  box-shadow: 0 4px 15px 0 #163d68;
 }
 
 .img-preview {

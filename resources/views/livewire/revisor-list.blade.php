@@ -1,4 +1,4 @@
-<div class=" container mb-5  mt-3 p-5 ">
+<div class=" container mb-5  mt-3 p-5 text_color">
     <div class="row">
         <div class="col-12 shadow p-3 ">
             <h1 class=" text-center display-4">Gestisci annunci</h1>
