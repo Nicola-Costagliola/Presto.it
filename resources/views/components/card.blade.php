@@ -28,7 +28,7 @@
                 <div class="card-text">
                     <strong>{{ $price }} €</strong>
                 </div>
-                <a href="{{ $route }}" class="card-button">Apri</a>
+                <a href="{{ $route }}" class="card-button bn633-hover bn27">Apri</a>
             </div>
         </div>
     </div>
