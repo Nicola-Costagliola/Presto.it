@@ -2,7 +2,7 @@
 <div class="container-fluid fixed-top p-0 navbar shadow mb-3 "  >
 
         <div class="container ">
-            <nav class="navbar navbar-light navbar-expand-lg container-fluid p-0 ">
+            <nav class="navbar navbar-light navbar-expand-lg container-fluid p-0">
 
                     <a class="navbar-brand d-flex align-items-center " href="{{ route('home') }}">
                         <img src="{{asset('Logo/Logo2-no-bg.png')}}" class="img-fluid" style="height: 70px" alt="resources/images/Logo">
@@ -148,6 +148,8 @@
                     </div>
 
             </nav>
+            
 
         </div>
+
 </div>
