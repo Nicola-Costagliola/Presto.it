@@ -39,13 +39,13 @@ a[x-apple-data-detectors] {
 @media screen and (max-width:384px) {.mail-message-content { width:414px!important } }
 </style>
  </head>
- <body style="width:100%;font-family:arial, 'helvetica neue', helvetica, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0">
-  <div dir="ltr" class="es-wrapper-color" lang="en" style="background-color:#FAFAFA"><!--[if gte mso 9]>
+ <body style="width:100%;font-family:arial, 'helvetica neue', helvetica, sans-serif; background-color:#163d68; -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0">
+  <div dir="ltr" class="es-wrapper-color" lang="en" style="background-color:#eef1f3"><!--[if gte mso 9]>
 			<v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
 				<v:fill type="tile" color="#fafafa"></v:fill>
 			</v:background>
 		<![endif]-->
-   <table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top;background-color:#FAFAFA">
+   <table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top;background-color:#163d68">
      <tr>
       <td valign="top" style="padding:0;Margin:0">
        <table cellpadding="0" cellspacing="0" class="es-content" align="center" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%">
@@ -77,7 +77,11 @@ a[x-apple-data-detectors] {
                   <td class="es-m-p0r" valign="top" align="center" style="padding:0;Margin:0;width:560px">
                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr>
-                      <td align="center" style="padding:0;Margin:0;padding-bottom:20px;font-size:0px"><h2 style="Margin:0;line-height:46px;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:46px;font-style:normal;font-weight:bold;color:#333333">Presto.it</h2></td>
+                      <td align="center" style="padding:0;Margin:0;padding-bottom:20px;font-size:0px"> <a class=" align-items-center "  href="{{ route('home') }}">
+                        <img src="{{asset('Logo/Logo2-no-bg.png')}}" class="img-fluid" style="height: 70px" alt="resources/images/Logo">
+                        <a class="testo-primario text_color display-6 "
+                        href="{{ route('home') }}"></a>
+                    </a></td>
                      </tr>
 
                        </table></td>

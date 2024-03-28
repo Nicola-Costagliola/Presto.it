@@ -57,7 +57,7 @@
 
         <div class="wrap-contact100">
 
-            <form action="/login" method="POST" class="contact100-form validate-form">
+            <form action="/register" method="POST" class="contact100-form validate-form">
             @csrf
 
                 <span class="contact100-form-title">{{ __('messages.registrati') }}
