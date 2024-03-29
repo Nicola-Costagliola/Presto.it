@@ -82,8 +82,10 @@
                             <ul class="navbar-nav text-center ">
 
                                 <form class="d-flex " role="search" action="{{ route('announcements.search')}}" method="GET">
-                                    <input class="form-control p-0 ms-3 mt-md-0 mt-2 rounded-pill text_color_body" name="searched" type="search" placeholder="  Cerca" aria-label="Search">
-                                    <button class="bn632-hover bn26 shadow m-0 ms-1" type="submit">{{ __('messages.cerca') }}</button>
+                                    <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill text_color_body" name="searched" type="search" placeholder="{{ __('messages.cerca') }}" aria-label="Search">
+                                    <button class="btn shadow m-0 ms-1" type="submit">
+                                    <i class="bi bi-search text-white"></i>
+                                    </button>
                                 </form>
 
                             @guest

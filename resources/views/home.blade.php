@@ -9,9 +9,9 @@
 
           <div class="position-relative mx-auto">
             <form class="d-flex " role="search" action="{{ route('announcements.search')}}" method="GET">
-              <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" name="searched" type="search" placeholder="Cerca"
+              <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" name="searched" type="search" placeholder="{{ __('messages.cerca') }}"
               aria-label="Search">
-              <button class="bn632-hover bn26 py-3 px-4 position-absolute opacity-75 h-100" style="top: 0; right: 25%;" type="submit">Cerca</button>
+              <button class="bn632-hover bn26 py-3 px-4 position-absolute opacity-75 h-100" style="top: 0; right: 25%;" type="submit">{{ __('messages.cerca') }}</button>
             </form>
           </div>
         </div>
