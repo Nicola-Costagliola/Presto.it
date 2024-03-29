@@ -11,10 +11,10 @@
                 @forelse ($announcements as $announcement)
 
                 <div class="col-12 col-xl-4 col-lg-4 col-md-6 align-content-center ">
-                <x-card  
+                <x-card
                 :title="$announcement->title"
-                :img="!$announcement->images()->get()->isEmpty() 
-                ? $announcement->images()->first()->getUrl(400,250) 
+                :img="!$announcement->images()->get()->isEmpty()
+                ? $announcement->images()->first()->getUrl(400,250)
                 : 'https://picsum.photos/400/250' "
                 :category="$announcement->category->name_it"
                 :body="$announcement->body"
@@ -28,7 +28,7 @@
                     <div class="row ">
 
                         <div class="col-12 text-center shadow p-5 mt-5">
-                            <p class="h1 montserrat text_color_body">{{ __('messages.noAnnunciRicerca') }}</p>
+                            <p class="h1 montserrat text_color">{{ __('messages.noAnnunciRicerca') }}</p>
                         </div>
                     </div>
 
