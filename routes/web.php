@@ -39,7 +39,7 @@ Route::middleware('auth')->group( function () {
 Route::middleware('isRevisor')->group( function () {
 
     //gestione annunci
-    Route::get('revisor/manage', [RevisorController::class, 'manage'])->name('revisor.manage');
+    Route::get('/revisor/manage', [RevisorController::class, 'manage'])->name('revisor.manage');
     // accetta annuncio
     Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->name('revisor.acceptAnnouncement');
     // rifiuta annuncio

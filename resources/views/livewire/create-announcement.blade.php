@@ -27,7 +27,7 @@
                 <div class="wrap-input100 validate-input">
                     <label for="categories" class=" ">Seleziona Categoria</label>
                     @if($category)
-                        <p type="text" wire:model="categoryOgg" class=" form-control montserrat text_color_body"
+                        <p type="text" wire:model="categoryOgg" class=" form-control  text_color"
                         value="{{$category}}" id="category">{{ $category->name_it}}</p>
                     @else
                         <select class="form-select montserrat " id="categories" wire:model="categorySele">
@@ -42,7 +42,7 @@
                 <div class="wrap-input100 validate-input">
                     <label for="body" class=" ">Descrizione</label>
                     <span class="label-input100">{{ __('messages.descObb') }}</span>
-                    <textarea class=" input100 @error('body') is-invalid @enderror text_color_body montserrat" type="text" id="body" wire:model.blur="body" placeholder="Inserisci la descrizione del tuo annuncio"></textarea>
+                    <textarea class=" input100 text-white @error('body') is-invalid @enderror " type="text" id="body" wire:model.blur="body" placeholder="Inserisci la descrizione del tuo annuncio"></textarea>
                     @error('body')<span class=" text-danger "> {{ $message }}</span> @enderror
                 </div>
 

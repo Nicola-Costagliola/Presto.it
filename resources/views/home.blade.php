@@ -5,7 +5,7 @@
       <div class="row  g-5 align-items-center ">
         <div class="col-12 col-lg-7 ">
           <h1 class="mb-5 testo-primario text_color display-2 fw-bold ">Presto.it</h1>
-          <h4 class="mb-3 text-secondary display-6 text-wrap ">{{ __('messages.slogan')}}</h4>
+          <p class="mb-3 text-secondary display-6 text-wrap fs-3">{{ __('messages.slogan')}}</p>
 
           <div class="position-relative mx-auto">
             <form class="d-flex " role="search" action="{{ route('announcements.search')}}" method="GET">
@@ -23,7 +23,7 @@
               @foreach ($categories as $category)
 
 
-              <div class="carousel-inner shadow " role="listbox">
+              <div class="carousel-inner shadow" role="listbox">
                 <div class="carousel-item @if($loop->first)active @endif rounded ">
                   <a href="{{ route('category.show', $category ) }}" class="text_color_body  display-6  px-4 py-2 text_color   position-absolute my-5 mx-3  ">
                     @switch(App::currentLocale())
@@ -40,7 +40,7 @@
                             {{ $category->name_it }}
                             @endswitch
                   </a>
-                  <img src="https://picsum.photos/400/300" alt="" class="img-fluid w-100 h-100 bg-secondary rounded ">
+                  <img src="https://picsum.photos/400/300" alt="" class="img-fluid w-100 h-100 bg-secondary rounded">
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
