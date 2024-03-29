@@ -42,9 +42,10 @@
     <x-back />
 
 <div class="container-contact100">
-    
+
 
     <div class="wrap-contact100">
+
         
         @if(session()->has('message'))
             <div class="alert alert-success montserrat">

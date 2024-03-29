@@ -55,10 +55,28 @@
 
     <div class="container-contact100">
 
+
         <div class="wrap-contact100">
+
+       
+        <div class="row">
+            <div class="col-6">
+                <a class="navbar-brand d-flex align-items-center " href="{{ route('home') }}">
+                    <img src="{{asset('Logo/Logo2-no-bg.png')}}" class="img-fluid mb-4 " style="height: 150px" alt="resources/images/Logo">
+                    <a class="testo-primario text_color display-6 "
+                    href="{{ route('home') }}"></a>
+                </a>
+            </div>
+
+            <div class="col-6 mt-4 ">
+                <span class="mx-auto">Hai già un account?</span>
+                <a href="/login" class=" btn shadow mx-5  ">Accedi</a>
+            </div>
+        </div>
 
             <form action="/register" method="POST" class="contact100-form validate-form">
             @csrf
+
 
                 <span class="contact100-form-title">{{ __('messages.registrati') }}
                     <i class="bi bi-person-circle"></i>
@@ -69,7 +87,7 @@
                         <i class="bi bi-person"></i>
                     </label>
                     <span class="label-input100">{{ __('messages.nomeObb') }}</span>
-                    <input type="text" id="name" name="name" class="input100  @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="{{ __('messages.inserisciNome') }}">
+                    <input type="text" id="name" name="name" class="input100 text-light @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="{{ __('messages.inserisciNome') }}">
                     @error('name') <span class=" text-danger small ">{{ __('messages.name') }} </span>  @enderror
                     <span class="focus-input100"></span>
                 </div>

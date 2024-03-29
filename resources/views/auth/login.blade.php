@@ -57,6 +57,21 @@
 
         <div class="wrap-contact100">
 
+        <div class="row">
+            <div class="col-6">
+                <a class="navbar-brand d-flex align-items-center " href="{{ route('home') }}">
+                    <img src="{{asset('Logo/Logo2-no-bg.png')}}" class="img-fluid mb-4 " style="height: 150px" alt="resources/images/Logo">
+                    <a class="testo-primario text_color display-6 "
+                    href="{{ route('home') }}"></a>
+                </a>
+            </div>
+
+            <div class="col-6 mt-4">
+            <span class="mt-5 ">Non sei ancora registrato?</span>
+                <a href="/register" class=" btn shadow mx-0 ">Registrati</a>
+            </div>
+        </div>
+
             <form action="/login" method="POST" class="contact100-form validate-form">
             @csrf
 
