@@ -29,9 +29,9 @@ class SendEmail extends Component
     }
 
     public function store() {
-        
-        Mail::to($this->announcement->user->email)->send(new ContactAuthor( Auth::user(), $this->announcement->title, $this->message));
 
+        Mail::to($this->announcement->user->email)->send(new ContactAuthor( Auth::user(), $this->announcement->title, $this->message));
+        session()->flash('message', 'Messaggio inviato!');
     }
 
     public function render()

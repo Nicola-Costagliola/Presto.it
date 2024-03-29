@@ -6,16 +6,19 @@
             </div>
         </div>
     </div>
+    <div>
+        <x-success />
+    </div>
     <div class="container p-0 mt-3">
         <x-back />
     </div>
-    
+
     <div class="container">
             <div class="row">
                 <div class="col-12 shadow p-3">
-                
+
                     <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
-        
+
                         @if($announcement->images->isNotEmpty())
 
                             <div class="carousel-inner">
@@ -46,7 +49,7 @@
                             </button>
 
                     </div>
-                                
+
                 </div>
                 {{-- fine carosello --}}
                 @if(session()->has('message'))
@@ -54,15 +57,16 @@
                     {{ session('message') }}
                 </div>
                 @endif
-                
+
                 <div class="col-12 col-md-8 p-2 mt-4">
                     <div class="col-12 ms-2">
-                        <p class="montserrat fs-5"><span class="text_color fw-semibold ">descrizione: </span>{{ $announcement->body }}</p>
+                        <p class="montserrat fs-5"><span class="text_color fw-semibold ">Titolo: </span>{{ $announcement->title }}</p>
+                        <p class="montserrat fs-5"><span class="text_color fw-semibold ">Descrizione: </span>{{ $announcement->body }}</p>
                         <p class="montserrat fs-4 "><strong><span class="text_color">Prezzo: </span>{{$announcement->price}} €</strong></p>
                         <p><a class=" bn632-hover bn26 shadow p-3 mx-0  mt-5 montserrat "
                             href=" {{route('category.show', ['category' => $announcement->category]) }} ">
                             Esplora la categoria: {{$announcement->category->name_it}}
-                        </a></p> 
+                        </a></p>
                     </div>
                 </div>
                 @auth
@@ -75,12 +79,10 @@
                     </div>
                     <div class="collapse mt-4 " id="collapseExample">
                         <div class=" card card-body ">
-                            
+
                         <livewire:send-email :announcement="$announcement" />
 
-    
-                            
-    
+
                         </div>
                     </div>
                     <div class="">
@@ -93,12 +95,12 @@
                         @endif
                     </div>
                     @endauth
-                    
+
                 </div>
-                
+
             </div>
-        
+
     </div>
-    
-    
+
+
 </x-layout>
