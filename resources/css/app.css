@@ -711,3 +711,11 @@ textarea {
   touch-action: manipulation;
   margin: 0;
 }
+
+input[placeholder] {
+  color: #eef1f3;
+}
+::-webkit-input-placeholder {
+    /* WebKit browsers (Safari, Google Chrome, Opera 15+) */
+    color: #eef1f3;
+  }
