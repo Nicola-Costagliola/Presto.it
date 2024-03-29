@@ -2,22 +2,22 @@
   <div class="container-fluid py-5  background  kenburns-top shadow ">
 
     <div class="container py-5  tracking-in-expand ">
-      <div class="row  g-5 align-items-center ">
+      <div class="row  g-5 align-items-center justify-content-center text-center ">
         <div class="col-12 col-lg-7 ">
           <h1 class="mb-5 testo-primario text_color display-2 fw-bold ">Presto.it</h1>
           <p class="mb-3 text-secondary display-6 text-wrap fs-3">{{ __('messages.slogan')}}</p>
 
-          <div class="position-relative mx-auto">
-            <form class="d-flex " role="search" action="{{ route('announcements.search')}}" method="GET">
+          <div class="position-relative">
+            <form style="margin-left:150px" role="search" action="{{ route('announcements.search')}}" method="GET">
               <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" name="searched" type="search" placeholder="{{ __('messages.cerca') }}"
               aria-label="Search">
-              <button class="bn632-hover bn26 py-3 px-4 position-absolute opacity-75 h-100" style="top: 0; right: 25%;" type="submit">{{ __('messages.cerca') }}</button>
+              <button class="bn632-hover bn26 py-3 px-4 ms-5 position-absolute opacity-75 h-100" style="top: 0; right: 25%;" type="submit">{{ __('messages.cerca') }}</button>
             </form>
           </div>
         </div>
 
 
-          <div class="col-12 col-lg-5">
+          {{-- <div class="col-12 col-lg-5">
             <div id="carouselId" class="carousel " data-bs-ride="carousel">
 
               @foreach ($categories as $category)
@@ -54,8 +54,70 @@
               @endforeach
 
             </div>
-          </div>
+          </div> --}}
 
+      </div>
+      <div class="row aligh-item-center mt-5">
+        <div class="col-12 mt-5">
+          <div class="all">
+            <a href="{{ route('category.show', 3 ) }}" class="left4">
+              <div class="">
+                <div class="text">Arredamendo</div>
+              </div>
+            </a>
+            <a href="{{ route('category.show', 7 ) }}" class="left3">
+            <div class="">
+              <div class="text">Accessori</div>
+            </div>
+            </a>
+            <a href="{{ route('category.show', 6 ) }}" class="left2">
+            <div class="">
+              <div class="text">Musica</div>
+            </div>
+            </a>
+            <a href="{{ route('category.show', 5 ) }}" class="left1">
+            <div class="">
+              <div class="text">Immobili</div>
+            </div>
+            </a>
+            <a href="{{ route('category.show', 10 ) }}" class="left">
+            <div class="">
+              <div class="text">Make-Up</div>
+            </div>
+            </a>
+
+            <div class="center">
+              <div class="explainer"><span>Categorie</span></div>
+              <div class="text">Categorie</div>
+            </div>
+
+            <a href="{{ route('category.show', 9 ) }}" class="right">
+              <div class="">
+                <div class="text">Sport</div>
+              </div>
+            </a>
+            <a href="{{ route('category.show', 4 ) }}" class="right1">
+              <div class="">
+                <div class="text">Lavoro</div>
+              </div>
+            </a>
+            <a href="{{ route('category.show', 8 ) }}" class="right2">
+              <div class="">
+                <div class="text">Collezione</div>
+              </div>
+            </a>
+            <a href="{{ route('category.show', 1 ) }}" class="right3">
+              <div class="">
+                <div class="text">Tecnologia</div>
+              </div>
+            </a>
+            <a href="{{ route('category.show', 2 ) }}" class="right4">
+              <div class="">
+                <div class="text">Auto</div>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
