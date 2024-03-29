@@ -105,7 +105,6 @@
                                         </div>
 
                                         {{-- Descrizione --}}
-                                        <div class="col-12 col-md-4 align-content-center">
                                             <p>Titolo: <span class="fs-5">{{ $announcement->title }}</span></p>
                                             <p>Categoria: <span class="fs-5">{{ $announcement->category->name_it }}</span></p>
                                             <p>Descrizione: <span class="fs-5 w-100">{{ $announcement->body }}</span></p>

@@ -31,7 +31,7 @@
             <div class="row ">
 
                 <div class="col-12 text-center shadow p-5 mt-5">
-                    <p class="h1 montserrat text_color_body">Non sono presenti annunci per questa categoria</p>
+                    <p class="h1 montserrat text_color">Non sono presenti annunci per questa categoria</p>
                     @auth
                     <p class="h2 montserrat text_color">Pubblicane uno:</p>
                     <p class=" montserrat d-inline-flex">
