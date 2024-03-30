@@ -10,7 +10,7 @@
                         href="{{ route('home') }}"></a>
                     </a>
 
-                    <button class="navbar-toggler collapsed ms-auto " type="button" data-bs-toggle="collapse" data-bs-target="#collasableMenu">
+                    <button class="navbar-toggler collapsed ms-auto bg-info " type="button" data-bs-toggle="collapse" data-bs-target="#collasableMenu">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 

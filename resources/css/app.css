@@ -871,8 +871,7 @@ input[placeholder] {
 
 }
 
-.categorySx{
-   width: 250px;
-  height: 100px;
-  
+.carItem{
+  background-color: #1f60a6;
+    background-image: radial-gradient(circle at center top, rgb(173, 190, 241), rgb(10, 57, 119));
 }

@@ -11,21 +11,21 @@
             <form style="margin-left:150px" role="search" action="{{ route('announcements.search')}}" method="GET">
               <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" name="searched" type="search" placeholder="{{ __('messages.cerca') }}"
               aria-label="Search">
-              <button class="bn632-hover bn26 py-3 px-4 ms-5 position-absolute opacity-75 h-100" style="top: 0; right: 25%;" type="submit">{{ __('messages.cerca') }}</button>
+              <button class="bn632-hover bn26 py-3 px-4 ms-5 position-absolute start-50 opacity-75 h-100" style="top: 0; right: 25%;" type="submit">{{ __('messages.cerca') }}</button>
             </form>
           </div>
         </div>
 
 
-          {{-- <div class="col-12 col-lg-5">
+          <div class="col-12 d-md-none">
             <div id="carouselId" class="carousel " data-bs-ride="carousel">
 
               @foreach ($categories as $category)
 
 
               <div class="carousel-inner shadow" role="listbox">
-                <div class="carousel-item @if($loop->first)active @endif rounded ">
-                  <a href="{{ route('category.show', $category ) }}" class="text_color_body  display-6  px-4 py-2 text_color   position-absolute my-5 mx-3  ">
+                <div class="carousel-item carItem  @if($loop->first)active @endif rounded">
+                  <a href="{{ route('category.show', $category ) }}" class="text_color_body  display-6    text_color mt-2">
                     @switch(App::currentLocale())
                             @case('it')
                             {{ $category->name_it }}
@@ -39,8 +39,8 @@
                             @default
                             {{ $category->name_it }}
                             @endswitch
+                        <img src="{{asset("images/$category->name_it.png")}}" alt="" class="img-fluid w-100 h-100  rounded explainer">
                   </a>
-                  <img src="https://picsum.photos/400/300" alt="" class="img-fluid w-100 h-100 bg-secondary rounded">
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
@@ -54,7 +54,7 @@
               @endforeach
 
             </div>
-          </div> --}}
+          </div>
       </div>
 
       <div class="row aligh-item-center mt-5 d-none d-md-block">
@@ -123,10 +123,7 @@
         </div>
       </div>
 
-      {{-- inizio categorie visibili da sx a md --}}
-      <div class="row d-md-none justify-content-center mt-5">
-        
-      </div>
+
     </div>
   </div>
 
