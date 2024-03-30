@@ -11,7 +11,7 @@
             <form style="margin-left:150px" role="search" action="{{ route('announcements.search')}}" method="GET">
               <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" name="searched" type="search" placeholder="{{ __('messages.cerca') }}"
               aria-label="Search">
-              <button class="bn632-hover bn26 py-3 px-4 ms-5 position-absolute opacity-75 h-100" style="top: 0; right: 25%;" type="submit">{{ __('messages.cerca') }}</button>
+              <button class="bn632-hover bn26 py-3 px-4 ms-5 position-absolute start-50  opacity-75 h-100" style="top: 0; right: 25%;" type="submit">{{ __('messages.cerca') }}</button>
             </form>
           </div>
         </div>
@@ -86,7 +86,7 @@
             </div>
             </a>
 
-            <div class="center">
+            <div class="center px-2">
               <div class="explainer"><span>Categorie</span></div>
               <div class="text">Categorie</div>
             </div>

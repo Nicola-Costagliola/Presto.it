@@ -8,7 +8,7 @@
             <div class="container mt-5">
                 <div class="row">
 
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <h5 class="text_color_body ">{{ __('messages.contattaci') }}</h5>
                             <p class="text_color_body bi bi-envelope-fill "> Email: info@example.com</p>
                             <p class="text_color_body bi bi-telephone-fill ">{{ __('messages.telefono') }}: +123 456 789</p>
