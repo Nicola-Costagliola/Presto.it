@@ -59,7 +59,7 @@
       </div>
       <div class="row aligh-item-center mt-5">
         <div class="col-12 mt-5">
-          <div class="all">
+          <div class="all ">
             <a href="{{ route('category.show', 3 ) }}" class="left4">
               <div class="">
                 <div class="text">Arredamendo</div>
@@ -86,8 +86,8 @@
             </div>
             </a>
 
-            <div class="center">
-              <div class="explainer"><span>Categorie</span></div>
+            <div class="tracking-in-expand center">
+              <div class="explainer "><span>Categorie</span></div>
               <div class="text">Categorie</div>
             </div>
 

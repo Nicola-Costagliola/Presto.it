@@ -279,6 +279,7 @@ body {
 .kenburns-top {
   -webkit-animation: kenburns-top 2s ease-out reverse both;
   animation: kenburns-top 2s ease-out reverse both;
+  overflow: hidden;
 }
 
 /* ----------------------------------------------
@@ -728,11 +729,12 @@ input[placeholder] {
   display: flex;
   perspective: 10px;
   transform: perspective(300px) rotateX(20deg);
-  /* will-change: perspective; */
+  will-change: perspective;
   perspective-origin: center center;
   transition: all 1.3s ease-out;
   justify-content: center;
   transform-style: preserve-3d;
+
 }
 
 .all:hover {
@@ -740,9 +742,10 @@ input[placeholder] {
   transition: all 1.3s ease-in;
   transform: perspective(10000px) rotateX(0deg);
 
+
   .text {
     opacity: 1;
-  }
+    }
 
   &>div, &>a {
     opacity: 1;
@@ -786,6 +789,7 @@ input[placeholder] {
   &:hover {
     box-shadow: 0 0 30px 10px rgba(184, 213, 242, 0.6);
     background-color: rgb(122, 175, 244);
+
   }
 }
 
