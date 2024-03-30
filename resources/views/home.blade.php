@@ -55,10 +55,13 @@
 
             </div>
           </div> --}}
-
       </div>
-      <div class="row aligh-item-center mt-5">
+
+      <div class="row aligh-item-center mt-5 d-none d-md-block">
+
         <div class="col-12 mt-5">
+
+          {{-- inizio categorie visibili da md in poi--}}
           <div class="all ">
             <a href="{{ route('category.show', 3 ) }}" class="left4">
               <div class="">
@@ -118,6 +121,11 @@
             </a>
           </div>
         </div>
+      </div>
+
+      {{-- inizio categorie visibili da sx a md --}}
+      <div class="row d-md-none justify-content-center mt-5">
+        
       </div>
     </div>
   </div>

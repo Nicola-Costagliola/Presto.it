@@ -782,7 +782,6 @@ input[placeholder] {
   background-size: contain;
   background-repeat: no-repeat;
   background-color: #1f60a6;
-
   cursor: pointer;
   background-blend-mode: color-burn;
 
@@ -870,4 +869,10 @@ input[placeholder] {
   justify-content: center;
   align-items: center;
 
+}
+
+.categorySx{
+   width: 250px;
+  height: 100px;
+  
 }
