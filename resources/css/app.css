@@ -873,5 +873,6 @@ input[placeholder] {
 
 .carItem{
   background-color: #1f60a6;
-    background-image: radial-gradient(circle at center top, rgb(173, 190, 241), rgb(10, 57, 119));
+  background-image: radial-gradient(circle at center top, rgb(173, 190, 241), rgb(10, 57, 119));
+
 }
