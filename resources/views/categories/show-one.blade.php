@@ -1,13 +1,13 @@
 <x-layout>
 
-    <div class="container mt-5 text-center">
+    <div class="container mt-3 text-center">
         <div class="col-12 mt-5">
             <div class="row">
 
                 <x-back />
                 <div class="col-12 shadow p-5 text-center">
 
-                    <p class=" display-6 montserrat text_color_body">Ecco tutti gli annunci della categoria: </p>
+                    <p class=" display-6 montserrat text_color">Ecco tutti gli annunci della categoria: </p>
                     <h3 class=" display-5 fw-semibold montserrat text_color">{{$category->name_it}}</h3>
 
                 </div>

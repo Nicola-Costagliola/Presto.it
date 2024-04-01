@@ -5,18 +5,18 @@
             <x-message />
         </div>
     </div>
-
+    
     <div class="row">
-
+        
         {{-- Implementazione according --}}
-
+        
         {{-- la classe di bootstrap collapsaOne-- collapse{{$number}}  per l'according prende un numero in inglese che non riesco a passare e quindi cliccaldo su un annuncio me li apre tutti --}}
-
+        
         <div class="col-12 shadow p-5">
             @foreach($announcements as $announcement)
-
+            
             @if($announcement->is_accepted == null && $announcement->is_accepted == false )
-
+            
             <div class="accordion accordion-flush shadow" id="accordionFlushExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header ">
@@ -34,29 +34,34 @@
                         </div>
                     </button>
                 </h2>
-
+                
                 <div id="flush-collapse{{$announcement->id}}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-
+                    
                     <div class="accordion-body text_color_body " style="background: linear-gradient(180deg, #163d68 0%, #246cbb 68%);">
-
+                        
                         <div class="row">
-
+                            
                             {{-- Carosello --}}
                             <div class="col-12  my-auto p-1">
-
+                            
                                 <div id="showCarousel" class="carousel slide shadow " data-bs-ride="carousel">
-
+                                    
                                     @if($announcement->images->isNotEmpty())
                                     <div class="carousel-inner ">
                                         @foreach($announcement->images as $image)
                                         <div class="carousel-item p-4 shadow border rounded-2 text_color @if($loop->first)active   @endif"
                                             style="background:#eef1f3;">
                                             <div class="row">
-
-                                                <div class="col-12 col-md-6 ">
+                                                <div class=" text-center mb-3">
+                                                    <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                                                    aria-controls="collapseExample" class="bn632-hover bn26 shadow p-3">
+                                                    Mostra le immagini
+                                                </a>
+                                                </div>
+                                                <div class="col-12 col-md-6 collapse" id="collapseExample">
                                                     <img src="{{ $image->getUrl(400,250) }}" class="w-100 rounded mt-3" alt="...">
                                                 </div>
-                                                <div class="col-12 col-md-4  text-center text-md-start ">
+                                                <div class="col-12 col-md-4  text-center text-md-start mx-auto ">
                                                     <h5>Revisione immagini:</h5>
                                                     <p>Adulti: <span class="{{ $image->adult }}"></span></p>
                                                     <p>Satira: <span class="{{ $image->spoof }}"></span></p>
@@ -64,7 +69,7 @@
                                                     <p>Violenza: <span class="{{ $image->violence }}"></span></p>
                                                     <p>Contenuto sessuale: <span class="{{ $image->racy }}"></span></p>
                                                 </div>
-                                                <div class="col-12 col-md-2 text-center text-md-start">
+                                                <div class="col-12 col-md-2 text-center text-md-start mx-auto">
                                                     <h5 class="">Tags</h5>
                                                     <div class="">
                                                         @if($image->labels)
@@ -74,7 +79,7 @@
                                                         @endif
                                                     </div>
                                                 </div>
-
+                                                
                                             </div>
                                         </div>
                                         @endforeach
@@ -89,7 +94,7 @@
                                         </div>
                                     </div>
                                     @endif
-
+                                    
                                     <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel"
                                     data-bs-slide="prev">
                                     <span class="bi bi-caret-left-fill text-black fs-1 " aria-hidden="true"></span>
@@ -100,43 +105,43 @@
                                 <span class="bi bi-caret-right-fill text-black fs-1 " aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
-                        </div>
-
-                    </div>
-                    {{-- Descrizione --}}
-                    <div class="col-12 col-md-4 align-content-center">
-                    <p>Titolo: <span class="fs-5">{{ $announcement->title }}</span></p>
-                    <p>Categoria: <span class="fs-5">{{ $announcement->category->name_it }}</span></p>
-                    <p>Descrizione: <span class="fs-5 w-100">{{ $announcement->body }}</span></p>
-                    </div>
-                    <div class="col-12 col-md-4 align-content-center">
-                        <p>Prezzo: <span class="fs-5">{{ $announcement->price }} €</span></p>
-                        <p>Autore: <span class="fs-5">{{ $announcement->user->name }}</span></p>
-                        <p>Data creazione:: <span class="fs-5">{{ $announcement->created_at->format('d/m/Y') }}</span>
-                        </p>
-                    </div>
-
-
+                        </div>                  
+                    
+                </div>
+                {{-- Descrizione --}}
+                <div class="col-12 col-md-4 align-content-center">
+                    <p class=" text-info fs-4  ">Titolo: <span class="fs-5 text_color_body">{{ $announcement->title }}</span></p>
+                    <p class=" text-info fs-4">Categoria: <span class="fs-5 text_color_body">{{ $announcement->category->name_it }}</span></p>
+                    <p class=" text-info fs-4">Descrizione: <span class="fs-5 text_color_body w-100">{{ $announcement->body }}</span></p>
+                </div>
+                <div class="col-12 col-md-4 align-content-center">
+                    <p class=" text-info fs-4">Prezzo: <span class="fs-5 text_color_body">{{ $announcement->price }} €</span></p>
+                    <p class=" text-info fs-4">Autore: <span class="fs-5 text_color_body">{{ $announcement->user->name }}</span></p>
+                    <p class=" text-info fs-4">Data creazione:: <span class="fs-5 text_color_body">{{ $announcement->created_at->format('d/m/Y') }}</span>
+                    </p>
+                </div>
+                
+                
                 {{-- Bottoni --}}
-                    <div class="col-12 col-md-4 align-content-center   ">
-
-                        <form action="{{ route('revisor.acceptAnnouncement', $announcement) }}" method="POST">
-                            @csrf
-                            @method('PATCH')
-                            <button type="submit" class="bn632-hover bn26  shadow">Accetta</button>
-                        </form>
-
-                        <form action="{{ route('revisor.rejectAnnouncement',$announcement) }}" method="POST">
-                            @csrf
-                            @method('PATCH')
-                            <button type="submit" class="bn632-hover bn26 shadow ">Rifiuta</button>
-                        </form>
-                    </div>
-
+                <div class="col-12 col-md-4 align-content-center text-center ">
+                    
+                    <form action="{{ route('revisor.acceptAnnouncement', $announcement) }}" method="POST">
+                        @csrf
+                        @method('PATCH')
+                        <button type="submit" class="bn632-hover bn26  shadow">Accetta</button>
+                    </form>
+                    
+                    <form action="{{ route('revisor.rejectAnnouncement',$announcement) }}" method="POST">
+                        @csrf
+                        @method('PATCH')
+                        <button type="submit" class="bn632-hover bn26 shadow ">Rifiuta</button>
+                    </form>
+                </div>
+                
             </div>
-
+            
         </div>
-
+        
     </div>
 </div>
 </div>

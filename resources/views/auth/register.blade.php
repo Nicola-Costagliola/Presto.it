@@ -18,7 +18,7 @@
                     </div>
 
                     <div class="col-6 mt-4 ">
-                        <span class="mx-auto">Hai già un account?</span>
+                        <span class="mx-auto text-info fw-bold ">Hai già un account?</span>
                         <a href="/login" class=" btn shadow mx-5 text-white ">Accedi</a>
                     </div>
                 </div>
@@ -27,15 +27,15 @@
                     @csrf
 
 
-                        <span class="contact100-form-title">{{ __('messages.registrati') }}
+                        <span class="contact100-form-title text-white ">{{ __('messages.registrati') }}
                             <i class="bi bi-person-circle"></i>
                         </span>
 
                         <div class="wrap-input100 validate-input">
-                            <label class="" for="name">{{ __('messages.nome') }}
+                            <label class="text_color fw-semibold fs-4" for="name">{{ __('messages.nome') }}
                                 <i class="bi bi-person"></i>
                             </label>
-                            <span class="label-input100">{{ __('messages.nomeObb') }}</span>
+                            <span class="small text-info">{{ __('messages.nomeObb') }}</span>
                             <input type="text" id="name" name="name" class="input100 text-light @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="{{ __('messages.inserisciNome') }}">
                             @error('name') <span class=" text-danger small ">{{ __('messages.name') }} </span>  @enderror
                             <span class="focus-input100"></span>
@@ -43,30 +43,30 @@
 
                         <div class="wrap-input100 validate-input">
 
-                            <label class="" for="email"> Email
+                            <label class="text_color fw-semibold fs-4" for="email"> Email
                                 <i class="bi bi-envelope"></i>
                             </label>
-                            <span class="label-input100">{{ __('messages.emailObb') }}</span>
+                            <span class="small text-info">{{ __('messages.emailObb') }}</span>
                             <input type="email" id="email" name="email" class="input100 @error('email') is-invalid @enderror" value=" {{ old('email') }} " placeholder="{{ __('messages.inserisciEmail') }}">
                             @error('email') <span class=" text-danger small "> {{ $message }} </span>  @enderror
                             <span class="focus-input100"></span>
                         </div>
 
                         <div class="wrap-input100 validate-input">
-                            <label class="" for="password"> Password
+                            <label class="text_color fw-semibold fs-4" for="password"> Password
                                 <i class=" bi bi-lock-fill"></i>
                             </label>
-                            <span class="label-input100">{{ __('messages.passwordObb') }}</span>
+                            <span class="small text-info">{{ __('messages.passwordObb') }}</span>
                             <input type="password" id="password" name="password" class="input100 @error('password') is-invalid @enderror" placeholder="{{ __('messages.inserisciPassword') }}">
                             @error('password') <span class=" text-danger small "> {{ $message }} </span>  @enderror
                             <span class="focus-input100"></span>
                         </div>
 
                         <div class="wrap-input100 validate-input">
-                            <label class="" for="password_confirmation">{{ __('messages.confPass') }}
+                            <label class="text_color fw-semibold fs-4" for="password_confirmation">{{ __('messages.confPass') }}
                                 <i class=" bi bi-lock-fill"></i>
                             </label>
-                            <span class="label-input100">{{ __('messages.confPasswordObb') }}</span>
+                            <span class="small text-info">{{ __('messages.confPasswordObb') }}</span>
                             <input type="password" id="password_confirmation" name="password_confirmation" class="input100 @error('password') is-invalid @enderror" placeholder="{{ __('messages.confermaPassword') }}" >
                             @error('password') <span class=" text-danger small "> {{ $message }} </span>  @enderror
                             <span class="focus-input100"></span>

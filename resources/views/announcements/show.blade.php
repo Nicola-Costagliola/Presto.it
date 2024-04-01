@@ -2,7 +2,7 @@
     <div class="container text-center mt-3 p-2">
         <div class="row">
             <div class="col-12 shadow p-3">
-                <h1 class="display-6 fs-2 text_color_body montserrat"><span class="text_color">Annuncio: </span>{{ $announcement->title }}</h1>
+                <h1 class="fs-2 montserrat fw-semibold "><span class="text_color">Annuncio: </span>{{ $announcement->title }}</h1>
             </div>
         </div>
     </div>
@@ -71,6 +71,7 @@
                 </div>
                 @auth
                 <div class="col-12 col-md-4 p-2 mt-4 ">
+                    <x-success />
                     <div class="">
                         <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
                         aria-controls="collapseExample" class="bn632-hover bn26 shadow p-3 mt-5 ">
@@ -79,10 +80,7 @@
                     </div>
                     <div class="collapse mt-4 " id="collapseExample">
                         <div class=" card card-body ">
-
                         <livewire:send-email :announcement="$announcement" />
-
-
                         </div>
                     </div>
                     <div class="">

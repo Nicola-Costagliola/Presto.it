@@ -781,7 +781,7 @@ input[placeholder] {
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: #1f60a6;
+  background-color: #163d68;
   cursor: pointer;
   background-blend-mode: color-burn;
 
@@ -810,7 +810,8 @@ input[placeholder] {
 }
 .left1 {
   transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
-  background-image: url(../images/Immobili.png);
+  background-image: url(../images/house-solid.svg);
+  
 }
 .left2 {
   transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);

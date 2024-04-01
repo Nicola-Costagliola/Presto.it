@@ -9,24 +9,24 @@
                 <div class="wrap-contact100">
 
                     <div>
-                        {{-- <a name="success"></a> --}}
                         <x-success />
                     </div>
 
-                    <h1 class=" contact100-form-title text_color">Crea il tuo annuncio
+                    <h1 class=" contact100-form-title text-white montserrat ">Crea il tuo annuncio
                         <i class="bi bi-chat-left-text-fill"></i>
                     </h1>
 
 
                     <div class="wrap-input100 validate-input">
-                        <label for="title" class=" ">Titolo</label>
-                        <span class="label-input100">{{ __('messages.titoloObb') }}</span>
-                        <input class=" input100 @error('title') is-invalid @enderror montserrat text_color_body" type="text" id="title" wire:model.blur="title" placeholder="Inserisci il titolo del tuo annuncio">
+                        <label for="title" class=" text_color fw-semibold fs-4">Titolo</label>
+                        <span class=" text-info small ">{{ __('messages.titoloObb') }}</span>
+                        <input class=" input100 @error('title') is-invalid @enderror montserrat text_color_body" type="text" id="title" 
+                        wire:model.blur="title" placeholder="Inserisci il titolo del tuo annuncio">
                         @error('title')<span class=" text-danger "> {{ $message }}</span> @enderror
                     </div>
 
                     <div class="wrap-input100 validate-input">
-                        <label for="categories" class=" ">Seleziona Categoria</label>
+                        <label for="categories" class="text_color fw-semibold fs-4">Categoria</label>
                         @if($category)
                             <p type="text" wire:model="categoryOgg" class=" form-control  text_color"
                             value="{{$category}}" id="category">{{ $category->name_it}}</p>
@@ -41,15 +41,15 @@
                         @endif
                     </div>
                     <div class="wrap-input100 validate-input">
-                        <label for="body" class=" ">Descrizione</label>
-                        <span class="label-input100">{{ __('messages.descObb') }}</span>
+                        <label for="body" class="text_color fw-semibold fs-4">Descrizione</label>
+                        <span class="text-info small">{{ __('messages.descObb') }}</span>
                         <textarea class=" input100 text-white @error('body') is-invalid @enderror " type="text" id="body" wire:model.blur="body" placeholder="Inserisci la descrizione del tuo annuncio"></textarea>
                         @error('body')<span class=" text-danger "> {{ $message }}</span> @enderror
                     </div>
 
                     <div class="wrap-input100 validate-input">
-                        <label for="price" class=" ">Prezzo</label>
-                        <span class="label-input100">{{ __('messages.prezzoObb') }}</span>
+                        <label for="price" class="text_color fw-semibold fs-4">Prezzo</label>
+                        <span class="small text-info ">{{ __('messages.prezzoObb') }}</span>
                         <input class=" input100 @error('price') is-invalid @enderror montserrat" type="text"  placeholder="Inserisci il prezzo: Es. 10.00"
                         id="price" wire:model="price">
                         @error('price')<span class=" text-danger "> {{ $message }}</span> @enderror
@@ -59,7 +59,7 @@
                     <div class="wrap-input100 validate-input">
 
                         <input wire:model="temporary_images" type="file" name="images" multiple
-                        class="shadow  @error('temporary_images.*') is-invalid @enderror " placeholder="img">
+                        class="shadow bg-info rounded  @error('temporary_images.*') is-invalid @enderror " placeholder="img">
                         @error('temporary_images.*')<span class=" text-danger "> {{ $message }} </span> @enderror
 
                     </div>

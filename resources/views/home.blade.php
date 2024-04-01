@@ -61,7 +61,7 @@
 
         <div class="col-12 mt-5">
 
-          {{-- inizio categorie visibili da md in poi--}}
+          {{-- inizio categorie --}}
           <div class="all ">
             <a href="{{ route('category.show', 3 ) }}" class="left4">
               <div class="">
@@ -90,7 +90,7 @@
             </a>
 
             <div class="tracking-in-expand center">
-              <div class="explainer "><span>Categorie</span></div>
+              <div class="explainer px-2  "><span>Categorie</span></div>
               <div class="text">Categorie</div>
             </div>
 
@@ -122,6 +122,7 @@
           </div>
         </div>
       </div>
+      
 
 
     </div>
