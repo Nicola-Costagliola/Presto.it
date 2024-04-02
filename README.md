@@ -1,4 +1,4 @@
-Presto.it è un portale di annunci che permette di visualizzare migliaia di annunci in tutto il mondo, da qualsiasi dispositivo sei collegato avrai sempre la miglior facilità di utilizzo.
+Presto.it è un portale di annunci che permette di visualizzare migliaia di annunci in tutto il mondo, ottimizzato e fruibile per qualsiasi dispositivo.
 
 Presto.it è stato sviluppato con il seguente technology stack:
 
