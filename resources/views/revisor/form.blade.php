@@ -19,13 +19,13 @@
             <form action="{{ route('become.revisor.send') }}" method="POST" class="contact100-form validate-form">
             @csrf
 
-                <span class="contact100-form-title">Scrivi la tua richiesta
+                <span class="contact100-form-title text-white ">Scrivi la tua richiesta
                     <i class="bi bi-envelope-arrow-down"></i>
                 </span>
 
                 <div class="wrap-input100 validate-input">
 
-                    <label class="" for="msg"> Motivo della richiesta
+                    <label class="text_color fw-semibold fs-4" for="msg"> Motivo della richiesta
                         <i class="bi bi-chat-left-text"></i>
                     </label>
                     <textarea name="msg" id="msg" rows="3" class="input100" placeholder="Scrivi qui il tuo messaggio"></textarea>
