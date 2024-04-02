@@ -63,11 +63,11 @@
                                                 </div>
                                                 <div class="col-12 col-md-4  text-center text-md-start mx-auto ">
                                                     <h5>Revisione immagini:</h5>
-                                                    <p>Adulti: <span class="{{ $image->adult }}"></span></p>
-                                                    <p>Satira: <span class="{{ $image->spoof }}"></span></p>
-                                                    <p>Medicina: <span class="{{ $image->medical }}"></span></p>
-                                                    <p>Violenza: <span class="{{ $image->violence }}"></span></p>
-                                                    <p>Contenuto sessuale: <span class="{{ $image->racy }}"></span></p>
+                                                    <p><span class="{{ $image->adult }}"></span> Adulti</p>
+                                                    <p><span class="{{ $image->spoof }}"></span> Satira</p>
+                                                    <p><span class="{{ $image->medical }}"></span> Medicina</p>
+                                                    <p><span class="{{ $image->violence }}"></span> Violenza</p>
+                                                    <p><span class="{{ $image->racy }}"></span> Contenuto sessuale</p>
                                                 </div>
                                                 <div class="col-12 col-md-2 text-center text-md-start mx-auto">
                                                     <h5 class="">Tags</h5>

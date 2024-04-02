@@ -2,7 +2,7 @@
     <div class="container text-center mt-3 p-2">
         <div class="row">
             <div class="col-12 shadow p-3">
-                <h1 class="fs-2 montserrat fw-semibold "><span class="text_color">Annuncio: </span>{{ $announcement->title }}</h1>
+                <h1 class="fs-2 montserrat fw-semibold text-info  "><span class="text_color">Annuncio: </span>{{ $announcement->title }}</h1>
             </div>
         </div>
     </div>
@@ -60,9 +60,9 @@
 
                 <div class="col-12 col-md-8 p-2 mt-4">
                     <div class="col-12 ms-2">
-                        <p class="montserrat fs-5"><span class="text_color fw-semibold ">Titolo: </span>{{ $announcement->title }}</p>
-                        <p class="montserrat fs-5"><span class="text_color fw-semibold ">Descrizione: </span>{{ $announcement->body }}</p>
-                        <p class="montserrat fs-4 "><strong><span class="text_color">Prezzo: </span>{{$announcement->price}} €</strong></p>
+                        <p class="montserrat fs-5 text-info "><span class="text_color fw-semibold ">Titolo: </span>{{ $announcement->title }}</p>
+                        <p class="montserrat fs-5 text-info "><span class="text_color fw-semibold ">Descrizione: </span>{{ $announcement->body }}</p>
+                        <p class="montserrat fs-4 text-info  "><strong><span class="text_color">Prezzo: </span>{{$announcement->price}} €</strong></p>
                         <p><a class=" bn632-hover bn26 shadow p-3 mx-0  mt-5 montserrat "
                             href=" {{route('category.show', ['category' => $announcement->category]) }} ">
                             Esplora la categoria: {{$announcement->category->name_it}}
@@ -71,8 +71,8 @@
                 </div>
                 @auth
                 <div class="col-12 col-md-4 p-2 mt-4 ">
-                    <x-success />
                     <div class="">
+                        <x-message />
                         <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
                         aria-controls="collapseExample" class="bn632-hover bn26 shadow p-3 mt-5 ">
                         Contatta il venditore

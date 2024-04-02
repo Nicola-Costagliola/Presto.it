@@ -34,7 +34,7 @@ class SendEmail extends Component
 
         $this->resetForm();
 
-        session()->flash('success','Messaggio inviato con successo!');
+        session()->flash('message','Messaggio inviato con successo!');
 
     }
 

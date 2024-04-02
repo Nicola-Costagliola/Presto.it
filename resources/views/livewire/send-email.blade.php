@@ -1,4 +1,5 @@
 <div>
+    <x-message />
     <form wire:submit.prevent="store" >
         <div class="col-12 mx-auto ">
             <div class="row g-3 ">
@@ -9,7 +10,7 @@
                     type="text" id="message" wire:model.blur="message"></textarea>
                     @error('message')<span class=" text-danger "> {{ $message }}</span> @enderror
                 </div>
-                    <button type="submit" onclick="window.location.href='#'"
+                    <button type="submit"
                     class=" bn632-hover bn26 shadow px-4 py-2 mt-4 montserrat text_color">Invia</button>
             </div>
         </div>

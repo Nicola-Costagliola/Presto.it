@@ -17,7 +17,7 @@
                     </div>
 
                     <div class="col-6 mt-4">
-                    <span class="mt-5 ">Non sei ancora registrato?</span>
+                    <span class="mt-5 text-info  ">Non sei ancora registrato?</span>
                         <a href="/register" class=" btn shadow mx-0 text-white">Registrati</a>
                     </div>
                 </div>
@@ -25,33 +25,33 @@
                 <form action="/login" method="POST" class="contact100-form validate-form">
                 @csrf
 
-                    <span class="contact100-form-title">{{ __('messages.accedi') }}
+                    <span class="contact100-form-title text-white ">{{ __('messages.accedi') }}
                         <i class="bi bi-person-circle"></i>
                     </span>
 
                     <div class="wrap-input100 validate-input">
 
-                        <label class="" for="email"> Email
+                        <label class="text_color fw-semibold fs-4" for="email"> Email
                             <i class="bi bi-envelope"></i>
                         </label>
-                        <span class="label-input100">{{ __('messages.emailObb') }}</span>
+                        <span class="small text-info">{{ __('messages.emailObb') }}</span>
                         <input type="email" id="email" name="email" class="input100 @error('email') is-invalid @enderror" value=" {{ old('email') }} " placeholder="{{ __('messages.inserisciEmail') }}">
                         @error('email') <span class=" text-danger small "> {{ $message }} </span>  @enderror
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input">
-                    <label class="" for="password"> Password
+                    <label class="text_color fw-semibold fs-4" for="password"> Password
                             <i class=" bi bi-lock-fill"></i>
                         </label>
-                        <span class="label-input100">La password è obbligatoria: almeno 1 lettera grande, 1 simbolo e 1 numero </span>
+                        <span class="small text-info">La password è obbligatoria: almeno 1 lettera grande, 1 simbolo e 1 numero </span>
                         <input type="password" id="password" name="password" class="input100 @error('password') is-invalid @enderror" placeholder="Scrivi la tua password">
                         @error('email') <span class=" text-danger small "> {{ $message }} </span>  @enderror
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="validate-input mb-3">
-                        <span class="label-input100">{{ __('messages.remember') }}</span>
+                        <span class="small text-info">{{ __('messages.remember') }}</span>
                         <input type="checkbox" id="remember" name="remember">
                     </div>
 
