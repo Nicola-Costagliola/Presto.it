@@ -19,8 +19,8 @@
                     <x-card
                     :title="$announcement->title"
                     :img="!$announcement->images()->get()->isEmpty()
-                    ? Storage::url($announcement->images()->first()->path)
-                    : 'https://picsum.photos/400/250' "
+                        ? $announcement->images()->first()->getUrl(400,250)
+                        : 'https://picsum.photos/400/250'"
                     :body="$announcement->body"
                     :price="$announcement->price"
                     :category="$category->name_it"
