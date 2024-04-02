@@ -90,7 +90,7 @@
             </a>
 
             <div class="tracking-in-expand center">
-              <div class="explainer px-2  "><span>Categorie</span></div>
+              <div class="explainer px-2  "><span>{{ __('messages.categorie') }}</span></div>
               <div class="text">Categorie</div>
             </div>
 
