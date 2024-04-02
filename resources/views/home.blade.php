@@ -8,10 +8,10 @@
           <p class="mb-3 text-secondary display-6 text-wrap fs-3">{{ __('messages.slogan')}}</p>
 
           <div class="position-relative">
-            <form style="margin-left:150px" role="search" action="{{ route('announcements.search')}}" method="GET">
-              <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" name="searched" type="search" placeholder="{{ __('messages.cerca') }}"
+            <form style="margin-left:80px" role="search" action="{{ route('announcements.search')}}" method="GET">
+              <input class="form-control border-2 border-secondary w-100 py-3 px-4 rounded-pill" name="searched" type="search" placeholder="{{ __('messages.cerca') }}"
               aria-label="Search">
-              <button class="bn632-hover bn26 py-3 px-4 ms-5 position-absolute start-50 opacity-75 h-100" style="top: 0; right: 25%;" type="submit">{{ __('messages.cerca') }}</button>
+              <button class="bn632-hover bn26 py-3 px-4 ms-5 position-absolute end-0 h-100" style="top: 0; right: 45%;" type="submit">{{ __('messages.cerca') }}</button>
             </form>
           </div>
         </div>
@@ -78,7 +78,7 @@
               <div class="text">Musica</div>
             </div>
             </a>
-            <a href="{{ route('category.show', 5 ) }}" class="left1">
+            <a href="{{ route('category.show', 5 ) }}" class="left1 ">
             <div class="">
               <div class="text">Immobili</div>
             </div>

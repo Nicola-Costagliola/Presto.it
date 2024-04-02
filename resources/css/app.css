@@ -783,7 +783,7 @@ input[placeholder] {
   background-repeat: no-repeat;
   background-color: #163d68;
   cursor: pointer;
-  background-blend-mode: color-burn;
+  /* background-blend-mode: color-burn; */
 
   &:hover {
     box-shadow: 0 0 30px 10px rgba(184, 213, 242, 0.6);
@@ -806,50 +806,50 @@ input[placeholder] {
 
 .left {
   transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
-  background-image: url(../images/MakeUp.png);
+  background-image: url(../images/highlighter-solid.svg);
 }
 .left1 {
   transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
-  background-image: url(../images/house-solid.svg);
+  background-image: url(../images/Immobili.svg);
   
 }
 .left2 {
   transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
-  background-image: url(../images/Musica.png);
+  background-image: url(../images/guitar-solid.svg);
 }
 .left3 {
   transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
-  background-image: url(../images/Accessori.png);
+  background-image: url(../images/bag-shopping-solid.svg);
 }
 .left4 {
   transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
-  background-image: url(../images/Arredamento.png);
+  background-image: url(../images/couch-solid.svg);
 }
 
 .center {
   opacity: 1;
-  background-image: url(../images/Categorie.png);
+  background-image: url(../images/list-solid.svg);
 }
 
 .right {
   transform: translateX(30px) translateZ(-25px) rotateY(5deg);
-  background-image: url(../images/Sport.png);
+  background-image: url(../images/dumbbell-solid.svg);
 }
 .right1 {
   transform: translateX(30px) translateZ(-25px) rotateY(5deg);
-  background-image: url(../images/Lavoro.png);
+  background-image: url(../images/user-tie-solid.svg);
 }
 .right2 {
   transform: translateX(30px) translateZ(-25px) rotateY(5deg);
-  background-image: url(../images/DaCollezione.png);
+  background-image: url(../images/envelopes-bulk-solid.svg);
 }
 .right3 {
   transform: translateX(30px) translateZ(-25px) rotateY(5deg);
-  background-image: url(../images/Tecnologia.png);
+  background-image: url(../images/laptop-solid.svg);
 }
 .right4 {
   transform: translateX(30px) translateZ(-25px) rotateY(5deg);
-  background-image: url(../images/Auto.png);
+  background-image: url(../images/car-solid.svg);
 }
 
 
