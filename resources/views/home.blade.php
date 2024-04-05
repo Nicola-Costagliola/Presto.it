@@ -4,8 +4,8 @@
     <div class="container py-5  tracking-in-expand ">
       <div class="row  g-5 align-items-center justify-content-center text-center ">
         <div class="col-12 col-lg-7 ">
-          <h1 class="mb-5 testo-primario text_color display-2 fw-bold ">Presto.it</h1>
-          <p class="mb-3 text-secondary display-6 text-wrap fs-3">{{ __('messages.slogan')}}</p>
+          <h1 class="mb-5 text_color display-2 fw-bold ">Presto.it</h1>
+          <p class="mb-3 text-secondary fw-bold text-wrap fs-3">{{ __('messages.slogan')}}</p>
 
           <div class="position-relative">
             <form style="margin-left:80px" role="search" action="{{ route('announcements.search')}}" method="GET">
@@ -25,7 +25,7 @@
 
               <div class="carousel-inner shadow" role="listbox">
                 <div class="carousel-item carItem  @if($loop->first)active @endif rounded">
-                  <a href="{{ route('category.show', $category ) }}" class="text_color_body  display-6    text_color mt-2">
+                  <a href="{{ route('category.show', $category ) }}" class="text_color_body fw-bold display-5 text_color mt-2">
                     @switch(App::currentLocale())
                             @case('it')
                             {{ $category->name_it }}
@@ -153,7 +153,7 @@
       </div>
       <div class="col-12 shadow p-5 reveal reveal.active">
 
-        <h1 class="display-3 text_color montserrat">{{__('messages.annunci')}}</h1>
+        <h1 class="display-3 text_color">{{__('messages.annunci')}}</h1>
 
         @auth
         <a href=" {{ route('announcements.create') }}" class=" bn632-hover bn26 shadow p-3 mt-1 text_color_body montserrat ">{{ __('messages.inserisciAnnuncio')}}</a>
