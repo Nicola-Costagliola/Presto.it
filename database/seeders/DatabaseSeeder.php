@@ -12,7 +12,8 @@ class DatabaseSeeder extends Seeder
     */
     public function run(): void
     {
-        \App\Models\Category::factory()->create([
+        
+        /* \App\Models\Category::factory()->create([
             'name_it'=>'Tecnologia',
             'name_es'=>'Tecnología',
             'name_en'=>'Technology']);
@@ -143,7 +144,7 @@ class DatabaseSeeder extends Seeder
                         // ]);
                         
                         
-                        
+                        */
                     }
                 }
                 
