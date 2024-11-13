@@ -25,9 +25,9 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrapFive();
         
-        if (Schema::hasTable('categories')) {
+        // if (Schema::hasTable('categories')) {
             
-            View::share('categories', Category::all());
-        }
+        //     View::share('categories', Category::all());
+        // }
     }
 }
