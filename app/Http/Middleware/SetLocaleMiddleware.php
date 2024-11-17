@@ -17,7 +17,7 @@ class SetLocaleMiddleware
      public function handle(Request $request, Closure $next): Response
      {
         $localeLanguage = session('locale', 'it');
-        App::setlocale($localeLanguage);
+        \illuminate\support\Facades\App::setlocale($localeLanguage);
         return $next($request);
     }
 }
