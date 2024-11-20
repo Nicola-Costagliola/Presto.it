@@ -13,11 +13,11 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         
-        /* \App\Models\Category::factory()->create([
-            'name_it'=>'Tecnologia',
-            'name_es'=>'Tecnología',
-            'name_en'=>'Technology']);
-            
+        \App\Models\Category::factory()->create([
+            'name_it'=>'Tecnocasa',
+            'name_es'=>'Tecnocasa',
+            'name_en'=>'Tecnocasa']);
+        /*    
         \App\Models\Category::factory()->create([
                 'name_it'=>'Auto',
                 'name_es'=>'Auto',

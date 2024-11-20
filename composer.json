@@ -7,14 +7,17 @@
     "require": {
         "php": "^8.1",
         "google/cloud-vision": "^1.9",
-        "guzzlehttp/guzzle": "^7.2",
+        "guzzlehttp/guzzle": "^7.9",
         "laravel/fortify": "^1.20",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.4",
         "outhebox/blade-flags": "^1.5",
+        "simple-html-dom/simple-html-dom": "^1.5",
         "spatie/image": "2.2.7",
+        "symfony/css-selector": "^7.1",
+        "symfony/dom-crawler": "^7.1",
         "teamtnt/laravel-scout-tntsearch-driver": "^13.2"
     },
     "require-dev": {

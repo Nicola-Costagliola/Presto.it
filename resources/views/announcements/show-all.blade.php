@@ -8,7 +8,7 @@
                 </div>
 
                 <div class="row mt-5 shadow p-5 g-3">
-                @forelse ($announcements as $announcement)
+                {{-- @forelse ($announcements as $announcement) --}}
 
                 <div class="col-12 col-xl-4 col-lg-4 col-md-6 align-content-center ">
                 <x-card
@@ -24,7 +24,7 @@
                 />
                 </div>
 
-                @empty
+                {{-- @empty --}}
                     <div class="row ">
 
                         <div class="col-12 text-center shadow p-5 mt-5">
@@ -32,12 +32,12 @@
                         </div>
                     </div>
 
-                    @endforelse
+                    {{-- @endforelse --}}
                 </div>
 
                 <div class=" d-flex  justify-content-center ">
                     <div class=" mt-5 montserrat text_color_body">
-                        {{ $announcements->links() }}
+                        {{-- {{ $announcements->links() }} --}}
 
                     </div>
                 </div>
